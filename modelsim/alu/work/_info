@@ -58,73 +58,73 @@ R11
 R12
 R13
 Ealu_tb
-Z14 w1699931237
+Z14 w1699970869
 R0
 R1
 R2
 R3
 R4
-!i122 84
-R5
-Z15 8C:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/alu/alu_tb.vhd
-Z16 FC:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/alu/alu_tb.vhd
+!i122 85
+Z15 dC:/Users/steve/source/eel4712/mini-project/modelsim/alu
+Z16 8C:/Users/steve/source/eel4712/mini-project/testbenches/alu_tb.vhd
+Z17 FC:/Users/steve/source/eel4712/mini-project/testbenches/alu_tb.vhd
 l0
 R8
 V^39hC[Vgia;cGV5bVYD;@1
 !s100 Xn397Mf@=?TN_fMkneC2A3
 R9
 32
-Z17 !s110 1699931243
+Z18 !s110 1699971003
 !i10b 1
-Z18 !s108 1699931243.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/alu/alu_tb.vhd|
-Z20 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/alu/alu_tb.vhd|
+Z19 !s108 1699971002.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/testbenches/alu_tb.vhd|
+Z21 !s107 C:/Users/steve/source/eel4712/mini-project/testbenches/alu_tb.vhd|
 !i113 1
 R12
 R13
 Atb
-Z21 DEx4 work 8 mips_alu 0 22 Yk`hY9z1`TcSVX9F:JI]L3
+Z22 DEx4 work 8 mips_alu 0 22 Yk`hY9z1`TcSVX9F:JI]L3
 R0
 R1
 R2
 R3
 R4
-Z22 DEx4 work 6 alu_tb 0 22 ^39hC[Vgia;cGV5bVYD;@1
-!i122 84
+DEx4 work 6 alu_tb 0 22 ^39hC[Vgia;cGV5bVYD;@1
+!i122 85
 l36
-Z23 L13 166
+L13 166
 VNONagG6Q^QWi6c54MVgVS2
 !s100 [M7GZR?Z9dVXGe6X][V6n2
 R9
 32
-R17
-!i10b 1
 R18
+!i10b 1
 R19
 R20
+R21
 !i113 1
 R12
 R13
 Emips_alu
-Z24 w1699930708
+R14
 R0
 R3
 R4
-!i122 83
-R5
-Z25 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd
-Z26 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd
+!i122 86
+R15
+Z23 8C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd
+Z24 FC:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd
 l0
 L7 1
 VYk`hY9z1`TcSVX9F:JI]L3
 !s100 k08IKO3Mn;_[Z4k7CG[P01
 R9
 32
-R17
-!i10b 1
 R18
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd|
-Z28 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd|
+!i10b 1
+Z25 !s108 1699971003.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd|
+!s107 C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd|
 !i113 1
 R12
 R13
@@ -132,19 +132,19 @@ Aarch
 R0
 R3
 R4
-R21
-!i122 83
+R22
+!i122 86
 l25
-L19 155
-VT;8N8GWhc?`l22Fbz[]SU1
-!s100 GD=I;WIiWNg7n8e<5zR8k1
+Z27 L19 155
+Z28 VT;8N8GWhc?`l22Fbz[]SU1
+Z29 !s100 GD=I;WIiWNg7n8e<5zR8k1
 R9
 32
-R17
-!i10b 1
 R18
-R27
-R28
+!i10b 1
+R25
+R26
+Z30 !s107 C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd|
 !i113 1
 R12
 R13
