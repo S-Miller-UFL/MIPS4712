@@ -77,7 +77,7 @@ begin  -- TB
         B <= conv_std_logic_vector(-4, B'length);
         wait for 50 ns;
         assert(result = (conv_std_logic_vector(-40, result'length))) report "Error : 10* -4 = " & integer'image(conv_integer(result)) & " instead of -40" severity warning;
-        assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for signed multiply test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
+        assert(result_hi = conv_std_logic_vector(-1,result_hi'length)) report "Error: incorrect result_hi for signed multiply test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
 	assert(branch_taken = '0') report "Error: incorrect branch_taken for signed multiply test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 0" severity warning;
 
 		  
@@ -87,15 +87,15 @@ begin  -- TB
         A <= conv_std_logic_vector(65536, A'length);
         B <= conv_std_logic_vector(131072, B'length);
         wait for 50 ns;
-        assert(result = (conv_std_logic_vector(8589934, result'length))) report "Error :  65536 * 131072 = " & integer'image(conv_integer(result)) & " instead of 8,589,934,592" severity warning;
-        assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for unsigned multiply test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
+        assert(result = (conv_std_logic_vector(0, result'length))) report "Error :  65536 * 131072 = " & integer'image(conv_integer(result)) & " instead of 0" severity warning;
+        assert(result_hi = conv_std_logic_vector(2,result_hi'length)) report "Error: incorrect result_hi for unsigned multiply test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 2" severity warning;
 	assert(branch_taken = '0') report "Error: incorrect branch_taken for unsigned multiply test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 0" severity warning;
 
 		
 	-- test 0x0000FFFF and 0xFFFF1234
         opcode    <= "00100";
         A <= conv_std_logic_vector(65535, A'length);
-        B <= conv_std_logic_vector(429490, B'length);
+        B <= "11111111111111110001001000110100";
         wait for 50 ns;
         assert(result = (conv_std_logic_vector(4660, result'length))) report "Error : 0x0000FFFF and 0xFFFF1234 = " & integer'image(conv_integer(result)) & " instead of 4660" severity warning;
         assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for and test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
@@ -107,17 +107,17 @@ begin  -- TB
         A <= conv_std_logic_vector(15, A'length);
         ir <= conv_std_logic_vector(4, ir'length);
         wait for 50 ns;
-        assert(result = (conv_std_logic_vector(0, result'length))) report "Error : 0x0000000F >> 4 = " & integer'image(conv_integer(result)) & " instead of 0" severity warning;
+        assert(result = (conv_std_logic_vector(0, result'length))) report "Error : 0x0000000F >> 4 logically = " & integer'image(conv_integer(result)) & " instead of 0" severity warning;
         assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for logical shift right test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
 	assert(branch_taken = '0') report "Error: incorrect branch_taken for logical shift right test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 0" severity warning;
 
          -- test 0xF0000008 shifted 1 times arithmetically right
         opcode    <= "01001";
-        A <= conv_std_logic_vector(251658248, A'length);
+        A <= "11110000000000000000000000001000";
         ir <= conv_std_logic_vector(1, ir'length);
         wait for 50 ns;
-        assert(result = (conv_std_logic_vector(125829124, result'length))) report "Error : 0xF0000008 >> 1 = " & integer'image(conv_integer(result)) & " instead of 125829124" severity warning;
-        assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for logical shift right test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
+        assert(result = "11111000000000000000000000000100") report "Error : 0xF0000008 >> 1 arithmetically = " & integer'image(conv_integer(result)) & " instead of 11111000000000000000000000000100" severity warning;
+        assert(result_hi = conv_std_logic_vector(0, result_hi'length)) report "Error: incorrect result_hi for logical shift right test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
 	assert(branch_taken = '0') report "Error: incorrect branch_taken for logical shift right test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 0" severity warning;
 
 
@@ -126,7 +126,7 @@ begin  -- TB
         A <= conv_std_logic_vector(8, A'length);
         ir <= conv_std_logic_vector(1, ir'length);
         wait for 50 ns;
-        assert(result = (conv_std_logic_vector(4, result'length))) report "Error : 0x00000008 >> 1 = " & integer'image(conv_integer(result)) & " instead of 4" severity warning;
+        assert(result = (conv_std_logic_vector(4, result'length))) report "Error : 0x00000008 >> 1 arithmetically = " & integer'image(conv_integer(result)) & " instead of 4" severity warning;
         assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for logical shift right test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
 	assert(branch_taken = '0') report "Error: incorrect branch_taken for logical shift right test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 0" severity warning;
 
@@ -153,7 +153,7 @@ begin  -- TB
 
 	-- test 5 <= 0 ->branch
         opcode    <= "01110";
-        A <= conv_std_logic_vector(15, A'length);
+        A <= conv_std_logic_vector(5, A'length);
         wait for 50 ns;
         assert(result = (conv_std_logic_vector(0, result'length))) report "Error : 5<=0->branch = " & integer'image(conv_integer(result)) & " instead of 0" severity warning;
         assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for branch if less than or equal to zero test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
@@ -165,7 +165,7 @@ begin  -- TB
         A <= conv_std_logic_vector(5, A'length);
         wait for 50 ns;
         assert(result = (conv_std_logic_vector(1, A'length))) report "Error : 5>0->branch = " & integer'image(conv_integer(result)) & " instead of 1" severity warning;
-        assert(result_hi = conv_std_logic_vector(1,result_hi'length)) report "Error: incorrect result_hi for branch if greater than or equal to zero test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 1" severity warning;
+        assert(result_hi = conv_std_logic_vector(0,result_hi'length)) report "Error: incorrect result_hi for branch if greater than or equal to zero test. result_hi is equal to " & integer'image(conv_integer(result_hi)) & "instead of 0" severity warning;
 	assert(branch_taken = '1') report "Error: incorrect branch_taken for branch if greater than or equal to zero test. branch_taken is equal to " & std_logic'image(branch_taken) & "instead of 1" severity warning;
 
 	report "simulation finished!";

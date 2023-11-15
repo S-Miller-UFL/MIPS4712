@@ -20,12 +20,13 @@ architecture arch of MIPS_ALU is
 signal tempsum : unsigned(31 downto 0) := (others=>'0');
 signal hi: unsigned(31 downto 0) := (others=>'0');
 signal lo: unsigned(31 downto 0) := (others=>'0');
-signal tempmult : unsigned(63 downto 0) := (others=>'0');
 signal ir_sig : unsigned(4 downto 0) := (others => '0');
 begin
 process(A,B,opcode,ir)
+
+variable tempmult :std_logic_Vector(63 downto 0) := (others => '0');
+
 begin
-tempmult <= (others => '0');
 tempsum <= (others => '0');
 branch_taken <= '0';
 result_hi <= (others => '0');
@@ -43,15 +44,15 @@ result <= std_logic_vector(unsigned(A) - unsigned(B));
 
 --A*B (SIGNED)
 when "00010" =>
-tempmult <= unsigned(signed(A) * signed(B));
-result <= std_logic_vector(tempmult(31 downto 0));
-result_hi <= std_logic_vector(tempmult(63 downto 32));
+tempmult := std_logic_vector(signed(A) * signed(B));
+result <= tempmult(31 downto 0);
+result_hi <= tempmult(63 downto 32);
 
 --A*B (UNSIGNED)
 when "00011" =>
-tempmult <= unsigned(A) * unsigned(B);
-result <= std_logic_vector(tempmult(31 downto 0));
-result_hi <= std_logic_vector(tempmult(63 downto 32));
+tempmult := std_logic_vector(unsigned(A) * unsigned(B));
+result <= tempmult(31 downto 0);
+result_hi <= tempmult(63 downto 32);
 
 --A AND B
 when "00100" =>

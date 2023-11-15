@@ -6,6 +6,7 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 use ieee.NUMERIC_STD.UNSIGNED;
+use std.textio.all;
 
 entity TB_sramandio is
 
@@ -57,24 +58,53 @@ port map
 clk <= not(clk) after 20 ns;
 process
 begin
-read_en <= '1';
-reset <= '1';
-wait for 10 ns;
-reset <= '0';
-sram_data <= std_logic_vector(to_unsigned(0,sram_data'length));
---test sram read
-for i in 0 to 255 loop
-	address <= std_logic_vector(to_unsigned(i,address'length));
-	wait until rising_edge(clk);
-end loop;
-
---test inport0
-inport_en <= '1';
-inport_input <= "1111100000";
-address <= x"0000FFF8";
+--write 0x0A0A0A0A to byte address 0X00000000
+write_en <= '1';
+read_en <= '0';
+address <= x"00000000";
+sram_data <= x"0A0A0A0A";
 wait until rising_edge(clk);
---wait until rising_edge(clk);
+
+--write 0xF0F0F0F0 to byte address 0x00000004
+write_en <= '1';
+read_en <= '0';
+address <= x"00000004";
+sram_data <= x"F0F0F0F0";
+wait until rising_edge(clk);
+
+--read from byte address 0X00000000
+write_en <= '0';
+read_en <= '1';
+address <= x"00000000";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000000 is not 0x0A0A0A0A";
+
+--read from byte address 0x00000001
+write_en <= '0';
+read_en <= '1';
+address <= x"00000001";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000001 is not 0x0A0A0A0A";
+
+--read from byte address 0x00000004
+write_en <= '0';
+read_en <= '1';
+address <= x"00000004";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000004 is not 0x0A0A0A0A";
+
+--read from byte address 0x00000005
+write_en <= '0';
+read_en <= '1';
+address <= x"00000005";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"F0F0F0F0") report "ERROR: byte address 0x00000005 is not 0xF0F0F0F0";
+
+
 report "simulation finished!";
-wait;
 end process;
 end TB;

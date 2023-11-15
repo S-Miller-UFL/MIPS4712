@@ -48,17 +48,6 @@ port
 );
 end component;
 
-component thirtytwobitlatch is
-
-port
-(
-	input : in std_logic_vector(31 downto 0);
-	latch_enable: in std_logic;
-	reset : in std_logic;
-	output: out std_logic_vector(31 downto 0)
-
-);
-end component;
 
 signal sram_out : std_logic_vector(31 downto 0);
 signal sram_in : std_logic_vector(31 downto 0);
@@ -68,12 +57,13 @@ signal outport_en : std_logic;
 signal inport_in_extended : std_logic_vector(31 downto 0);
 signal zero_extended : std_logic_vector(21 downto 0) := (others=>'0');
 signal outport_out : std_logic_vector(31 downto 0);
-signal latch_input : std_logic_vector(31 downto 0);
 signal sram_en : std_logic;
 constant fff8 : std_logic_vector := x"0000FFF8";
 constant fffc : std_logic_vector := x"0000FFFC";
+signal sram_address_word : std_logic_vector(7 downto 0);
 
 begin
+sram_address_word <= std_logic_vector(shift_right(unsigned(address(7 downto 0)),2));
 inport_in_extended <=zero_extended & inport_input;
 
 inport0 : thirtytwobitregister port map(input => inport_in_extended, clk => clk, enable=>inport_en,output=>inport0_out);
@@ -82,9 +72,9 @@ inport1 : thirtytwobitregister port map(input => inport_in_extended, clk => clk,
 
 outport : thirtytwobitregister port map(input => sram_data, clk => clk, enable=>outport_en, output=>outport_out);
 
-outputlatch : thirtytwobitregister port map(input => latch_input, clk=>clk, enable => read_en, reset => reset, output => output);
+sram_mem: SRAM port map(address =>sram_address_word,clock=>clk,data =>sram_data,rden=>read_en,wren=>sram_en, q=>sram_out);
 
-sram_mem: SRAM port map(address =>address(7 downto 0),clock=>clk,data =>sram_data,rden=>read_en,wren=>sram_en, q=>sram_out);
+
 --logic for output of entire unit
 output_logic:process(address,inport0_out,inport1_out, read_en, sram_out)
 
@@ -94,11 +84,11 @@ output_logic:process(address,inport0_out,inport1_out, read_en, sram_out)
 begin
 
 if(address = fff8) then
-latch_input <= inport0_out;
+output <= inport0_out;
 elsif(address = fffc) then
-latch_input <= inport1_out;
+output <= inport1_out;
 else
-latch_input <= sram_out;
+output <= sram_out;
 end if;
 
 
