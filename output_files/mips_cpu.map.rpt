@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips_cpu
-Wed Nov 15 12:19:27 2023
+Wed Nov 15 18:04:49 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,21 +15,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1
- 15. Parameter Settings for User Entity Instance: SRAM:sram_mem|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "SRAM:sram_mem"
- 18. Port Connectivity Checks: "thirtytwobitregister:outport"
- 19. Port Connectivity Checks: "thirtytwobitregister:inport1"
- 20. Port Connectivity Checks: "thirtytwobitregister:inport0"
- 21. In-System Memory Content Editor Settings
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1
+ 14. Parameter Settings for User Entity Instance: SRAM:sram_mem|altsyncram:altsyncram_component
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "SRAM:sram_mem"
+ 17. Port Connectivity Checks: "thirtytwobitregister:outport"
+ 18. Port Connectivity Checks: "thirtytwobitregister:inport1"
+ 19. Port Connectivity Checks: "thirtytwobitregister:inport0"
+ 20. In-System Memory Content Editor Settings
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -56,16 +55,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 15 12:19:26 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 15 18:04:49 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
 ; Top-level Entity Name              ; sramandio                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 303                                         ;
-;     Total combinational functions  ; 262                                         ;
-;     Dedicated logic registers      ; 160                                         ;
-; Total registers                    ; 160                                         ;
-; Total pins                         ; 111                                         ;
+; Total logic elements               ; 424                                         ;
+;     Total combinational functions  ; 297                                         ;
+;     Dedicated logic registers      ; 246                                         ;
+; Total registers                    ; 246                                         ;
+; Total pins                         ; 166                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -166,51 +165,51 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                  ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd                                                ;             ;
-; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
-; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd                                           ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                            ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                         ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                         ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                          ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                             ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                             ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                           ;             ;
-; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
-; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
-; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/source/eel4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                    ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                          ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                      ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                         ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                            ; altera_sld  ;
-; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                      ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                            ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd                                                ;             ;
+; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
+; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd                                           ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;             ;
+; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
+; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
+; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                              ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                   ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                      ; altera_sld  ;
+; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -218,31 +217,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 303                      ;
+; Estimated Total logic elements              ; 424                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 262                      ;
+; Total combinational functions               ; 297                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 96                       ;
-;     -- 3 input functions                    ; 81                       ;
-;     -- <=2 input functions                  ; 85                       ;
+;     -- 4 input functions                    ; 159                      ;
+;     -- 3 input functions                    ; 74                       ;
+;     -- <=2 input functions                  ; 64                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 238                      ;
+;     -- normal mode                          ; 273                      ;
 ;     -- arithmetic mode                      ; 24                       ;
 ;                                             ;                          ;
-; Total registers                             ; 160                      ;
-;     -- Dedicated logic registers            ; 160                      ;
+; Total registers                             ; 246                      ;
+;     -- Dedicated logic registers            ; 246                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 111                      ;
+; I/O pins                                    ; 166                      ;
 ; Total memory bits                           ; 8192                     ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 206                      ;
-; Total fan-out                               ; 2176                     ;
-; Average fan-out                             ; 3.18                     ;
+; Total fan-out                               ; 2710                     ;
+; Average fan-out                             ; 2.96                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -251,12 +250,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |sramandio                                                                                                                              ; 262 (45)            ; 160 (0)                   ; 8192        ; 0          ; 0            ; 0       ; 0         ; 111  ; 0            ; 0          ; |sramandio                                                                                                                                                                                                                                                                                                                                            ; sramandio                         ; work         ;
-;    |SRAM:sram_mem|                                                                                                                      ; 94 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem                                                                                                                                                                                                                                                                                                                              ; SRAM                              ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 94 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                              ; altsyncram                        ; work         ;
-;          |altsyncram_gpt3:auto_generated|                                                                                               ; 94 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated                                                                                                                                                                                                                                                               ; altsyncram_gpt3                   ; work         ;
+; |sramandio                                                                                                                              ; 297 (79)            ; 246 (0)                   ; 8192        ; 0          ; 0            ; 0       ; 0         ; 166  ; 0            ; 0          ; |sramandio                                                                                                                                                                                                                                                                                                                                            ; sramandio                         ; work         ;
+;    |SRAM:sram_mem|                                                                                                                      ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem                                                                                                                                                                                                                                                                                                                              ; SRAM                              ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                              ; altsyncram                        ; work         ;
+;          |altsyncram_gpt3:auto_generated|                                                                                               ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated                                                                                                                                                                                                                                                               ; altsyncram_gpt3                   ; work         ;
 ;             |altsyncram_r5r2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1                                                                                                                                                                                                                                   ; altsyncram_r5r2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 94 (70)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                     ; sld_mod_ram_rom                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 95 (71)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                     ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 24 (24)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                  ; sld_rom_sr                        ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 123 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 122 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -266,7 +265,9 @@ https://fpgasoftware.intel.com/eula.
 ;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 121 (85)            ; 81 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 18 (18)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-;    |thirtytwobitregister:inport0|                                                                                                       ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|thirtytwobitregister:inport0                                                                                                                                                                                                                                                                                                               ; thirtytwobitregister              ; work         ;
+;    |thirtytwobitregister:inport0|                                                                                                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|thirtytwobitregister:inport0                                                                                                                                                                                                                                                                                                               ; thirtytwobitregister              ; work         ;
+;    |thirtytwobitregister:inport1|                                                                                                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|thirtytwobitregister:inport1                                                                                                                                                                                                                                                                                                               ; thirtytwobitregister              ; work         ;
+;    |thirtytwobitregister:outport|                                                                                                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |sramandio|thirtytwobitregister:outport                                                                                                                                                                                                                                                                                                               ; thirtytwobitregister              ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -293,38 +294,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                               ;
-+---------------------------------------------+----------------------------------------------------+
-; Register name                               ; Reason for Removal                                 ;
-+---------------------------------------------+----------------------------------------------------+
-; thirtytwobitregister:inport1|sigout[10..31] ; Stuck at GND due to stuck port data_in             ;
-; thirtytwobitregister:inport0|sigout[10..31] ; Stuck at GND due to stuck port data_in             ;
-; thirtytwobitregister:inport1|sigout[0]      ; Merged with thirtytwobitregister:inport0|sigout[0] ;
-; thirtytwobitregister:inport1|sigout[1]      ; Merged with thirtytwobitregister:inport0|sigout[1] ;
-; thirtytwobitregister:inport1|sigout[2]      ; Merged with thirtytwobitregister:inport0|sigout[2] ;
-; thirtytwobitregister:inport1|sigout[3]      ; Merged with thirtytwobitregister:inport0|sigout[3] ;
-; thirtytwobitregister:inport1|sigout[4]      ; Merged with thirtytwobitregister:inport0|sigout[4] ;
-; thirtytwobitregister:inport1|sigout[5]      ; Merged with thirtytwobitregister:inport0|sigout[5] ;
-; thirtytwobitregister:inport1|sigout[6]      ; Merged with thirtytwobitregister:inport0|sigout[6] ;
-; thirtytwobitregister:inport1|sigout[7]      ; Merged with thirtytwobitregister:inport0|sigout[7] ;
-; thirtytwobitregister:inport1|sigout[8]      ; Merged with thirtytwobitregister:inport0|sigout[8] ;
-; thirtytwobitregister:inport1|sigout[9]      ; Merged with thirtytwobitregister:inport0|sigout[9] ;
-; Total Number of Removed Registers = 54      ;                                                    ;
-+---------------------------------------------+----------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 160   ;
+; Total registers                              ; 246   ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 18    ;
 ; Number of registers using Asynchronous Clear ; 56    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 124   ;
+; Number of registers using Clock Enable       ; 210   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -345,12 +325,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[27]                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |sramandio|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; No         ; |sramandio|output                                                                                                                                                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |sramandio|output                                                                                                                                                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |sramandio|outport_en                                                                                                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -454,34 +435,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtytwobitregister:outport"                                                         ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; reset  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "thirtytwobitregister:outport" ;
++-------+-------+----------+-------------------------------+
+; Port  ; Type  ; Severity ; Details                       ;
++-------+-------+----------+-------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                  ;
++-------+-------+----------+-------------------------------+
 
 
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "thirtytwobitregister:inport1" ;
-+---------------+-------+----------+-----------------------+
-; Port          ; Type  ; Severity ; Details               ;
-+---------------+-------+----------+-----------------------+
-; input[31..10] ; Input ; Info     ; Stuck at GND          ;
-; reset         ; Input ; Info     ; Stuck at GND          ;
-+---------------+-------+----------+-----------------------+
++-------+-------+----------+-------------------------------+
+; Port  ; Type  ; Severity ; Details                       ;
++-------+-------+----------+-------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                  ;
++-------+-------+----------+-------------------------------+
 
 
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "thirtytwobitregister:inport0" ;
-+---------------+-------+----------+-----------------------+
-; Port          ; Type  ; Severity ; Details               ;
-+---------------+-------+----------+-----------------------+
-; input[31..10] ; Input ; Info     ; Stuck at GND          ;
-; reset         ; Input ; Info     ; Stuck at GND          ;
-+---------------+-------+----------+-----------------------+
++-------+-------+----------+-------------------------------+
+; Port  ; Type  ; Severity ; Details                       ;
++-------+-------+----------+-------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                  ;
++-------+-------+----------+-------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -498,26 +476,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 138                         ;
-; cycloneiii_ff         ; 74                          ;
+; boundary_port         ; 193                         ;
+; cycloneiii_ff         ; 160                         ;
 ;     CLR               ; 8                           ;
-;     ENA               ; 46                          ;
+;     ENA               ; 132                         ;
 ;     ENA CLR           ; 7                           ;
 ;     ENA CLR SLD       ; 8                           ;
 ;     ENA SCLR          ; 5                           ;
-; cycloneiii_lcell_comb ; 139                         ;
+; cycloneiii_lcell_comb ; 174                         ;
 ;     arith             ; 16                          ;
 ;         2 data inputs ; 16                          ;
-;     normal            ; 123                         ;
+;     normal            ; 158                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 42                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 42                          ;
+;         4 data inputs ; 105                         ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.03                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -526,7 +504,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -536,41 +514,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 15 12:19:03 2023
+    Info: Processing started: Wed Nov 15 18:04:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file components/sram.vhd
-    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 57
-    Info (12023): Found entity 1: SRAM File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 43
+    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 57
+    Info (12023): Found entity 1: SRAM File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips_alu.vhd
-    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 19
-    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 19
+    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitregister.vhd
-    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 20
-    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 20
+    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitlatch.vhd
-    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
-    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
+    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio.vhd
-    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 24
-    Info (12023): Found entity 1: sramandio File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 26
+    Info (12023): Found entity 1: sramandio File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux4to1.vhd
-    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 17
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 17
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 7
 Warning (12019): Can't analyze file -- file SRAM.vhd is missing
 Warning (12019): Can't analyze file -- file components/TB_sramandio.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/register_file.vhd
-    Info (12022): Found design unit 1: registerfile-sync_read File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 25
-    Info (12023): Found entity 1: registerfile File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 5
+    Info (12022): Found design unit 1: registerfile-sync_read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 25
+    Info (12023): Found entity 1: registerfile File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 5
 Info (12127): Elaborating entity "sramandio" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at sramandio.vhd(58): used explicit default value for signal "zero_extended" because signal was never assigned a value File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 58
-Warning (10036): Verilog HDL or VHDL warning at sramandio.vhd(59): object "outport_out" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 59
-Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "thirtytwobitregister:inport0" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 69
-Info (12128): Elaborating entity "SRAM" for hierarchy "SRAM:sram_mem" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 75
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12130): Elaborated megafunction instantiation "SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12133): Instantiated megafunction "SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
+Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "thirtytwobitregister:inport0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 78
+Info (12128): Elaborating entity "SRAM" for hierarchy "SRAM:sram_mem" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 84
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12130): Elaborated megafunction instantiation "SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12133): Instantiated megafunction "SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -622,14 +598,14 @@ Info (12133): Instantiated megafunction "SRAM:sram_mem|altsyncram:altsyncram_com
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=SRAM"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gpt3.tdf
-    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_gpt3" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r5r2.tdf
-    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12130): Elaborated megafunction instantiation "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12133): Instantiated megafunction "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12130): Elaborated megafunction instantiation "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12133): Instantiated megafunction "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -642,7 +618,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "SRAM
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.15.12:19:16 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.11.15.18:04:37 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -653,32 +629,32 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 16
-Info (21057): Implemented 455 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 82 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 307 logic cells
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 16
+Info (21057): Implemented 631 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 105 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 428 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Wed Nov 15 12:19:27 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Wed Nov 15 18:04:49 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:12
 
 

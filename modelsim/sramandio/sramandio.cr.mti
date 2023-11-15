@@ -1,4 +1,4 @@
-C:/Users/steve/source/eel4712/mini-project/testbenches/TB_sramandio.vhd {2 {vcom -work work -2002 -explicit -stats=none {C:\Users\steve\source\eel4712\mini-project\testbenches\TB_sramandio.vhd}
+C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -9,12 +9,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity TB_sramandio
 -- Compiling architecture TB of TB_sramandio
 -- Loading entity sramandio
-** Warning: C:\Users\steve\source\eel4712\mini-project\testbenches\TB_sramandio.vhd(80): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:\Users\steve\source\eel4712\mini-project\testbenches\TB_sramandio.vhd(88): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:\Users\steve\source\eel4712\mini-project\testbenches\TB_sramandio.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:\Users\steve\source\eel4712\mini-project\testbenches\TB_sramandio.vhd(104): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(86): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(94): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(110): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(119): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(146): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd(155): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
