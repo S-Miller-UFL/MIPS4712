@@ -1,0 +1,19 @@
+--steven miller
+--Section number: 11710
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity datapath is
+
+port
+(
+);
+end datapath;
+
+architecture arch of datapath is
+
+begin
+
+
+end arch;

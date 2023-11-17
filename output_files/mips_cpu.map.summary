@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Nov 15 18:04:49 2023
+Analysis & Synthesis Status : Successful - Fri Nov 17 14:03:34 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : mips_cpu
-Top-level Entity Name : sramandio
+Top-level Entity Name : datapath
 Family : MAX 10
-Total logic elements : 424
-    Total combinational functions : 297
-    Dedicated logic registers : 246
-Total registers : 246
-Total pins : 166
+Total logic elements : 247
+    Total combinational functions : 216
+    Dedicated logic registers : 150
+Total registers : 150
+Total pins : 58
 Total virtual pins : 0
 Total memory bits : 8,192
 Embedded Multiplier 9-bit elements : 0

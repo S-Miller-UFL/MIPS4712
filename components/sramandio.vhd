@@ -52,27 +52,40 @@ end component;
 
 
 signal sram_out : std_logic_vector(31 downto 0);
+
 signal sram_in : std_logic_vector(31 downto 0);
+
 signal inport0_out : std_logic_vector(31 downto 0);
+
 signal inport1_out : std_logic_vector(31 downto 0);
+
 signal outport_en : std_logic;
-signal inport_in_extended : std_logic_vector(31 downto 0);
+
 signal zero_extended : std_logic_vector(21 downto 0) := (others=>'0');
+
 signal outport_out : std_logic_vector(31 downto 0);
+
 signal sram_en : std_logic;
+
 constant fff8 : std_logic_vector := x"0000FFF8";
+
 constant fffc : std_logic_vector := x"0000FFFC";
+
 signal sram_address_word : std_logic_vector(7 downto 0);
+
 signal inport0_en : std_logic;
+
 signal inport1_en : std_logic;
 
 --do not write immediately after reading
 
 
 begin
+
 sram_address_word <= std_logic_vector(shift_right(unsigned(address(7 downto 0)),2));
---inport_in_extended <=zero_extended & inport_input;
+
 inport0_en <= not(switchten) and inport_en;
+
 inport1_en <= (switchten) and inport_en;
 
 inport0 : thirtytwobitregister port map(input => inport_input, clk => clk, enable=>inport0_en,output=>inport0_out);

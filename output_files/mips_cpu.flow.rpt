@@ -1,5 +1,5 @@
 Flow report for mips_cpu
-Wed Nov 15 18:05:07 2023
+Fri Nov 17 14:03:54 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 15 18:05:07 2023       ;
+; Flow Status                        ; Successful - Fri Nov 17 14:03:54 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
-; Top-level Entity Name              ; sramandio                                   ;
+; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 354 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 298 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 246 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 246                                         ;
-; Total pins                         ; 166 / 360 ( 46 % )                          ;
+; Total logic elements               ; 247 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 217 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 150 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 150                                         ;
+; Total pins                         ; 58 / 360 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192 / 1,677,312 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/15/2023 18:02:11 ;
+; Start date & time ; 11/17/2023 14:03:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips_cpu            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589194.170008933116720         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 17613682322845.170024779009948         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -93,13 +93,13 @@ https://fpgasoftware.intel.com/eula.
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --                                ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --                                ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; sramandio   ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; sramandio   ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; sramandio   ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; sramandio                              ; mips_cpu      ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; datapath                               ; mips_cpu      ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -108,17 +108,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4862 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:09     ; 1.1                     ; 5940 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4696 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.3                     ; 4877 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4662 MB             ; 00:00:01                           ;
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4845 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:08     ; 1.1                     ; 5927 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4697 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.3                     ; 4876 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4661 MB             ; 00:00:01                           ;
-; Total                ; 00:01:04     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4813 MB             ; 00:00:47                           ;
+; Fitter               ; 00:00:08     ; 1.1                     ; 5651 MB             ; 00:00:11                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4690 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4822 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4655 MB             ; 00:00:02                           ;
+; Total                ; 00:00:38     ; --                      ; --                  ; 00:01:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -127,27 +122,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Analysis & Synthesis ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
-quartus_fit --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
-quartus_asm --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
-quartus_sta mips_cpu -c mips_cpu
-quartus_eda --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
 quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
 quartus_fit --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
 quartus_asm --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu

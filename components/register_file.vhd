@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity registerfile is
+entity register_file is
     port(
         clk : in std_logic;
         rst : in std_logic;
@@ -20,9 +20,9 @@ entity registerfile is
 		  PC_4 : in std_logic_vector(31 downto 0);
 		  JumpAndLink : in std_logic
         );
-end registerfile;
+end register_file;
 
-architecture sync_read of registerfile is
+architecture sync_read of register_file is
     type reg_array is array(0 to 31) of std_logic_vector(31 downto 0);
     signal regs : reg_array;
     
