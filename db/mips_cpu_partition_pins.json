@@ -16,6 +16,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "memtoreg",
+					"strict" : false
+				},
+				{
+					"name" : "regdst",
+					"strict" : false
+				},
+				{
+					"name" : "regwrite",
+					"strict" : false
+				},
+				{
+					"name" : "irwrite",
+					"strict" : false
+				},
+				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

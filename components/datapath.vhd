@@ -21,8 +21,8 @@ pcwrite			: in std_logic;
 jal				: in std_logic;
 issigned			: in std_logic;
 pcsource			: in std_logic;
-aluop				: in std_logic;
-alusrcb			: in std_logic;
+aluop				: in std_logic_vector(4 downto 0);
+alusrcb			: in std_logic_vector(1 downto 0);
 alusrca			: in std_logic;
 regwrite			: in std_logic;
 regdst			: in std_logic;
@@ -117,10 +117,49 @@ port
 );
 end component;
 
+component instruction_register is
+port
+(
+	clk					: in std_logic;
+	input					: in std_logic_vector(31 downto 0);
+	irwrite				: in std_logic;
+	shiftlefttwo 		: out std_logic_vector(25 downto 0);
+	instructiontype	: out std_logic_vector(5 downto 0);
+	readreg1				: out std_logic_vector(4 downto 0);
+	readreg2				: out std_logic_vector(4 downto 0);
+	mux1					: out std_logic_vector(4 downto 0);
+	signextend		 	: out std_logic_vector(15 downto 0)
+);
+end component;
+
+component MIPS_ALU is
+port 
+(
+	A: in std_logic_vector(31 downto 0);
+	B : in std_logic_vector(31 downto 0);
+	ir : in std_logic_vector(4 downto 0);
+	opcode : in std_logic_vector(4 downto 0);
+	result : out std_logic_vector(31 downto 0);
+	result_hi : out std_logic_vector(31 downto 0);
+	branch_taken: out std_logic
+	);
+end component;
+
+component alu_controller is
+port
+(
+	ir 			: in std_logic_vector(5 downto 0);
+	aluop 		: in std_logic_vector(4 downto 0);
+	hi_en 		: out std_logic;
+	lo_en 		: out std_logic;
+	alu_lo_hi 	: out std_logic_vector(1 downto 0);
+	op_select	: out std_logic_vector(4 downto 0)
+);
+end component;
 
 --memoryunit signals
 signal memoryunit_inport_input 			: std_logic_vector(31 downto 0);
-signal memoryunit_sram_data 				: std_logic_vector(31 downto 0);
+--signal memoryunit_sram_data 				: std_logic_vector(31 downto 0);
 signal memoryunit_sram_address 			: std_logic_vector(31 downto 0);
 signal memoryunit_output 					: std_logic_vector(31 downto 0);
 
@@ -160,7 +199,23 @@ signal pc_output								: std_logic_vector(31 downto 0);
 --alu signals
 signal alu_input1								: std_logic_vector(31 downto 0);
 signal alu_input2								: std_logic_vector(31 downto 0);
+signal alu_result								: std_logic_vector(31 downto 0);
+signal alu_resulthi							: std_logic_vector(31 downto 0);
+signal alu_branchtaken						: std_logic;
+signal alu_inputb_4x1mux_input_0			: std_logic_vector(31 downto 0);
+signal alu_inputb_4x1mux_input_1			: std_logic_vector(31 downto 0);
+signal alu_inputb_4x1mux_input_2			: std_logic_vector(31 downto 0);
+signal alu_inputb_4x1mux_input_3			: std_logic_vector(31 downto 0);
+signal alu_result_mux_input_0				: std_logic_vector(31 downto 0);
+signal alu_result_mux_input_1				: std_logic_vector(31 downto 0);
+signal alu_result_mux_input_2				: std_logic_vector(31 downto 0);
+signal alu_result_mux_output				: std_logic_vector(31 downto 0);
 
+--alu controller signals
+signal alucontroller_opcode				: std_logic_Vector(4 downto 0);
+signal alucontroller_hien					: std_logic;
+signal alucontroller_loen					: std_logic;
+signal alucontroller_alulohi				: std_logic_vector(1 downto 0);
 begin
 
 
@@ -170,7 +225,7 @@ zeroextend: tentothirtytwoextender port map(
 														);
 
 memoryunit: sramandio port map(
-										sram_data => memoryunit_sram_data,
+										sram_data => alu_inputb_4x1mux_input_0,
 
 										address => memoryunit_sram_address,
 
@@ -195,7 +250,7 @@ memoryunit: sramandio port map(
 										
 --change this so that the mux inputs are 5 bits wide, not 32.
 instructionregistermux: mux2to1 generic map(width=>5) port map(
-														A => instructionregister_mux_1,
+														A => instructionregister_20to16,
 														
 														B => instructionregister_mux_0,
 													
@@ -222,7 +277,7 @@ registerfile: register_file port map(
 													
 													rd_addr0=>instructionregister_25to21,
 													
-													rd_addr1 => instructionregister_20to16,
+													rd_addr1 =>instructionregister_20to16,
 													
 													wr_addr=>instructionregister_mux_output(4 downto 0),
 													
@@ -257,13 +312,13 @@ registerfileregb: thirtytwobitregister port map(
 																	
 																	reset=> reset,
 																	
-																	output=>registerfile_regb_output
+																	output=>alu_inputb_4x1mux_input_0
 																);
 																
-registerfilemux: mux2to1 generic map(width=>32) port map(
+registerfileoutputmux: mux2to1 generic map(width=>32) port map(
 														A => pc_output,
 														
-														B => registerfile_regb_output,
+														B => registerfile_rega_output,
 													
 														s =>alusrca,
 													
@@ -271,6 +326,100 @@ registerfilemux: mux2to1 generic map(width=>32) port map(
 													
 													 );
 										
-										
+instructionregister: instruction_register port map(
+																	clk => clk,
+																	
+																	input=>memoryunit_output,
+																	
+																	irwrite=>irwrite,
+																	
+																	shiftlefttwo=>instructionregister_25to0,
+																	
+																	instructiontype=>instructionregister_31to26,
+																	
+																	readreg1=>instructionregister_25to21,
+																	
+																	readreg2=>instructionregister_20to16,
+																	
+																	mux1=>instructionregister_mux_0,
+																	
+																	signextend=>instructionregister_15to0
 
+
+																	);		
+																	
+alu_inputb_4x1mux: mux4to1 port map(
+												A=>alu_inputb_4x1mux_input_0,
+												B=>alu_inputb_4x1mux_input_1,
+												C=>alu_inputb_4x1mux_input_2,
+												D=>alu_inputb_4x1mux_input_3,
+												s=>alusrcb,
+												y=>alu_input2
+												);		
+												
+alu:MIPS_ALU port map(
+								A=>registerfile_outputmux_output,
+								B=>alu_input2,
+								ir=>instructionregister_25to0(10 downto 6),
+								opcode=>alucontroller_opcode,
+								result=>alu_result,
+								result_hi=>alu_resulthi,
+								branch_taken=>alu_branchtaken
+							);
+memorydatamux: mux2to1 generic map(width=>32) port map(
+																			A => alu_result_mux_output,
+														
+																			B => memorydataregister_mux_1,
+													
+																			s =>memtoreg,
+													
+																			y=>memorydataregister_mux_output
+																		);
+aluresultregister: thirtytwobitregister port map(
+																	input=>alu_result,
+																	
+																	clk=>clk,
+																	
+																	reset=> reset,
+																	
+																	output=>alu_result_mux_input_0
+																);
+loregister: thirtytwobitregister port map(
+																	input=>alu_result,
+																	
+																	clk=>clk,
+																	
+																	enable =>alucontroller_loen,
+																	
+																	reset=> reset,
+																	
+																	output=>alu_result_mux_input_1
+														);
+hiregister: thirtytwobitregister port map(
+																	input=>alu_resulthi,
+																	
+																	clk=>clk,
+																	
+																	enable =>alucontroller_hien,
+																	
+																	reset=> reset,
+																	
+																	output=>alu_result_mux_input_2
+															);
+aluresultmux: mux4to1 generic map(width=>32) port map(
+																		A=>alu_result_mux_input_0,
+																		B=>alu_result_mux_input_1,
+																		C=>alu_result_mux_input_2,
+																		D=>alu_inputb_4x1mux_input_3,
+																		s=>alucontroller_alulohi,
+																		y=>alu_result_mux_output
+																			);
+alucontroller: alu_controller port map(
+													ir=>instructionregister_25to0(5 downto 0),
+													aluop=> aluop,
+													hi_en=>alucontroller_hien,
+													lo_en=>alucontroller_loen,
+													alu_lo_hi=>alucontroller_alulohi,
+													op_select=>alucontroller_opcode
+													);
 end arch;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips_cpu
-Fri Nov 17 15:20:18 2023
+Fri Nov 17 21:42:44 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,26 +16,32 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1
- 15. Parameter Settings for User Entity Instance: sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: mux2to1:instructionregistermux
- 17. Parameter Settings for User Entity Instance: mux2to1:registerfilemux
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "mux2to1:registerfilemux"
- 20. Port Connectivity Checks: "thirtytwobitregister:registerfileregb"
- 21. Port Connectivity Checks: "thirtytwobitregister:registerfilerega"
- 22. Port Connectivity Checks: "thirtytwobitregister:memorydataregister"
- 23. Port Connectivity Checks: "sramandio:memoryunit|SRAM:sram_mem"
- 24. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:outport"
- 25. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport1"
- 26. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport0"
- 27. In-System Memory Content Editor Settings
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1
+ 16. Parameter Settings for User Entity Instance: sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: mux2to1:instructionregistermux
+ 18. Parameter Settings for User Entity Instance: mux2to1:registerfileoutputmux
+ 19. Parameter Settings for User Entity Instance: mux4to1:alu_inputb_4x1mux
+ 20. Parameter Settings for User Entity Instance: mux2to1:memorydatamux
+ 21. Parameter Settings for User Entity Instance: mux4to1:aluresultmux
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "thirtytwobitregister:aluresultregister"
+ 24. Port Connectivity Checks: "MIPS_ALU:alu"
+ 25. Port Connectivity Checks: "instruction_register:instructionregister"
+ 26. Port Connectivity Checks: "thirtytwobitregister:registerfileregb"
+ 27. Port Connectivity Checks: "thirtytwobitregister:registerfilerega"
+ 28. Port Connectivity Checks: "thirtytwobitregister:memorydataregister"
+ 29. Port Connectivity Checks: "sramandio:memoryunit|SRAM:sram_mem"
+ 30. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:outport"
+ 31. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport1"
+ 32. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport0"
+ 33. In-System Memory Content Editor Settings
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -62,16 +68,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 17 15:20:18 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 17 21:42:44 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
 ; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 247                                         ;
-;     Total combinational functions  ; 216                                         ;
-;     Dedicated logic registers      ; 150                                         ;
-; Total registers                    ; 150                                         ;
-; Total pins                         ; 58                                          ;
+; Total logic elements               ; 2,039                                       ;
+;     Total combinational functions  ; 974                                         ;
+;     Dedicated logic registers      ; 1,248                                       ;
+; Total registers                    ; 1248                                        ;
+; Total pins                         ; 63                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -172,88 +178,94 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                      ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                            ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
-; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd                                                ;             ;
-; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd                                             ;             ;
-; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
-; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd                                           ;             ;
-; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd                                       ;             ;
-; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd                                            ;             ;
-; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                       ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                       ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;             ;
-; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
-; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
-; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                              ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                    ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                   ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                      ; altera_sld  ;
-; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                 ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                  ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
+; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd                                                ;             ;
+; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd                                             ;             ;
+; components/MIPS_ALU.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd                                            ;             ;
+; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
+; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd                                           ;             ;
+; components/mux4to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd                                             ;             ;
+; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd                                       ;             ;
+; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd                                            ;             ;
+; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
+; components/alu_controller.vhd                                      ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd                                      ;             ;
+; components/instruction_register.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd                                ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                            ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                         ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                         ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                          ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                             ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                             ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                           ;             ;
+; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
+; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
+; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/source/eel4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                    ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                          ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                      ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                         ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                            ; altera_sld  ;
+; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 247                      ;
-;                                             ;                          ;
-; Total combinational functions               ; 216                      ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 85                       ;
-;     -- 3 input functions                    ; 70                       ;
-;     -- <=2 input functions                  ; 61                       ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 192                      ;
-;     -- arithmetic mode                      ; 24                       ;
-;                                             ;                          ;
-; Total registers                             ; 150                      ;
-;     -- Dedicated logic registers            ; 150                      ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 58                       ;
-; Total memory bits                           ; 8192                     ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 206                      ;
-; Total fan-out                               ; 1712                     ;
-; Average fan-out                             ; 3.27                     ;
-+---------------------------------------------+--------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 2,039     ;
+;                                             ;           ;
+; Total combinational functions               ; 974       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 778       ;
+;     -- 3 input functions                    ; 101       ;
+;     -- <=2 input functions                  ; 95        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 950       ;
+;     -- arithmetic mode                      ; 24        ;
+;                                             ;           ;
+; Total registers                             ; 1248      ;
+;     -- Dedicated logic registers            ; 1248      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 63        ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1130      ;
+; Total fan-out                               ; 8968      ;
+; Average fan-out                             ; 3.75      ;
++---------------------------------------------+-----------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -261,7 +273,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |datapath                                                                                                                               ; 216 (1)             ; 150 (0)                   ; 8192        ; 0          ; 0            ; 0       ; 0         ; 58   ; 0            ; 0          ; |datapath                                                                                                                                                                                                                                                                                                                                            ; datapath                          ; work         ;
+; |datapath                                                                                                                               ; 974 (1)             ; 1248 (0)                  ; 8192        ; 0          ; 0            ; 0       ; 0         ; 63   ; 0            ; 0          ; |datapath                                                                                                                                                                                                                                                                                                                                            ; datapath                          ; work         ;
+;    |instruction_register:instructionregister|                                                                                           ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|instruction_register:instructionregister                                                                                                                                                                                                                                                                                                   ; instruction_register              ; work         ;
+;    |mux2to1:instructionregistermux|                                                                                                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:instructionregistermux                                                                                                                                                                                                                                                                                                             ; mux2to1                           ; work         ;
+;    |mux2to1:memorydatamux|                                                                                                              ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux2to1:memorydatamux                                                                                                                                                                                                                                                                                                                      ; mux2to1                           ; work         ;
+;    |register_file:registerfile|                                                                                                         ; 725 (725)           ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|register_file:registerfile                                                                                                                                                                                                                                                                                                                 ; register_file                     ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 120 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -270,13 +286,15 @@ https://fpgasoftware.intel.com/eula.
 ;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 118 (82)            ; 81 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 18 (18)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-;    |sramandio:memoryunit|                                                                                                               ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit                                                                                                                                                                                                                                                                                                                       ; sramandio                         ; work         ;
-;       |SRAM:sram_mem|                                                                                                                   ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem                                                                                                                                                                                                                                                                                                         ; SRAM                              ; work         ;
-;          |altsyncram:altsyncram_component|                                                                                              ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                         ; altsyncram                        ; work         ;
-;             |altsyncram_gpt3:auto_generated|                                                                                            ; 95 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated                                                                                                                                                                                                                                          ; altsyncram_gpt3                   ; work         ;
+;    |sramandio:memoryunit|                                                                                                               ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit                                                                                                                                                                                                                                                                                                                       ; sramandio                         ; work         ;
+;       |SRAM:sram_mem|                                                                                                                   ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem                                                                                                                                                                                                                                                                                                         ; SRAM                              ; work         ;
+;          |altsyncram:altsyncram_component|                                                                                              ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                         ; altsyncram                        ; work         ;
+;             |altsyncram_gpt3:auto_generated|                                                                                            ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated                                                                                                                                                                                                                                          ; altsyncram_gpt3                   ; work         ;
 ;                |altsyncram_r5r2:altsyncram1|                                                                                            ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1                                                                                                                                                                                                              ; altsyncram_r5r2                   ; work         ;
-;                |sld_mod_ram_rom:mgl_prim2|                                                                                              ; 95 (70)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                ; sld_mod_ram_rom                   ; work         ;
-;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                  ; 25 (25)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                             ; sld_rom_sr                        ; work         ;
+;                |sld_mod_ram_rom:mgl_prim2|                                                                                              ; 92 (70)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                ; sld_mod_ram_rom                   ; work         ;
+;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                  ; 22 (22)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                             ; sld_rom_sr                        ; work         ;
+;    |thirtytwobitregister:memorydataregister|                                                                                            ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|thirtytwobitregister:memorydataregister                                                                                                                                                                                                                                                                                                    ; thirtytwobitregister              ; work         ;
+;    |thirtytwobitregister:registerfileregb|                                                                                              ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|thirtytwobitregister:registerfileregb                                                                                                                                                                                                                                                                                                      ; thirtytwobitregister              ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -303,14 +321,189 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                       ;
-+-----------------------------------------------------------------+----------------------------------------+
-; Register name                                                   ; Reason for Removal                     ;
-+-----------------------------------------------------------------+----------------------------------------+
-; sramandio:memoryunit|thirtytwobitregister:outport|sigout[0..31] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 32                          ;                                        ;
-+-----------------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                    ; Reason for Removal                          ;
++------------------------------------------------------------------+---------------------------------------------+
+; register_file:registerfile|regs[0][31]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][30]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][29]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][28]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][27]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][26]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][25]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][24]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][23]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][22]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][21]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][20]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][19]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][18]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][17]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][16]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][15]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][14]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][13]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][12]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][11]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][10]                           ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][9]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][8]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][7]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][6]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][5]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][4]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][3]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][2]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][1]                            ; Stuck at GND due to stuck port data_in      ;
+; register_file:registerfile|regs[0][0]                            ; Stuck at GND due to stuck port data_in      ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[10..31] ; Stuck at GND due to stuck port data_in      ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[10..31] ; Stuck at GND due to stuck port data_in      ;
+; thirtytwobitregister:hiregister|sigout[0..31]                    ; Stuck at GND due to stuck port clock_enable ;
+; thirtytwobitregister:loregister|sigout[0..31]                    ; Stuck at GND due to stuck port clock_enable ;
+; sramandio:memoryunit|thirtytwobitregister:outport|sigout[0..31]  ; Stuck at GND due to stuck port clock_enable ;
+; thirtytwobitregister:aluresultregister|sigout[0..31]             ; Lost fanout                                 ;
+; instruction_register:instructionregister|shiftlefttwo[7..10]     ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[0]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[0]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[1]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[1]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[30]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[30]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[31]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[31]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[7]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[7]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[8]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[8]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[9]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[9]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[10]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[10]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[11]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[11]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[12]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[12]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[13]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[13]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[14]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[14]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[15]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[15]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[16]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[16]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[17]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[17]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[2]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[2]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[3]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[3]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[4]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[4]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[5]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[5]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[6]                  ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[6]                           ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[18]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[18]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[25]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[25]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[26]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[26]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[27]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[27]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[28]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[28]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[29]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[29]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[19]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[19]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[20]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[20]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[21]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[21]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[22]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[22]                          ; Lost fanout                                 ;
+; instruction_register:instructionregister|shiftlefttwo[6]         ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[23]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[23]                          ; Lost fanout                                 ;
+; thirtytwobitregister:registerfilerega|sigout[24]                 ; Lost fanout                                 ;
+; register_file:registerfile|rd_data0[24]                          ; Lost fanout                                 ;
+; instruction_register:instructionregister|readreg1[0..4]          ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[9]      ; Stuck at VCC due to stuck port data_in      ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[9]      ; Stuck at GND due to stuck port data_in      ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[0]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[0]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[1]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[1]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[2]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[2]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[3]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[3]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[4]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[4]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[5]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[5]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[6]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[6]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[7]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[7]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[8]      ; Lost fanout                                 ;
+; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[8]      ; Lost fanout                                 ;
+; Total Number of Removed Registers = 298                          ;                                             ;
++------------------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register                       ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; register_file:registerfile|regs[0][31]                   ; Stuck at GND              ; instruction_register:instructionregister|readreg1[3],        ;
+;                                                          ; due to stuck port data_in ; instruction_register:instructionregister|readreg1[4],        ;
+;                                                          ;                           ; instruction_register:instructionregister|readreg1[1],        ;
+;                                                          ;                           ; instruction_register:instructionregister|readreg1[2],        ;
+;                                                          ;                           ; instruction_register:instructionregister|readreg1[0]         ;
+; instruction_register:instructionregister|shiftlefttwo[8] ; Lost Fanouts              ; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[8], ;
+;                                                          ;                           ; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[8]  ;
+; instruction_register:instructionregister|shiftlefttwo[7] ; Lost Fanouts              ; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[7], ;
+;                                                          ;                           ; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[7]  ;
+; instruction_register:instructionregister|shiftlefttwo[6] ; Lost Fanouts              ; sramandio:memoryunit|thirtytwobitregister:inport1|sigout[6], ;
+;                                                          ;                           ; sramandio:memoryunit|thirtytwobitregister:inport0|sigout[6]  ;
+; thirtytwobitregister:registerfilerega|sigout[1]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[1]                       ;
+; thirtytwobitregister:registerfilerega|sigout[30]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[30]                      ;
+; thirtytwobitregister:registerfilerega|sigout[31]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[31]                      ;
+; thirtytwobitregister:registerfilerega|sigout[7]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[7]                       ;
+; thirtytwobitregister:registerfilerega|sigout[8]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[8]                       ;
+; thirtytwobitregister:registerfilerega|sigout[9]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[9]                       ;
+; thirtytwobitregister:registerfilerega|sigout[10]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[10]                      ;
+; thirtytwobitregister:registerfilerega|sigout[11]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[11]                      ;
+; thirtytwobitregister:registerfilerega|sigout[12]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[12]                      ;
+; thirtytwobitregister:registerfilerega|sigout[13]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[13]                      ;
+; thirtytwobitregister:registerfilerega|sigout[14]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[14]                      ;
+; thirtytwobitregister:registerfilerega|sigout[15]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[15]                      ;
+; thirtytwobitregister:registerfilerega|sigout[16]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[16]                      ;
+; thirtytwobitregister:registerfilerega|sigout[17]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[17]                      ;
+; thirtytwobitregister:registerfilerega|sigout[2]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[2]                       ;
+; thirtytwobitregister:registerfilerega|sigout[3]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[3]                       ;
+; thirtytwobitregister:registerfilerega|sigout[4]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[4]                       ;
+; thirtytwobitregister:registerfilerega|sigout[5]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[5]                       ;
+; thirtytwobitregister:registerfilerega|sigout[6]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[6]                       ;
+; thirtytwobitregister:registerfilerega|sigout[18]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[18]                      ;
+; thirtytwobitregister:registerfilerega|sigout[25]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[25]                      ;
+; thirtytwobitregister:registerfilerega|sigout[26]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[26]                      ;
+; thirtytwobitregister:registerfilerega|sigout[27]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[27]                      ;
+; thirtytwobitregister:registerfilerega|sigout[28]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[28]                      ;
+; thirtytwobitregister:registerfilerega|sigout[29]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[29]                      ;
+; thirtytwobitregister:registerfilerega|sigout[19]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[19]                      ;
+; thirtytwobitregister:registerfilerega|sigout[20]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[20]                      ;
+; thirtytwobitregister:registerfilerega|sigout[21]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[21]                      ;
+; thirtytwobitregister:registerfilerega|sigout[22]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[22]                      ;
+; thirtytwobitregister:registerfilerega|sigout[0]          ; Lost Fanouts              ; register_file:registerfile|rd_data0[0]                       ;
+; thirtytwobitregister:registerfilerega|sigout[23]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[23]                      ;
+; thirtytwobitregister:registerfilerega|sigout[24]         ; Lost Fanouts              ; register_file:registerfile|rd_data0[24]                      ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -318,12 +511,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 150   ;
+; Total registers                              ; 1248  ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 56    ;
+; Number of registers using Asynchronous Clear ; 1112  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 114   ;
+; Number of registers using Clock Enable       ; 1148  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -344,11 +537,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |datapath|thirtytwobitregister:memorydataregister|sigout[31]                                                                                                                                             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |datapath|thirtytwobitregister:memorydataregister|sigout[1]                                                                                                                                              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |datapath|register_file:registerfile|rd_data1[13]                                                                                                                                                        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |datapath|register_file:registerfile|rd_data0[23]                                                                                                                                                        ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |datapath|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 0 LEs                ; 168 LEs                ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[20]                                                                                                                                              ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 0 LEs                ; 184 LEs                ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[8]                                                                                                                                               ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[27]                                                                                                                                              ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[5]                                                                                                                                               ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[28]                                                                                                                                              ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |datapath|thirtytwobitregister:aluresultregister|sigout[3]                                                                                                                                               ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |datapath|mux2to1:registerfileoutputmux|y[11]                                                                                                                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |datapath|sramandio:memoryunit|output[15]                                                                                                                                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |datapath|sramandio:memoryunit|output[7]                                                                                                                                                                 ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |datapath|mux4to1:alu_inputb_4x1mux|Mux17                                                                                                                                                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|mux2to1:memorydatamux|y[2]                                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -432,13 +640,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2to1:registerfilemux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; width          ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:registerfileoutputmux ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; width          ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4to1:alu_inputb_4x1mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; width          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:memorydatamux ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; width          ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4to1:aluresultmux ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; width          ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -462,13 +700,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2to1:registerfilemux"                                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "thirtytwobitregister:aluresultregister" ;
++--------+-------+----------+----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                ;
++--------+-------+----------+----------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                           ;
++--------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MIPS_ALU:alu"                                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; branch_taken ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "instruction_register:instructionregister"                                                           ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; shiftlefttwo[25..11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instructiontype      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; signextend           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -480,24 +738,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtytwobitregister:registerfilerega"                                                ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "thirtytwobitregister:registerfilerega" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                          ;
++--------+-------+----------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtytwobitregister:memorydataregister"                                              ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "thirtytwobitregister:memorydataregister" ;
++--------+-------+----------+-----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                 ;
++--------+-------+----------+-----------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                            ;
++--------+-------+----------+-----------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -551,26 +807,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 85                          ;
-; cycloneiii_ff         ; 64                          ;
-;     CLR               ; 8                           ;
-;     ENA               ; 36                          ;
-;     ENA CLR           ; 7                           ;
+; boundary_port         ; 90                          ;
+; cycloneiii_ff         ; 1162                        ;
+;     CLR               ; 72                          ;
+;     ENA               ; 78                          ;
+;     ENA CLR           ; 999                         ;
 ;     ENA CLR SLD       ; 8                           ;
 ;     ENA SCLR          ; 5                           ;
-; cycloneiii_lcell_comb ; 96                          ;
+; cycloneiii_lcell_comb ; 854                         ;
 ;     arith             ; 16                          ;
 ;         2 data inputs ; 16                          ;
-;     normal            ; 80                          ;
+;     normal            ; 838                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 32                          ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 725                         ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.03                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -579,7 +835,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -589,62 +845,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 15:19:53 2023
+    Info: Processing started: Fri Nov 17 21:42:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file components/sram.vhd
-    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 57
-    Info (12023): Found entity 1: SRAM File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 43
+    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 57
+    Info (12023): Found entity 1: SRAM File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux2to1.vhd
-    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 18
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 18
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips_alu.vhd
-    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 19
-    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 19
+    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitregister.vhd
-    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 20
-    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 20
+    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitlatch.vhd
-    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
-    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
+    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio.vhd
-    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 26
-    Info (12023): Found entity 1: sramandio File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 26
+    Info (12023): Found entity 1: sramandio File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux4to1.vhd
-    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 20
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 20
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 7
 Warning (12019): Can't analyze file -- file SRAM.vhd is missing
 Warning (12019): Can't analyze file -- file components/TB_sramandio.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/register_file.vhd
-    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 25
-    Info (12023): Found entity 1: register_file File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 5
+    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 25
+    Info (12023): Found entity 1: register_file File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file components/datapath.vhd
-    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 36
-    Info (12023): Found entity 1: datapath File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 36
+    Info (12023): Found entity 1: datapath File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/tentothirtytwoextender.vhd
-    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
-    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
+    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
+    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file components/mips_controller.vhd
+    Info (12022): Found design unit 1: MIPS_controller-arch File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 33
+    Info (12023): Found entity 1: MIPS_controller File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file components/alu_controller.vhd
+    Info (12022): Found design unit 1: alu_controller-arch File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 19
+    Info (12023): Found entity 1: alu_controller File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file components/instruction_register.vhd
+    Info (12022): Found design unit 1: instruction_register-arch File: C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd Line: 24
+    Info (12023): Found entity 1: instruction_register File: C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd Line: 7
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(123): used implicit default value for signal "memoryunit_sram_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 123
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(124): used implicit default value for signal "memoryunit_sram_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 124
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(130): used implicit default value for signal "instructionregister_25to21" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 130
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(131): used implicit default value for signal "instructionregister_20to16" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 131
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(134): used implicit default value for signal "instructionregister_mux_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 134
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(135): used implicit default value for signal "instructionregister_mux_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 135
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(142): object "memorydataregister_mux_1" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 142
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(143): used implicit default value for signal "memorydataregister_mux_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 143
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(148): object "registerfile_rega_output" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 148
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(154): object "registerfile_outputmux_output" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 154
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(158): used implicit default value for signal "pc_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 158
-Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "tentothirtytwoextender:zeroextend" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 167
-Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
-Info (12128): Elaborating entity "sramandio" for hierarchy "sramandio:memoryunit" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 172
-Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 91
-Info (12128): Elaborating entity "SRAM" for hierarchy "sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 97
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
-Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
-Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(163): used implicit default value for signal "memoryunit_sram_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 163
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(168): object "instructionregister_31to26" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 168
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(172): object "instructionregister_15to0" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 172
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(197): used implicit default value for signal "pc_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 197
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(204): object "alu_branchtaken" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 204
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(206): used implicit default value for signal "alu_inputb_4x1mux_input_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 206
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(207): used implicit default value for signal "alu_inputb_4x1mux_input_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 207
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(208): used implicit default value for signal "alu_inputb_4x1mux_input_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 208
+Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "tentothirtytwoextender:zeroextend" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 222
+Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
+Info (12128): Elaborating entity "sramandio" for hierarchy "sramandio:memoryunit" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 227
+Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 91
+Info (12128): Elaborating entity "SRAM" for hierarchy "sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 97
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
+Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
+Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -696,14 +958,14 @@ Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|alts
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=SRAM"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gpt3.tdf
-    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_gpt3" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r5r2.tdf
-    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -715,11 +977,20 @@ Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|alts
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:instructionregistermux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 197
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:registerfile" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 218
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:registerfilemux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 263
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:instructionregistermux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 252
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:registerfile" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 273
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:registerfileoutputmux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 318
+Info (12128): Elaborating entity "instruction_register" for hierarchy "instruction_register:instructionregister" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 329
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:alu_inputb_4x1mux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 351
+Info (12128): Elaborating entity "MIPS_ALU" for hierarchy "MIPS_ALU:alu" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 360
+Warning (10036): Verilog HDL or VHDL warning at MIPS_ALU.vhd(20): object "tempsum" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 20
+Info (12128): Elaborating entity "alu_controller" for hierarchy "alu_controller:alucontroller" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 417
+Warning (10541): VHDL Signal Declaration warning at alu_controller.vhd(12): used implicit default value for signal "hi_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at alu_controller.vhd(13): used implicit default value for signal "lo_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at alu_controller.vhd(14): used implicit default value for signal "alu_lo_hi" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at alu_controller.vhd(15): used implicit default value for signal "op_select" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 15
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.17.15:20:07 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.11.17.21:42:32 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -730,87 +1001,88 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_leds[0]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[1]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[2]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[3]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[4]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[5]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[6]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[7]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[8]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[9]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[10]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[11]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[12]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[13]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[14]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[15]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[16]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[17]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[18]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[19]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[20]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[21]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[22]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[23]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[24]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[25]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[26]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[27]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[28]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[29]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[30]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[31]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[0]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[1]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[2]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[3]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[4]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[5]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[6]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[7]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[8]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[9]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[10]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[11]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[12]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[13]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[14]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[15]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[16]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[17]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[18]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[19]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[20]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[21]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[22]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[23]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[24]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[25]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[26]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[27]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[28]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[29]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[30]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[31]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 124 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 23 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "inport_enable" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 12
-    Warning (15610): No output dependent on input pin "input_switches[0]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[1]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[2]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[3]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[4]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[5]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[6]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[7]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[8]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[9]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "memtoreg" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 18
-    Warning (15610): No output dependent on input pin "irwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 19
-    Warning (15610): No output dependent on input pin "pcwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 20
-    Warning (15610): No output dependent on input pin "jal" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 21
-    Warning (15610): No output dependent on input pin "issigned" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 22
-    Warning (15610): No output dependent on input pin "pcsource" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 23
-    Warning (15610): No output dependent on input pin "aluop" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 24
-    Warning (15610): No output dependent on input pin "alusrcb" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 25
-    Warning (15610): No output dependent on input pin "alusrca" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 26
-    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 27
-    Warning (15610): No output dependent on input pin "regdst" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 28
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 31
-Info (21057): Implemented 346 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 29 input pins
+    Warning (15610): No output dependent on input pin "pcwrite" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 20
+    Warning (15610): No output dependent on input pin "issigned" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 22
+    Warning (15610): No output dependent on input pin "pcsource" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 23
+    Warning (15610): No output dependent on input pin "aluop[0]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "aluop[1]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "aluop[2]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "aluop[3]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "aluop[4]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "jal" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 21
+    Warning (15610): No output dependent on input pin "alusrca" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 26
+    Warning (15610): No output dependent on input pin "alusrcb[1]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 25
+    Warning (15610): No output dependent on input pin "alusrcb[0]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 25
+    Warning (15610): No output dependent on input pin "input_switches[0]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "inport_enable" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 12
+    Warning (15610): No output dependent on input pin "input_switches[9]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[1]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[2]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[3]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[4]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[5]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[6]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[7]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[8]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
+Info (21057): Implemented 2175 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 251 logic cells
+    Info (21061): Implemented 2075 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Fri Nov 17 15:20:18 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Fri Nov 17 21:42:44 2023
     Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:45
 
 

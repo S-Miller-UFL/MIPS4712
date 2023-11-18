@@ -8,7 +8,7 @@ entity MIPS_controller is
 port
 (
 --controller signals
-instruction_type	: in std_logic(5 downto 0);
+instruction_type	: in std_logic_vector(5 downto 0);
 pcwritecond			: out std_logic;
 lord					: out std_logic;
 memread				: out std_logic;
@@ -20,17 +20,28 @@ jal					: out std_logic;
 issigned				: out std_logic;
 pcsource				: out std_logic;
 aluop					: out std_logic;
-alusrcb				: out std_logic;
+alusrcb				: out std_logic_vector(1 downto 0);
 alusrca				: out std_logic;
 regwrite				: out std_logic;
-regdst				: out std_logic
+regdst				: out std_logic;
+
+--general signals
+clk 					: in std_logic 
 );
 end MIPS_controller;
 
 architecture arch of MIPS_controller is
-type asmstatetype is (fetch,decode
-							memory_computeaddress, memory_read,memory_write
-							alu_execute);
+type asmstatetype is (
+							fetch,
+							
+							decode,
+							
+							memory_computeaddress, 
+							
+							memory_read,memory_write,
+							
+							alu_execute
+							);
 signal state, nextstate: asmstatetype;
 begin
 
