@@ -1,0 +1,48 @@
+--Steven Miller
+--11710
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity MIPS_controller is
+port
+(
+--controller signals
+instruction_type	: in std_logic(5 downto 0);
+pcwritecond			: out std_logic;
+lord					: out std_logic;
+memread				: out std_logic;
+memwrite 			: out std_logic;
+memtoreg				: out std_logic;
+irwrite				: out std_logic;
+pcwrite				: out std_logic;
+jal					: out std_logic;
+issigned				: out std_logic;
+pcsource				: out std_logic;
+aluop					: out std_logic;
+alusrcb				: out std_logic;
+alusrca				: out std_logic;
+regwrite				: out std_logic;
+regdst				: out std_logic
+);
+end MIPS_controller;
+
+architecture arch of MIPS_controller is
+type asmstatetype is (fetch,decode
+							memory_computeaddress, memory_read,memory_write
+							alu_execute);
+signal state, nextstate: asmstatetype;
+begin
+
+--states
+process(clk)
+begin
+
+end process;
+
+--outputs
+process(state)
+begin
+
+end process;
+end arch;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips_cpu
-Fri Nov 17 14:03:34 2023
+Fri Nov 17 15:20:18 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -21,20 +21,21 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1
  15. Parameter Settings for User Entity Instance: sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "mux2to1:registerfilemux"
- 18. Port Connectivity Checks: "thirtytwobitregister:registerfileregb"
- 19. Port Connectivity Checks: "thirtytwobitregister:registerfilerega"
- 20. Port Connectivity Checks: "thirtytwobitregister:memorydataregister"
- 21. Port Connectivity Checks: "mux2to1:instructionregistermux"
- 22. Port Connectivity Checks: "sramandio:memoryunit|SRAM:sram_mem"
- 23. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:outport"
- 24. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport1"
- 25. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport0"
- 26. In-System Memory Content Editor Settings
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 16. Parameter Settings for User Entity Instance: mux2to1:instructionregistermux
+ 17. Parameter Settings for User Entity Instance: mux2to1:registerfilemux
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "mux2to1:registerfilemux"
+ 20. Port Connectivity Checks: "thirtytwobitregister:registerfileregb"
+ 21. Port Connectivity Checks: "thirtytwobitregister:registerfilerega"
+ 22. Port Connectivity Checks: "thirtytwobitregister:memorydataregister"
+ 23. Port Connectivity Checks: "sramandio:memoryunit|SRAM:sram_mem"
+ 24. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:outport"
+ 25. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport1"
+ 26. Port Connectivity Checks: "sramandio:memoryunit|thirtytwobitregister:inport0"
+ 27. In-System Memory Content Editor Settings
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -61,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 17 14:03:34 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 17 15:20:18 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
 ; Top-level Entity Name              ; datapath                                    ;
@@ -171,55 +172,55 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                  ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd                                                ;             ;
-; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd                                             ;             ;
-; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
-; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd                                           ;             ;
-; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd                                       ;             ;
-; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd                                            ;             ;
-; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                            ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                         ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                         ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                          ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                             ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                             ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                           ;             ;
-; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
-; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
-; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/source/eel4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                    ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                          ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                      ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                         ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                            ; altera_sld  ;
-; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                      ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                            ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd                                                ;             ;
+; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd                                             ;             ;
+; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
+; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd                                           ;             ;
+; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd                                       ;             ;
+; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd                                            ;             ;
+; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;             ;
+; db/altsyncram_gpt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf                                             ;             ;
+; db/altsyncram_r5r2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf                                             ;             ;
+; components/SRAM_INIT.mif                                           ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM_INIT.mif                                           ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                              ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                   ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                      ; altera_sld  ;
+; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -421,6 +422,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:instructionregistermux ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; width          ; 5     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:registerfilemux ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; width          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                               ;
 +-------------------------------------------+--------------------------------------------------------------------+
@@ -441,13 +462,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2to1:registerfilemux"                                                                ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; y[31..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2to1:registerfilemux"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -459,13 +480,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtytwobitregister:registerfilerega" ;
-+--------+-------+----------+---------------------------------------+
-; Port   ; Type  ; Severity ; Details                               ;
-+--------+-------+----------+---------------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                          ;
-+--------+-------+----------+---------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "thirtytwobitregister:registerfilerega"                                                ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -476,15 +498,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2to1:instructionregistermux"                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; y[31..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -576,60 +589,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 14:03:10 2023
+    Info: Processing started: Fri Nov 17 15:19:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file components/sram.vhd
-    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 57
-    Info (12023): Found entity 1: SRAM File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 43
+    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 57
+    Info (12023): Found entity 1: SRAM File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux2to1.vhd
-    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 16
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 18
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips_alu.vhd
-    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 19
-    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 19
+    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitregister.vhd
-    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 20
-    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 20
+    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitlatch.vhd
-    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
-    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
+    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio.vhd
-    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 26
-    Info (12023): Found entity 1: sramandio File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 26
+    Info (12023): Found entity 1: sramandio File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux4to1.vhd
-    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 16
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 20
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 7
 Warning (12019): Can't analyze file -- file SRAM.vhd is missing
 Warning (12019): Can't analyze file -- file components/TB_sramandio.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/register_file.vhd
-    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 25
-    Info (12023): Found entity 1: register_file File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 5
+    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 25
+    Info (12023): Found entity 1: register_file File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file components/datapath.vhd
-    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 36
-    Info (12023): Found entity 1: datapath File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 36
+    Info (12023): Found entity 1: datapath File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/tentothirtytwoextender.vhd
-    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
-    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
+    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
+    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(117): used implicit default value for signal "memoryunit_sram_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 117
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(118): used implicit default value for signal "memoryunit_sram_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 118
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(124): used implicit default value for signal "instructionregister_25to21" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 124
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(125): used implicit default value for signal "instructionregister_20to16" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 125
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(128): used implicit default value for signal "instructionregister_mux_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 128
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(129): used implicit default value for signal "instructionregister_mux_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 129
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(136): object "memorydataregister_mux_1" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 136
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(137): used implicit default value for signal "memorydataregister_mux_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 137
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(152): used implicit default value for signal "pc_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 152
-Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "tentothirtytwoextender:zeroextend" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 161
-Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
-Info (12128): Elaborating entity "sramandio" for hierarchy "sramandio:memoryunit" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 166
-Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 91
-Info (12128): Elaborating entity "SRAM" for hierarchy "sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 97
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(123): used implicit default value for signal "memoryunit_sram_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 123
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(124): used implicit default value for signal "memoryunit_sram_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 124
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(130): used implicit default value for signal "instructionregister_25to21" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 130
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(131): used implicit default value for signal "instructionregister_20to16" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 131
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(134): used implicit default value for signal "instructionregister_mux_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 134
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(135): used implicit default value for signal "instructionregister_mux_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 135
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(142): object "memorydataregister_mux_1" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 142
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(143): used implicit default value for signal "memorydataregister_mux_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 143
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(148): object "registerfile_rega_output" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 148
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(154): object "registerfile_outputmux_output" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 154
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(158): used implicit default value for signal "pc_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 158
+Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "tentothirtytwoextender:zeroextend" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 167
+Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
+Info (12128): Elaborating entity "sramandio" for hierarchy "sramandio:memoryunit" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 172
+Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 91
+Info (12128): Elaborating entity "SRAM" for hierarchy "sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 97
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -681,14 +696,14 @@ Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|alts
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=SRAM"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gpt3.tdf
-    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_gpt3 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_gpt3" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r5r2.tdf
-    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
-Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+    Info (12023): Found entity 1: altsyncram_r5r2 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_r5r2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_r5r2" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|altsyncram_r5r2:altsyncram1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 39
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12130): Elaborated megafunction instantiation "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
+Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_gpt3.tdf Line: 40
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -700,10 +715,11 @@ Info (12133): Instantiated megafunction "sramandio:memoryunit|SRAM:sram_mem|alts
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_gpt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:instructionregistermux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 190
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:registerfile" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 209
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:instructionregistermux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 197
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:registerfile" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 218
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:registerfilemux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 263
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.17.14:03:24 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.11.17.15:20:07 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -714,87 +730,87 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_leds[0]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[1]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[2]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[3]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[4]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[5]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[6]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[7]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[8]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[9]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[10]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[11]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[12]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[13]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[14]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[15]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[16]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[17]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[18]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[19]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[20]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[21]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[22]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[23]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[24]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[25]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[26]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[27]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[28]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[29]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[30]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
-    Warning (13410): Pin "output_leds[31]" is stuck at GND File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[0]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[1]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[2]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[3]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[4]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[5]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[6]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[7]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[8]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[9]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[10]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[11]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[12]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[13]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[14]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[15]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[16]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[17]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[18]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[19]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[20]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[21]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[22]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[23]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[24]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[25]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[26]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[27]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[28]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[29]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[30]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
+    Warning (13410): Pin "output_leds[31]" is stuck at GND File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 14
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 23 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "inport_enable" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 12
-    Warning (15610): No output dependent on input pin "input_switches[0]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[1]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[2]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[3]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[4]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[5]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[6]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[7]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[8]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "input_switches[9]" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 13
-    Warning (15610): No output dependent on input pin "memtoreg" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 18
-    Warning (15610): No output dependent on input pin "irwrite" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 19
-    Warning (15610): No output dependent on input pin "pcwrite" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 20
-    Warning (15610): No output dependent on input pin "jal" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 21
-    Warning (15610): No output dependent on input pin "issigned" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 22
-    Warning (15610): No output dependent on input pin "pcsource" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 23
-    Warning (15610): No output dependent on input pin "aluop" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 24
-    Warning (15610): No output dependent on input pin "alusrcb" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 25
-    Warning (15610): No output dependent on input pin "alusrca" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 26
-    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 27
-    Warning (15610): No output dependent on input pin "regdst" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 28
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 31
+    Warning (15610): No output dependent on input pin "inport_enable" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 12
+    Warning (15610): No output dependent on input pin "input_switches[0]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[1]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[2]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[3]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[4]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[5]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[6]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[7]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[8]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "input_switches[9]" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 13
+    Warning (15610): No output dependent on input pin "memtoreg" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 18
+    Warning (15610): No output dependent on input pin "irwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 19
+    Warning (15610): No output dependent on input pin "pcwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 20
+    Warning (15610): No output dependent on input pin "jal" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 21
+    Warning (15610): No output dependent on input pin "issigned" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 22
+    Warning (15610): No output dependent on input pin "pcsource" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 23
+    Warning (15610): No output dependent on input pin "aluop" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 24
+    Warning (15610): No output dependent on input pin "alusrcb" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 25
+    Warning (15610): No output dependent on input pin "alusrca" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 26
+    Warning (15610): No output dependent on input pin "regwrite" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 27
+    Warning (15610): No output dependent on input pin "regdst" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 28
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 31
 Info (21057): Implemented 346 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 29 input pins
     Info (21059): Implemented 33 output pins
     Info (21061): Implemented 251 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Fri Nov 17 14:03:34 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:48
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Fri Nov 17 15:20:18 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:15
 
 

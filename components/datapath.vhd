@@ -75,20 +75,26 @@ port
 end component;
 
 component mux2to1 is
+generic(width: positive :=32);
 port
 (
-	d : in std_logic_vector(63 downto 0);
+	A : in std_logic_vector(width-1 downto 0);
+	B : in std_logic_vector(width-1  downto 0);
 	s : in std_logic;
-	y : out std_logic_vector(31 downto 0)
+	y : out std_logic_vector(width-1  downto 0)
 );
 end component;
 
 component mux4to1 is
+generic(width: positive := 32);
 port
 (	
-	d : in std_logic_vector(127 downto 0);
+	A : in std_logic_vector(width-1  downto 0);
+	B : in std_logic_vector(width-1  downto 0);
+	C : in std_logic_vector(width-1  downto 0);
+	D : in std_logic_vector(width-1  downto 0);
 	s : in std_logic_vector(1 downto 0);
-	y : out std_logic_vector(31 downto 0)
+	y : out std_logic_vector(width-1 downto 0)
 );
 end component;
 
@@ -125,9 +131,9 @@ signal instructionregister_25to21		: std_logic_vector(4 downto 0);
 signal instructionregister_20to16		: std_logic_vector(4 downto 0);
 signal instructionregister_15to11		: std_logic_vector(3 downto 0);
 signal instructionregister_15to0 		: std_logic_vector(15 downto 0);
-signal instructionregister_mux_0 		: std_logic_vector(31 downto 0);
-signal instructionregister_mux_1 		: std_logic_vector(31 downto 0);
-signal instructionregister_mux_output 	: std_logic_vector(31 downto 0);
+signal instructionregister_mux_0 		: std_logic_vector(4 downto 0);
+signal instructionregister_mux_1 		: std_logic_vector(4 downto 0);
+signal instructionregister_mux_output 	: std_logic_vector(4 downto 0);
 
 --memory data signals
 signal memorydataregister_input			: std_logic_Vector(31 downto 0);
@@ -188,8 +194,10 @@ memoryunit: sramandio port map(
 										);
 										
 --change this so that the mux inputs are 5 bits wide, not 32.
-instructionregistermux: mux2to1 port map(
-														d => (instructionregister_mux_1 & instructionregister_mux_0),
+instructionregistermux: mux2to1 generic map(width=>5) port map(
+														A => instructionregister_mux_1,
+														
+														B => instructionregister_mux_0,
 													
 														s =>regdst,
 													
@@ -252,12 +260,14 @@ registerfileregb: thirtytwobitregister port map(
 																	output=>registerfile_regb_output
 																);
 																
-registerfilemux: mux2to1 port map(
-														d => (registerfile_rega_output & registerfile_regb_output),
+registerfilemux: mux2to1 generic map(width=>32) port map(
+														A => pc_output,
+														
+														B => registerfile_regb_output,
 													
 														s =>alusrca,
 													
-														y=>instructionregister_mux_output
+														y=>registerfile_outputmux_output
 													
 													 );
 										

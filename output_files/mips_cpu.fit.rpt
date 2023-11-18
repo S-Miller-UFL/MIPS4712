@@ -1,5 +1,5 @@
 Fitter report for mips_cpu
-Fri Nov 17 14:03:43 2023
+Fri Nov 17 15:20:27 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 17 14:03:43 2023       ;
+; Fitter Status                      ; Successful - Fri Nov 17 15:20:27 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
 ; Top-level Entity Name              ; datapath                                    ;
@@ -154,16 +154,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.16        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.8%      ;
-;     Processors 3-4         ;   1.8%      ;
+;     Processor 2            ;   2.2%      ;
+;     Processors 3-8         ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -585,7 +585,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/steve/source/eel4712/mini-project/output_files/mips_cpu.pin.
+The pin-out file can be found in C:/Users/steve/git_repos/school/EEL4712/mini-project/output_files/mips_cpu.pin.
 
 
 +---------------------------------------------------------------------------+
@@ -2040,7 +2040,7 @@ Note: This table only shows the top 30 path(s) that have the largest delay added
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device 10M50DAF484C6GES for design "mips_cpu"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2076,7 +2076,7 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk~input (placed in PIN M8 (CLK1n, DIFFIO_RX_L36n, DIFFOUT_L36n, High_Speed)) File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 30
+Info (176353): Automatically promoted node clk~input (placed in PIN M8 (CLK1n, DIFFIO_RX_L36n, DIFFOUT_L36n, High_Speed)) File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 30
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
@@ -2306,17 +2306,17 @@ Warning (334000): Timing characteristics of device 10M50DAF484C6GES are prelimin
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/steve/source/eel4712/mini-project/output_files/mips_cpu.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/steve/git_repos/school/EEL4712/mini-project/output_files/mips_cpu.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 198 warnings
-    Info: Peak virtual memory: 5651 megabytes
-    Info: Processing ended: Fri Nov 17 14:03:44 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5928 megabytes
+    Info: Processing ended: Fri Nov 17 15:20:27 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/steve/source/eel4712/mini-project/output_files/mips_cpu.fit.smsg.
+The suppressed messages can be found in C:/Users/steve/git_repos/school/EEL4712/mini-project/output_files/mips_cpu.fit.smsg.
 
 
