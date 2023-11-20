@@ -1,0 +1,153 @@
+# Compile of mips_controller.vhd was successful.
+# Compile of mips_controller_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.mips_controller_tb
+# vsim -gui work.mips_controller_tb 
+# Start time: 14:42:19 on Nov 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mips_controller_tb(tb)
+# Loading work.mips_controller(arch)
+add wave -position end  sim:/mips_controller_tb/instruction_type
+add wave -position end  sim:/mips_controller_tb/pcwritecond
+add wave -position end  sim:/mips_controller_tb/lord
+add wave -position end  sim:/mips_controller_tb/memread
+add wave -position end  sim:/mips_controller_tb/memwrite
+add wave -position end  sim:/mips_controller_tb/memtoreg
+add wave -position end  sim:/mips_controller_tb/irwrite
+add wave -position end  sim:/mips_controller_tb/pcwrite
+add wave -position end  sim:/mips_controller_tb/jal
+add wave -position end  sim:/mips_controller_tb/issigned
+add wave -position end  sim:/mips_controller_tb/pcsource
+add wave -position end  sim:/mips_controller_tb/aluop
+add wave -position end  sim:/mips_controller_tb/alusrcb
+add wave -position end  sim:/mips_controller_tb/alusrca
+add wave -position end  sim:/mips_controller_tb/regwrite
+add wave -position end  sim:/mips_controller_tb/regdst
+add wave -position end  sim:/mips_controller_tb/clk
+run
+run
+run
+run
+# ** Note: simulation finished!
+#    Time: 10 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+run
+# ** Note: simulation finished!
+#    Time: 30 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+run
+# ** Note: simulation finished!
+#    Time: 50 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+run
+# ** Note: simulation finished!
+#    Time: 70 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 90 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 110 ns  Iteration: 0  Instance: /mips_controller_tb
+add wave -position end  sim:/mips_controller_tb/UUT/state
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Note: simulation finished!
+#    Time: 10 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 30 ns  Iteration: 0  Instance: /mips_controller_tb
+# Compile of mips_controller.vhd was successful.
+# Compile of mips_controller_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mips_controller_tb(tb)
+# Loading work.mips_controller(arch)
+run
+# ** Note: simulation finished!
+#    Time: 5 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 15 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 25 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 35 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 45 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 65 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 75 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 85 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 95 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 105 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 115 ns  Iteration: 0  Instance: /mips_controller_tb
+add wave -position end  sim:/mips_controller_tb/UUT/nextstate
+restart -f
+run
+# ** Note: simulation finished!
+#    Time: 5 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 15 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 25 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 35 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 45 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips_controller_tb
+# Compile of mips_controller.vhd was successful.
+# Compile of mips_controller_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mips_controller_tb(tb)
+# Loading work.mips_controller(arch)
+# Warning in wave window restart: (vish-4014) No objects found matching '/mips_controller_tb/UUT/nextstate'. 
+run
+# ** Note: simulation finished!
+#    Time: 5 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 15 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 25 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 35 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 45 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 65 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 75 ns  Iteration: 0  Instance: /mips_controller_tb
+run
+# ** Note: simulation finished!
+#    Time: 85 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 95 ns  Iteration: 0  Instance: /mips_controller_tb
+# End time: 17:56:43 on Nov 20,2023, Elapsed time: 3:14:24
+# Errors: 0, Warnings: 1

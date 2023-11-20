@@ -2,56 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "memwrite",
-					"strict" : false
-				},
-				{
-					"name" : "memread",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "memtoreg",
-					"strict" : false
-				},
-				{
-					"name" : "regdst",
-					"strict" : false
-				},
-				{
-					"name" : "regwrite",
-					"strict" : false
-				},
-				{
-					"name" : "irwrite",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tms",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

@@ -1,0 +1,20 @@
+--steven miller
+--Section number: 11710
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity signextend is
+port
+(
+	input: in std_logic_vector(15 downto 0);
+	output: out std_logic_vector(31 downto 0);
+);
+end signextend;
+
+architecture arch of signextend is
+
+begin
+
+output <= "0000000000000000" & input;
+end arch;

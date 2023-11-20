@@ -71,6 +71,14 @@ address <= x"00000000";
 sram_data <= x"0A0A0A0A";
 wait until rising_edge(clk);
 
+--read from byte address 0X00000000
+write_en <= '0';
+read_en <= '1';
+address <= x"00000000";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000000 is not 0x0A0A0A0A";
+
 --write 0xF0F0F0F0 to byte address 0x00000004
 write_en <= '1';
 read_en <= '0';
@@ -83,7 +91,7 @@ write_en <= '0';
 read_en <= '1';
 address <= x"00000000";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000000 is not 0x0A0A0A0A";
 
 --read from byte address 0x00000001
@@ -91,7 +99,7 @@ write_en <= '0';
 read_en <= '1';
 address <= x"00000001";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000001 is not 0x0A0A0A0A";
 
 --read from byte address 0x00000004
@@ -99,7 +107,7 @@ write_en <= '0';
 read_en <= '1';
 address <= x"00000004";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"F0F0F0F0") report "ERROR: byte address 0x00000004 is not 0xF0F0F0F0";
 
 --read from byte address 0x00000005
@@ -107,7 +115,7 @@ write_en <= '0';
 read_en <= '1';
 address <= x"00000005";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"F0F0F0F0") report "ERROR: byte address 0x00000005 is not 0xF0F0F0F0";
 
 --Write 0x00001111 to the outport
@@ -116,7 +124,7 @@ read_en <= '0';
 address <= x"0000FFFC";
 sram_data <= x"00001111";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert (outport_output = x"00001111") report "ERROR: outport is not 0x00001111";
 
 --Load 0x00010000 into inport 0
@@ -143,7 +151,7 @@ read_en <= '0';
 inport_en <= '0';
 address <= x"0000FFF8";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"00010000") report "ERROR: inport 0 is not 0x00010000";
 
 --Read from inport 1
@@ -152,7 +160,7 @@ read_en <= '0';
 inport_en <= '0';
 address <= x"0000FFFC";
 wait until rising_edge(clk);
---wait for 5ns;
+wait for 5ns;
 assert(output = x"00000001") report "ERROR: inport 1 is not 0x00000001";
 
 report "simulation finished!";

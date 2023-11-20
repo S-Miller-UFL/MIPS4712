@@ -71,6 +71,14 @@ address <= x"00000000";
 sram_data <= x"0A0A0A0A";
 wait until rising_edge(clk);
 
+--read from byte address 0x00000001
+write_en <= '0';
+read_en <= '1';
+address <= x"00000001";
+wait until rising_edge(clk);
+wait for 5ns;
+assert(output = x"0A0A0A0A") report "ERROR: byte address 0x00000001 is not 0x0A0A0A0A";
+
 --write 0xF0F0F0F0 to byte address 0x00000004
 write_en <= '1';
 read_en <= '0';

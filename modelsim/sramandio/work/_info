@@ -53,25 +53,25 @@ R11
 R12
 R13
 Esramandio
-Z14 w1700089467
+Z14 w1700242948
 Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
-!i122 344
-Z16 dC:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/sramandio
-Z17 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
-Z18 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+!i122 350
+Z16 dC:/Users/steve/source/eel4712/mini-project/modelsim/sramandio
+Z17 8C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd
+Z18 FC:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd
 l0
 L7 1
 VhK;;]lI5;MgNCoVBjaUbC1
 !s100 eQ:JdV3SVKJ1HjIE5SlBN0
 R7
 32
-Z19 !s110 1700089561
+Z19 !s110 1700492812
 !i10b 1
-Z20 !s108 1700089561.000000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd|
-Z22 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd|
+Z20 !s108 1700492811.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd|
+Z22 !s107 C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd|
 !i113 1
 R12
 R13
@@ -80,11 +80,11 @@ R15
 R2
 R3
 Z23 DEx4 work 9 sramandio 0 22 hK;;]lI5;MgNCoVBjaUbC1
-!i122 344
-l72
-Z24 L26 100
-Z25 V<I3[9@dMF>>PjQJ9@Y:bn3
-Z26 !s100 J[0a`mMNkH<T5M_Nk=AR]1
+!i122 350
+l83
+Z24 L26 113
+Z25 VMoS229kj9kA7F0R;G?`fi2
+Z26 !s100 iY76o]Y]d9;?V4YD;^C@o0
 R7
 32
 R19
@@ -96,27 +96,27 @@ R22
 R12
 R13
 Etb_sramandio
-Z27 w1700089558
+Z27 w1700492809
 R15
 Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
-!i122 343
+!i122 349
 R16
-Z30 8C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd
-Z31 FC:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd
+Z30 8C:/Users/steve/source/eel4712/mini-project/testbenches/TB_sramandio.vhd
+Z31 FC:/Users/steve/source/eel4712/mini-project/testbenches/TB_sramandio.vhd
 l0
 L11 1
 V_DZ[b2;7WJmaZcRLhj_Y80
 !s100 6TV0W1SE?b?kQ1o3E3YiO1
 R7
 32
-Z32 !s110 1700089560
+Z32 !s110 1700492811
 !i10b 1
-Z33 !s108 1700089560.000000
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd|
-Z35 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/TB_sramandio.vhd|
+R20
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/testbenches/TB_sramandio.vhd|
+Z34 !s107 C:/Users/steve/source/eel4712/mini-project/testbenches/TB_sramandio.vhd|
 !i113 1
 R12
 R13
@@ -128,31 +128,31 @@ R29
 R2
 R3
 DEx4 work 12 tb_sramandio 0 22 _DZ[b2;7WJmaZcRLhj_Y80
-!i122 343
+!i122 349
 l47
-L15 146
-V1d?lCABJER130K4O1^kRL2
-!s100 VX[kKJcizAJ]kQQ<<Lo]B3
+L15 154
+VChUNEBoB8djJ@II7VcEg91
+!s100 G<oel]ldknH]m^G_I<4j10
 R7
 32
 R32
 !i10b 1
+R20
 R33
 R34
-R35
 !i113 1
 R12
 R13
 Ethirtytwobitlatch
-Z36 w1699823756
+Z35 w1699823756
 R29
 R28
 R2
 R3
 !i122 238
 R4
-Z37 8C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd
-Z38 FC:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd
+Z36 8C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd
+Z37 FC:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd
 l0
 L7 1
 Vl]nCmm9@4<giCOT[Xl0IV0
@@ -162,8 +162,8 @@ R7
 R8
 !i10b 1
 R9
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd|
-Z40 !s107 C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd|
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd|
+Z39 !s107 C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd|
 !i113 1
 R12
 R13
@@ -183,32 +183,32 @@ R7
 R8
 !i10b 1
 R9
+R38
 R39
-R40
 !i113 1
 R12
 R13
 Ethirtytwobitregister
-Z41 w1699810314
+Z40 w1699810314
 R29
 R28
 R2
 R3
 !i122 241
-Z42 dC:/Users/steve/source/eel4712/mini-project/modelsim/sramandio
-Z43 8C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
-Z44 FC:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
+R16
+Z41 8C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
+Z42 FC:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
 l0
 L7 1
 Va^Pga90>aW<<=ICgzdf<N0
 !s100 inW>J47zLAEPUOYFLX2cR1
 R7
 32
-Z45 !s110 1700066411
+Z43 !s110 1700066411
 !i10b 1
-Z46 !s108 1700066411.000000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
-Z48 !s107 C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
+Z44 !s108 1700066411.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
+Z46 !s107 C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
 !i113 1
 R12
 R13
@@ -225,11 +225,11 @@ V`6aocM^AEa3AKhgCMKeTJ1
 !s100 bo<c<J;7TWgCb29?EC1IN2
 R7
 32
-R45
+R43
 !i10b 1
+R44
+R45
 R46
-R47
-R48
 !i113 1
 R12
 R13

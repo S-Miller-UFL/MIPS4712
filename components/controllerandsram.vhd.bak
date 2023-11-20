@@ -1,0 +1,49 @@
+--Steven Miller
+--11710
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity controllerandsram is
+
+port
+(
+);
+end controllerandsram;
+
+architecture arch of controllerandsram is
+
+component mips_controller is
+port
+(
+	instruction_type	: in std_logic_vector(5 downto 0);
+	pcwritecond			: out std_logic;
+	lord					: out std_logic;
+	memread				: out std_logic;
+	memwrite 			: out std_logic;
+	memtoreg				: out std_logic;
+	irwrite				: out std_logic;
+	pcwrite				: out std_logic;
+	jal					: out std_logic;
+	issigned				: out std_logic;
+	pcsource				: out std_logic;
+	aluop					: out std_logic_vector(5 downto 0);
+	alusrcb				: out std_logic_vector(1 downto 0);
+	alusrca				: out std_logic;
+	regwrite				: out std_logic;
+	regdst				: out std_logic;
+	--general signals
+	clk 					: in std_logic 
+);
+end component;
+
+component sramandio is
+
+port
+(
+);
+end component;
+
+begin
+
+end arch;

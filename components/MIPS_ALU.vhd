@@ -24,7 +24,7 @@ signal ir_sig : unsigned(4 downto 0) := (others => '0');
 begin
 process(A,B,opcode,ir)
 
-variable tempmult :std_logic_Vector(63 downto 0) := (others => '0');
+variable tempmult :std_logic_vector(63 downto 0) := (others => '0');
 
 begin
 tempsum <= (others => '0');
@@ -156,14 +156,10 @@ end if;
 
 --JUMP REGISTER
 when "10010"=>
-if(signed(A)  > to_signed(0,32)) then
-	result <= std_logic_vector(to_unsigned(1,32));
-	branch_taken <= '1';
-else
-	result <= (others=>'0');
-	branch_taken <= '0';
-end if;
-
+result <= A;
+--nop
+when "10011" =>
+	--do nothing
 when others =>
 	null;
 
