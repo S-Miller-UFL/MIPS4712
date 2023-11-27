@@ -1,0 +1,27 @@
+# Compile of alu_tb.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_tb
+# vsim -gui work.alu_tb 
+# Start time: 13:21:12 on Nov 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_tb(tb)
+# Loading work.mips_alu(arch)
+add wave -position end  sim:/alu_tb/A
+add wave -position end  sim:/alu_tb/B
+add wave -position end  sim:/alu_tb/ir
+add wave -position end  sim:/alu_tb/opcode
+add wave -position end  sim:/alu_tb/result
+add wave -position end  sim:/alu_tb/result_hi
+add wave -position end  sim:/alu_tb/branch_taken
+run -all
+# ** Note: simulation finished!
+#    Time: 600 ns  Iteration: 0  Instance: /alu_tb
+# End time: 13:31:46 on Nov 21,2023, Elapsed time: 0:10:34
+# Errors: 0, Warnings: 2
+# Closing project C:/Users/steve/source/eel4712/mini-project/modelsim/alu/alu.mpf

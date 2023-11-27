@@ -1,17 +1,17 @@
-Fitter Status : Successful - Mon Nov 20 17:56:17 2023
+Fitter Status : Successful - Tue Nov 21 18:17:46 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : mips_cpu
-Top-level Entity Name : MIPS4712
+Top-level Entity Name : sramandio
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 1 / 49,760 ( < 1 % )
-    Total combinational functions : 1 / 49,760 ( < 1 % )
-    Dedicated logic registers : 0 / 49,760 ( 0 % )
-Total registers : 0
-Total pins : 45 / 360 ( 13 % )
+Total logic elements : 391 / 49,760 ( < 1 % )
+    Total combinational functions : 269 / 49,760 ( < 1 % )
+    Dedicated logic registers : 278 / 49,760 ( < 1 % )
+Total registers : 278
+Total pins : 166 / 360 ( 46 % )
 Total virtual pins : 0
-Total memory bits : 0 / 1,677,312 ( 0 % )
+Total memory bits : 8,192 / 1,677,312 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
 UFM blocks : 0 / 1 ( 0 % )
