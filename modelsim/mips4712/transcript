@@ -1,0 +1,536 @@
+# 0 compiles, 2 failed with no errors.
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of mips_controller_tb.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of mips_controller_tb.vhd failed with 1 errors.
+# Compile of mips_controller.vhd was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of mips_controller_tb.vhd failed with 1 errors.
+# Compile of mips_controller.vhd was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of mips_controller_tb.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.mips_controller_tb
+# vsim -gui work.mips_controller_tb 
+# Start time: 15:23:43 on Nov 27,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mips_controller_tb(tb)
+# Loading work.mips_controller(arch)
+add wave -position end  sim:/mips_controller_tb/aluop
+add wave -position end  sim:/mips_controller_tb/alusrca
+add wave -position end  sim:/mips_controller_tb/alusrcb
+add wave -position end  sim:/mips_controller_tb/clk
+add wave -position end  sim:/mips_controller_tb/instruction_type
+add wave -position end  sim:/mips_controller_tb/irwrite
+add wave -position end  sim:/mips_controller_tb/issigned
+add wave -position end  sim:/mips_controller_tb/jal
+add wave -position end  sim:/mips_controller_tb/lord
+add wave -position end  sim:/mips_controller_tb/memread
+add wave -position end  sim:/mips_controller_tb/memtoreg
+add wave -position end  sim:/mips_controller_tb/memwrite
+add wave -position end  sim:/mips_controller_tb/pcsource
+add wave -position end  sim:/mips_controller_tb/pcwrite
+add wave -position end  sim:/mips_controller_tb/pcwritecond
+add wave -position end  sim:/mips_controller_tb/regdst
+add wave -position end  sim:/mips_controller_tb/regwrite
+add wave -position end  sim:/mips_controller_tb/reset
+run
+# ** Note: simulation finished!
+#    Time: 5 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 15 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 25 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 35 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 45 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 65 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 75 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 85 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 95 ns  Iteration: 0  Instance: /mips_controller_tb
+add wave -position end  sim:/mips_controller_tb/UUT/state
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: simulation finished!
+#    Time: 5 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 15 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 25 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 35 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 45 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 65 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 75 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 85 ns  Iteration: 0  Instance: /mips_controller_tb
+# ** Note: simulation finished!
+#    Time: 95 ns  Iteration: 0  Instance: /mips_controller_tb
+# End time: 15:29:17 on Nov 27,2023, Elapsed time: 0:05:34
+# Errors: 0, Warnings: 1
+# Closing project C:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/mips_controller/mips_controller.mpf
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project mips4712
+vsim -gui work.mips4712_tb
+# vsim -gui work.mips4712_tb 
+# Start time: 15:29:25 on Nov 27,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mips4712_tb(tb)
+# Loading work.mips4712(arch)
+# Loading work.datapath(arch)
+# ** Warning: (vsim-3473) Component instance "zeroextend : tentothirtytwoextender" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# Loading work.sramandio(arch)
+# ** Warning: (vsim-3473) Component instance "inport0 : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "inport1 : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "outport : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "dff : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# Loading altera_mf.altera_mf_components
+# Loading work.sram(syn)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# ** Warning: (vsim-3473) Component instance "instructionregistermux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "memorydataregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# Loading work.register_file(sync_read)
+# ** Warning: (vsim-3473) Component instance "registerfilerega : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "registerfileregb : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "registerfileoutputmux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "instructionregister : instruction_register" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "alu_inputb_4x1mux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "alu : MIPS_ALU" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "memorydatamux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "aluresultregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "loregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "hiregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "aluresultmux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# Loading work.alu_controller(arch)
+# ** Warning: (vsim-3473) Component instance "pcsourcemux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "signextender : signextend" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "programcounter : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "programcountermux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# Loading work.mips_controller(arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/memoryunit/output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/UUT/datapathcircuit/memoryunit_output.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/memoryunit/outport_output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/output_leds, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/instructiontype, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/UUT/controller_instruction_type.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/outputs, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+add wave -position end  sim:/mips4712_tb/clk
+add wave -position end  sim:/mips4712_tb/inport_en
+add wave -position end  sim:/mips4712_tb/input_sw
+add wave -position end  sim:/mips4712_tb/outputs
+add wave -position end  sim:/mips4712_tb/reset
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/aluop
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/alusrca
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/alusrcb
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/clk
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/instruction_type
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/irwrite
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/issigned
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/jal
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/lord
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/memread
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/memtoreg
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/memwrite
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/pcsource
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/pcwrite
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/pcwritecond
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/regdst
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/regwrite
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/reset
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/state
+run
+# ** Error: Illegal Character Ain string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Bin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Fin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Fin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/instructionregister_31to26
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3473) Component instance "zeroextend : tentothirtytwoextender" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "inport0 : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "inport1 : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "outport : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "dff : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+# ** Warning: (vsim-3473) Component instance "instructionregistermux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "memorydataregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "registerfilerega : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "registerfileregb : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "registerfileoutputmux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "instructionregister : instruction_register" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "alu_inputb_4x1mux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "alu : MIPS_ALU" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "memorydatamux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "aluresultregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "loregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "hiregister : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "aluresultmux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "pcsourcemux : mux4to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "signextender : signextend" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "programcounter : thirtytwobitregister" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-3473) Component instance "programcountermux : mux2to1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/memoryunit/output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/UUT/datapathcircuit/memoryunit_output.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/memoryunit/outport_output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/output_leds, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/datapathcircuit/instructiontype, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/UUT/controller_instruction_type.
+# ** Warning: (vsim-8684) No drivers exist on out port /mips4712_tb/UUT/outputs, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /mips4712_tb/outputs.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: Illegal Character Ain string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Bin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Fin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Error: Illegal Character Fin string parameter! 
+#    Time: 0 ps  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 35 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 45 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Note: simulation finished!
+#    Time: 55 ns  Iteration: 0  Instance: /mips4712_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 0  Instance: /mips4712_tb/UUT/datapathcircuit/registerfile
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 1  Instance: /mips4712_tb/UUT/datapathcircuit/memoryunit/sram_mem/altsyncram_component
+# End time: 15:31:51 on Nov 27,2023, Elapsed time: 0:02:26
+# Errors: 4, Warnings: 90

@@ -27,13 +27,14 @@ architecture TB of MIPS_controller_tb is
 			pcwrite				: out std_logic;
 			jal					: out std_logic;
 			issigned				: out std_logic;
-			pcsource				: out std_logic;
+			pcsource				: out std_logic_vector(1 downto 0);
 			aluop					: out std_logic_vector(5 downto 0);
 			alusrcb				: out std_logic_vector(1 downto 0);
 			alusrca				: out std_logic;
 			regwrite				: out std_logic;
 			regdst				: out std_logic;
-			clk 					: in std_logic 
+			clk 					: in std_logic;
+			reset					: in std_logic
            );
 
     end component;
@@ -48,13 +49,14 @@ architecture TB of MIPS_controller_tb is
 			signal pcwrite					: std_logic;
 			signal jal						: std_logic;
 			signal issigned				: std_logic;
-			signal pcsource				: std_logic;
+			signal pcsource				: std_logic_vector(1 downto 0);
 			signal aluop					: std_logic_vector(5 downto 0);
 			signal alusrcb					: std_logic_vector(1 downto 0);
 			signal alusrca					: std_logic;
 			signal regwrite				: std_logic;
 			signal regdst					: std_logic;
 			signal clk 						: std_logic:='0'; 
+			signal reset 					: std_logic;
 			
 begin
 
@@ -78,9 +80,9 @@ UUT : entity work.MIPS_controller
 			  regwrite				=>	regwrite	,
 			  regdst					=>	regdst,
 			  clk						=> clk
-	);
+			  );
 
-clk<= not(clk) after 10 ns;
+clk<= not(clk) after 5 ns;
 	
 process
 

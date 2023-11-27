@@ -18,20 +18,23 @@ irwrite				: out std_logic;
 pcwrite				: out std_logic;
 jal					: out std_logic;
 issigned				: out std_logic;
-pcsource				: out std_logic;
+pcsource				: out std_logic_vector(1 downto 0);
 aluop					: out std_logic_vector(5 downto 0);
 alusrcb				: out std_logic_vector(1 downto 0);
 alusrca				: out std_logic;
 regwrite				: out std_logic;
 regdst				: out std_logic;
 --general signals
-clk 					: in std_logic 
+clk 					: in std_logic; 
+reset					: in std_logic
 );
 end MIPS_controller;
 
 architecture arch of MIPS_controller is
 type asmstatetype is (
 							fetch,
+							
+							fetch_buffer0,
 							
 							decode,
 							
@@ -54,10 +57,12 @@ type asmstatetype is (
 signal state: asmstatetype := fetch;
 begin
 --states
-process(clk)
+process(clk, reset)
 
 begin
-if (clk'event and clk = '1') then
+if(reset = '1') then
+	state <= fetch;
+elsif (clk'event and clk = '1') then
 
 	--so state only updates on rising edge
 	
@@ -65,7 +70,11 @@ if (clk'event and clk = '1') then
 	
 		when fetch=>
 		
-			state<=decode;
+			state<=fetch_buffer0;
+			
+		when fetch_buffer0 =>
+		
+			state <= decode;
 			
 		when decode=>
 		
@@ -140,7 +149,24 @@ case state is
 		pcwrite		<=	'1';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "01";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		
+	when fetch_buffer0=>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '1';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "01";
 		alusrca		<= '0';
@@ -157,7 +183,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "11";
 		alusrca		<= '0';
@@ -173,7 +199,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	instruction_type;
 		alusrcb		<= "00";
 		alusrca		<= '1';
@@ -189,7 +215,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';
@@ -205,7 +231,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'1';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	instruction_type;
 		alusrcb		<= "10";
 		alusrca		<= '1';
@@ -221,7 +247,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';
@@ -237,7 +263,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'1';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "10";
 		alusrca		<= '1';
@@ -253,7 +279,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';
@@ -269,7 +295,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';
@@ -285,7 +311,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';
@@ -301,7 +327,7 @@ case state is
 		pcwrite		<=	'0';
 		jal			<=	'0';
 		issigned		<=	'0';
-		pcsource		<=	'0';
+		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "00";
 		alusrca		<= '0';

@@ -223,6 +223,7 @@ signal pcsource_mux_2						: std_logic_vector(31 downto 0);
 signal pcsource_concat						: std_logic_vector(31 downto 0);
 signal pcsource_shiftleft_output			: std_logic_vector(31 downto 0);
 signal pc_enable 								: std_logic;
+signal concated 					: std_logic_vector(31 downto 0);
 --alu signals
 signal alu_input1										: std_logic_vector(31 downto 0);
 signal alu_input2										: std_logic_vector(31 downto 0);
@@ -246,6 +247,9 @@ signal alucontroller_opcode				: std_logic_Vector(4 downto 0);
 signal alucontroller_hien					: std_logic;
 signal alucontroller_loen					: std_logic;
 signal alucontroller_alulohi				: std_logic_vector(1 downto 0);
+signal shifted_left 					: std_logic_vector(31 downto 0);
+
+
 begin
 
 pc_enable <= ((alu_branchtaken and pcwritecond) or (pcwrite));
@@ -377,12 +381,12 @@ instructionregister: instruction_register port map(
 
 
 																	);		
-																	
+			shifted_left <= std_logic_vector(shift_left(unsigned(alu_inputb_4x1mux_signextend_output),2));													
 alu_inputb_4x1mux: mux4to1 port map(
 												A=>alu_inputb_4x1mux_input_0,
 												B=>alu_inputb_4x1mux_input_1,
 												C=>alu_inputb_4x1mux_signextend_output,
-												D=>std_logic_vector(shift_left(unsigned(alu_inputb_4x1mux_signextend_output),2)),
+												D=>shifted_left,
 												s=>alusrcb,
 												y=>alu_input2
 												);		
@@ -452,11 +456,11 @@ alucontroller: alu_controller port map(
 													alu_lo_hi=>alucontroller_alulohi,
 													op_select=>alucontroller_opcode
 													);
-													
+			concated <= pc_output(31 downto 28) & instructionregister_25to0 & "00";									
 pcsourcemux: mux4to1 generic map(width=>32) port map(
 																		A=>alu_result,
 																		B=>alu_result_mux_input_0,
-																		C=> pc_output(31 downto 28) & instructionregister_25to0 & "00",
+																		C=> concated,
 																		--D=>alu_inputb_4x1mux_input_3,
 																		s=>pcsource,
 																		y=>pc_input

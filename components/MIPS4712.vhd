@@ -33,14 +33,15 @@ port
 	pcwrite				: out std_logic;
 	jal					: out std_logic;
 	issigned				: out std_logic;
-	pcsource				: out std_logic;
+	pcsource				: out std_logic_vector(1 downto 0);
 	aluop					: out std_logic_vector(5 downto 0);
 	alusrcb				: out std_logic_vector(1 downto 0);
 	alusrca				: out std_logic;
 	regwrite				: out std_logic;
 	regdst				: out std_logic;
 	--general signals
-	clk 					: in std_logic 
+	clk 					: in std_logic;
+	reset 				: in std_logic
 );
 end component;
 
@@ -74,9 +75,70 @@ port
 	
 );
 end component;
-
-
+	signal controller_instruction_type	: std_logic_vector(5 downto 0);
+	signal controller_pcwritecond			: std_logic;
+	signal controller_lord					: std_logic;
+	signal controller_memread				: std_logic;
+	signal controller_memwrite 			: std_logic;
+	signal controller_memtoreg				: std_logic;
+	signal controller_irwrite				: std_logic;
+	signal controller_pcwrite				: std_logic;
+	signal controller_jal					: std_logic;
+	signal controller_issigned				: std_logic;
+	signal controller_pcsource				: std_logic_vector(1 downto 0);
+	signal controller_aluop					: std_logic_vector(5 downto 0);
+	signal controller_alusrcb				: std_logic_vector(1 downto 0);
+	signal controller_alusrca				: std_logic;
+	signal controller_regwrite				: std_logic;
+	signal controller_regdst				: std_logic;
 begin
 
+datapathcircuit : datapath port map
+(
+	inport_enable 		=>inport_en,
+	input_switches 	=>input_sw,
+	output_leds 		=>outputs,
+	memread				=>controller_memread,
+	memwrite 			=>controller_memwrite,
+	memtoreg				=>controller_memtoreg,
+	irwrite				=>controller_irwrite,
+	pcwrite				=>controller_pcwrite,
+	pcwritecond			=>controller_pcwritecond,
+	jal					=>controller_jal,
+	issigned				=>controller_issigned,
+	pcsource				=>controller_pcsource,
+	aluop					=>controller_aluop,
+	alusrcb				=>controller_alusrcb,
+	alusrca				=>controller_alusrca,
+	regwrite				=>controller_regwrite,
+	regdst				=>controller_regdst,
+	lord					=>controller_lord,
+	instructiontype	=> controller_instruction_type,
+	clk					=>clk,
+	reset					=> reset
+	
+);
 
+controllercircuit : MIPS_controller port map
+(
+
+	instruction_type	=>controller_instruction_type,
+	pcwritecond			=>controller_pcwritecond,
+	lord					=>controller_lord		,
+	memread				=>controller_memread	,
+	memwrite 			=>controller_memwrite,
+	memtoreg				=>controller_memtoreg,
+	irwrite				=>controller_irwrite	,
+	pcwrite				=>controller_pcwrite	,
+	jal					=>controller_jal		,
+	issigned				=>controller_issigned,
+	pcsource				=>controller_pcsource,
+	aluop					=>controller_aluop		,
+	alusrcb				=>controller_alusrcb	,
+	alusrca				=>controller_alusrca	,
+	regwrite				=>controller_regwrite,
+	regdst				=>controller_regdst	,
+	clk 					=> clk,
+	reset 				=> reset
+);
 end arch;

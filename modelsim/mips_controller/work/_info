@@ -9,26 +9,26 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/steve/source/eel4712/mini-project/modelsim/sramandio
-Emips_controller
-Z0 w1700510230
+Ealu_controller
+Z0 w1700703389
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 4
-Z4 dC:/Users/steve/source/eel4712/mini-project/modelsim/mips_controller
-Z5 8C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd
-Z6 FC:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd
+!i122 6
+Z4 dC:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/mips_controller
+Z5 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd
+Z6 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd
 l0
 L7 1
-VZ<c5LdIB1V>@U3Z43f0W;0
-!s100 @O=Jlm?YU;JSbC1Oc?Y932
+VL@NUBbfnU47jJ7<lQlCGi3
+!s100 <M^d9ck_ZeZB2KCDnXE^C3
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1700510302
+Z8 !s110 1701116416
 !i10b 1
-Z9 !s108 1700510302.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd|
-Z11 !s107 C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd|
+Z9 !s108 1701116416.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd|
+Z11 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -36,12 +36,12 @@ Aarch
 R1
 R2
 R3
-Z14 DEx4 work 15 mips_controller 0 22 Z<c5LdIB1V>@U3Z43f0W;0
-!i122 4
-l56
-L33 282
-VaS?``<U1CO7DdDVZlPMDb0
-!s100 BAI[GmaN_Y65;4GIzVIaf3
+DEx4 work 14 alu_controller 0 22 L@NUBbfnU47jJ7<lQlCGi3
+!i122 6
+l21
+L19 218
+V2H=>eD4ZAWe@4?z@3D4TV2
+!s100 n@HlZ58_]IfmPg<@O_agB3
 R7
 32
 R8
@@ -52,51 +52,94 @@ R11
 !i113 1
 R12
 R13
-Emips_controller_tb
-Z15 w1700509463
+Emips_controller
+Z14 w1701110841
 R1
-Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
-!i122 5
+!i122 13
 R4
-Z18 8C:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd
-Z19 FC:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd
+Z15 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd
+Z16 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd
+l0
+L7 1
+V=jNbBAb8JSFL4kfe;Ba?_3
+!s100 Y4l[RDk`hiIO1oBBVLHa82
+R7
+32
+Z17 !s110 1701116614
+!i10b 1
+Z18 !s108 1701116614.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd|
+Z20 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+Z21 DEx4 work 15 mips_controller 0 22 =jNbBAb8JSFL4kfe;Ba?_3
+!i122 13
+l58
+Z22 L33 307
+Z23 VWHCiTkYN1QRGF9Af?aAB;2
+Z24 !s100 NWIbW:]Sfgogdl;AQeWKT3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Emips_controller_tb
+Z25 w1701116612
+R1
+Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 12
+R4
+Z28 8C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd
+Z29 FC:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd
 l0
 L10 1
 V]?H384?ho@;T3;lL1O;CD0
 !s100 SYVG3jW30Yi5FA7E9CT3U1
 R7
 32
-Z20 !s110 1700510303
+R17
 !i10b 1
-R9
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd|
-Z22 !s107 C:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd|
+R18
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd|
+Z31 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd|
 !i113 1
 R12
 R13
 Atb
-R14
+R21
 R1
-R16
-R17
+R26
+R27
 R2
 R3
-Z23 DEx4 work 18 mips_controller_tb 0 22 ]?H384?ho@;T3;lL1O;CD0
-!i122 5
-l59
-Z24 L13 81
-Z25 V<DY994ioWo@D8B38Y;F8a0
-Z26 !s100 0Bb2m[OVKB[1?GY=m41cK3
+DEx4 work 18 mips_controller_tb 0 22 ]?H384?ho@;T3;lL1O;CD0
+!i122 12
+l61
+L13 84
+VE3hc]D2@@lW?ZajZmi35A0
+!s100 f0[=_a@VHFYe92N>NTI]53
 R7
 32
-R20
+R17
 !i10b 1
-R9
-R21
-R22
+R18
+R30
+R31
 !i113 1
 R12
 R13
