@@ -39,6 +39,7 @@ port
 	alusrca				: out std_logic;
 	regwrite				: out std_logic;
 	regdst				: out std_logic;
+	aluoutput_en		: out std_logic;
 	--general signals
 	clk 					: in std_logic;
 	reset 				: in std_logic
@@ -68,6 +69,7 @@ port
 	regwrite				: in std_logic;
 	regdst				: in std_logic;
 	lord					: in std_logic;
+	aluoutput_en		: in std_logic;
 	instructiontype	: out std_logic_vector(5 downto 0);
 	--general use
 	clk					: in std_logic;
@@ -91,6 +93,7 @@ end component;
 	signal controller_alusrca				: std_logic;
 	signal controller_regwrite				: std_logic;
 	signal controller_regdst				: std_logic;
+	signal controller_aluoutput_en		: std_logic;
 begin
 
 datapathcircuit : datapath port map
@@ -113,7 +116,8 @@ datapathcircuit : datapath port map
 	regwrite				=>controller_regwrite,
 	regdst				=>controller_regdst,
 	lord					=>controller_lord,
-	instructiontype	=> controller_instruction_type,
+	instructiontype	=>controller_instruction_type,
+	aluoutput_en 		=>controller_aluoutput_en,
 	clk					=>clk,
 	reset					=> reset
 	
@@ -138,6 +142,7 @@ controllercircuit : MIPS_controller port map
 	alusrca				=>controller_alusrca	,
 	regwrite				=>controller_regwrite,
 	regdst				=>controller_regdst	,
+	aluoutput_en		=>controller_aluoutput_en,
 	clk 					=> clk,
 	reset 				=> reset
 );

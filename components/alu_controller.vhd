@@ -28,7 +28,7 @@ if(aluop = "000000") then
 	if(	ir = 	"100001") then
 	hi_en 	<= '0';	
 	lo_en 	<= '1';
-	alu_lo_hi<= "01";
+	alu_lo_hi<= "00";
 	op_select<=	"00000";
 	--sub unsigned
 	elsif(ir = 	"100011") then	
@@ -125,13 +125,13 @@ if(aluop = "000000") then
 elsif(aluop = "001001") then
 	hi_en 	<= '0';	
 	lo_en 	<= '1';
-	alu_lo_hi<= "01";
+	alu_lo_hi<= "00";
 	op_select<=	"00000";
 --sub immediate unsigned
 elsif(aluop = "010000") then
 	hi_en 	<= '0';	
 	lo_en 	<= '1';
-	alu_lo_hi<= "01";
+	alu_lo_hi<= "00";
 	op_select<=	"00001";
 --and immediate
 elsif(aluop = "001100") then

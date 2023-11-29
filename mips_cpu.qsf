@@ -252,26 +252,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name VHDL_FILE components/SRAM.vhd
-set_global_assignment -name VHDL_FILE components/mux2to1.vhd
-set_global_assignment -name VHDL_FILE components/MIPS_ALU.vhd
-set_global_assignment -name VHDL_FILE components/thirtytwobitregister.vhd
-set_global_assignment -name VHDL_FILE components/thirtytwobitlatch.vhd
-set_global_assignment -name VHDL_FILE components/sramandio.vhd
-set_global_assignment -name VHDL_FILE components/mux4to1.vhd
-set_global_assignment -name QIP_FILE SRAM.qip
-set_global_assignment -name VHDL_FILE components/TB_sramandio.vhd
-set_global_assignment -name VHDL_FILE components/register_file.vhd
-set_global_assignment -name VHDL_FILE components/datapath.vhd
-set_global_assignment -name VHDL_FILE components/tentothirtytwoextender.vhd
-set_global_assignment -name VHDL_FILE components/mips_controller.vhd
-set_global_assignment -name VHDL_FILE components/alu_controller.vhd
-set_global_assignment -name VHDL_FILE components/instruction_register.vhd
-set_global_assignment -name VHDL_FILE components/shiftleft2.vhd
-set_global_assignment -name VHDL_FILE components/signextend.vhd
-set_global_assignment -name VHDL_FILE testbenches/mips_controller_tb.vhd
-set_global_assignment -name VHDL_FILE components/controllerandsram.vhd
-set_global_assignment -name VHDL_FILE components/MIPS4712.vhd
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50
@@ -460,4 +440,27 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE components/sramandio_sramenablelogic.vhd
+set_global_assignment -name VHDL_FILE components/SRAM.vhd
+set_global_assignment -name VHDL_FILE components/mux2to1.vhd
+set_global_assignment -name VHDL_FILE components/MIPS_ALU.vhd
+set_global_assignment -name VHDL_FILE components/thirtytwobitregister.vhd
+set_global_assignment -name VHDL_FILE components/thirtytwobitlatch.vhd
+set_global_assignment -name VHDL_FILE components/sramandio.vhd
+set_global_assignment -name VHDL_FILE components/mux4to1.vhd
+set_global_assignment -name QIP_FILE SRAM.qip
+set_global_assignment -name VHDL_FILE components/TB_sramandio.vhd
+set_global_assignment -name VHDL_FILE components/register_file.vhd
+set_global_assignment -name VHDL_FILE components/datapath.vhd
+set_global_assignment -name VHDL_FILE components/tentothirtytwoextender.vhd
+set_global_assignment -name VHDL_FILE components/mips_controller.vhd
+set_global_assignment -name VHDL_FILE components/alu_controller.vhd
+set_global_assignment -name VHDL_FILE components/instruction_register.vhd
+set_global_assignment -name VHDL_FILE components/shiftleft2.vhd
+set_global_assignment -name VHDL_FILE components/signextend.vhd
+set_global_assignment -name VHDL_FILE testbenches/mips_controller_tb.vhd
+set_global_assignment -name VHDL_FILE components/controllerandsram.vhd
+set_global_assignment -name VHDL_FILE components/MIPS4712.vhd
+set_global_assignment -name VHDL_FILE components/sramandio_outputlogic_addressdecoder.vhd
+set_global_assignment -name VHDL_FILE components/sramandio_outputlogic.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

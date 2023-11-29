@@ -50,10 +50,48 @@ port
 );
 end component;
 
+component mux4to1 is
+generic(width: positive := 32);
+port
+(	
+	A : in std_logic_vector(width-1  downto 0);
+	B : in std_logic_vector(width-1  downto 0);
+	C : in std_logic_vector(width-1  downto 0);
+	D : in std_logic_vector(width-1  downto 0) := (others=>'0');
+	s : in std_logic_vector(1 downto 0);
+	y : out std_logic_vector(width-1 downto 0)
+);
+end component;
+
+component sramandio_outputlogic is
+port
+(
+
+inport0: in std_logic_vector(31 downto 0);
+inport1: in std_logic_vector(31 downto 0);
+ram	 : in std_logic_vector(31 downto 0);
+address: in std_logic_vector(31 downto 0);
+enable : in std_logic;
+clk	: in std_logic;
+output: out std_logic_vector(31 downto 0)
+
+);
+
+end component;
+
+component sramandio_sramenablelogic is
+port
+(
+
+address: in std_logic_vector(31 downto 0);
+write_en: in std_logic;
+sram_write_en: out std_logic;
+outport_en: out std_logic
+);
+end component;
+
 
 signal sram_out : std_logic_vector(31 downto 0);
-
-signal sram_in : std_logic_vector(31 downto 0);
 
 signal inport0_out : std_logic_vector(31 downto 0);
 
@@ -61,25 +99,13 @@ signal inport1_out : std_logic_vector(31 downto 0);
 
 signal outport_en : std_logic;
 
-signal zero_extended : std_logic_vector(21 downto 0) := (others=>'0');
-
-signal outport_out : std_logic_vector(31 downto 0);
-
 signal sram_en : std_logic;
-
-constant fff8 : std_logic_vector := x"0000FFF8";
-
-constant fffc : std_logic_vector := x"0000FFFC";
 
 signal sram_address_word : std_logic_vector(7 downto 0);
 
 signal inport0_en : std_logic;
 
 signal inport1_en : std_logic;
-
-signal dff_input : std_logic_vector(31 downto 0);
-
---do not write immediately after reading
 
 
 begin
@@ -96,47 +122,25 @@ inport1 : thirtytwobitregister port map(input => inport_input, clk => clk, enabl
 
 outport : thirtytwobitregister port map(input => sram_data, clk => clk, enable=>outport_en, output=>outport_output);
 
-dff:	thirtytwobitregister port map(input=> dff_input, output => output, clk=>clk, enable=>read_en);
+outputlogic: sramandio_outputlogic port map(
+								inport0 => inport0_out,
+								inport1=>inport1_out,
+								ram	=> sram_out,
+								address=>address,
+								enable =>read_en,
+								clk => clk,
+								output=>output 
+								);
+sram_enablelogic: sramandio_sramenablelogic port map(
+																	address=>address,
+																	write_en=>write_en,
+																	sram_write_en=>sram_en,
+																	outport_en=>outport_en
+																	);
 
 sram_mem: SRAM port map(address =>sram_address_word,clock=>clk,data =>sram_data,rden=>read_en,wren=>sram_en, q=>sram_out);
 
 
---logic for output of entire unit
-output_logic:process(address,inport0_out,inport1_out, sram_out)
-
---max address : ff = 1111 1111
---inport0 address: fff8 = 1111 1111 1111 1000
---inport1/outport address: fffc = 1111 1111 1111 1100
-begin
-
-if(address = fff8) then
-dff_input <= inport0_out;
-elsif(address = fffc) then
-dff_input <= inport1_out;
-else
-dff_input <= sram_out;
-end if;
-
-
-end process;
-
---logic for enable of sram
-sram_enable_logic: process(address,inport0_out,inport1_out, write_en, sram_out)
-begin
-if(write_en = '0') then
-	sram_en <= '0';
-	outport_en <= '0';
-elsif(address = fff8) then
-	sram_en <= '0';
-	outport_en <= '0';
-elsif(address = fffc and write_en = '1') then
-	sram_en <= '0';
-	outport_en <= '1';
-else
-	sram_en <= '1';
-	outport_en <= '0';
-end if;
-end process;
 
 
 end arch;

@@ -24,6 +24,7 @@ alusrcb				: out std_logic_vector(1 downto 0);
 alusrca				: out std_logic;
 regwrite				: out std_logic;
 regdst				: out std_logic;
+aluoutput_en		: out std_logic;
 --general signals
 clk 					: in std_logic; 
 reset					: in std_logic
@@ -35,6 +36,8 @@ type asmstatetype is (
 							fetch,
 							
 							fetch_buffer0,
+							
+							fetch_buffer1,
 							
 							decode,
 							
@@ -51,6 +54,12 @@ type asmstatetype is (
 							memaccess_SW,
 							
 							memaccess_lw,
+							
+							memaccess_lw_buffer0,
+							
+							memaccess_lw_buffer1,
+							
+							storein_memorydataregister,
 							
 							store_inregisterfile_lw
 							);
@@ -73,6 +82,10 @@ elsif (clk'event and clk = '1') then
 			state<=fetch_buffer0;
 			
 		when fetch_buffer0 =>
+		
+			state<=fetch_buffer1;
+			
+		when fetch_buffer1 =>
 		
 			state <= decode;
 			
@@ -98,10 +111,10 @@ elsif (clk'event and clk = '1') then
 		
 			--load word
 			if(instruction_type = "100011") then
-				state <= memaccess_SW;
+				state <= memaccess_LW;
 			--store word
 			else
-				state<= memaccess_LW;
+				state<= memaccess_SW;
 			end if;
 			
 		--alu op on R type
@@ -118,6 +131,15 @@ elsif (clk'event and clk = '1') then
 			
 		--load from ram
 		when memaccess_LW=>
+			state <= memaccess_lw_buffer0;
+			
+		when memaccess_lw_buffer0=>
+			state<=memaccess_lw_buffer1;
+			
+		when memaccess_lw_buffer1=>
+			state<=storein_memorydataregister;
+		
+		when storein_memorydataregister =>
 			state<=store_inregisterfile_lw;
 			
 		when store_inregisterfile_lw=>
@@ -135,7 +157,7 @@ end process;
 
 --outputs
 process(state)
-variable default_op : std_logic_vector(5 downto 0) := "000000";
+variable default_op : std_logic_vector(5 downto 0) := "001001";
 begin
 case state is
 
@@ -155,6 +177,7 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'0';
 		regdst		<=	'0';
+		aluoutput_en<=	'1';
 		
 	when fetch_buffer0=>
 		pcwritecond <= '0';	
@@ -172,6 +195,25 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'0';
 		regdst		<=	'0';
+		aluoutput_en<=	'1';
+		
+	when fetch_buffer1=>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '1';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'1';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "01";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'1';
 		
 	when decode =>
 		pcwritecond <= '0';	
@@ -188,7 +230,9 @@ case state is
 		alusrcb		<= "11";
 		alusrca		<= '0';
 		regwrite		<=	'0';
-		regdst		<=	'0';	
+		regdst		<=	'0';
+		aluoutput_en<=	'1';
+		
 	when compute_R=>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -205,6 +249,8 @@ case state is
 		alusrca		<= '1';
 		regwrite		<=	'0';
 		regdst		<=	'0';	
+		aluoutput_en<=	'1';
+		
 	when store_inregisterfile_R =>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -221,6 +267,8 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'1';
 		regdst		<=	'1';	
+		aluoutput_en<=	'1';
+		
 	when compute_I =>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -237,6 +285,8 @@ case state is
 		alusrca		<= '1';
 		regwrite		<=	'0';
 		regdst		<=	'0';	
+		aluoutput_en<=	'1';
+		
 	when store_inregisterfile_I =>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -253,6 +303,8 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'1';
 		regdst		<=	'0';	
+		aluoutput_en<=	'1';
+		
 	when compute_address =>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -262,13 +314,15 @@ case state is
 		irwrite		<=	'0';
 		pcwrite		<=	'0';
 		jal			<=	'0';
-		issigned		<=	'1';
+		issigned		<=	'0';
 		pcsource		<=	"00";
 		aluop			<=	default_op;
 		alusrcb		<= "10";
 		alusrca		<= '1';
 		regwrite		<=	'0';
-		regdst		<=	'0';	
+		regdst		<=	'0';
+		aluoutput_en<=	'1';	
+		
 	when memaccess_SW =>
 		pcwritecond <= '0';	
 		lord			<=	'1';
@@ -284,7 +338,9 @@ case state is
 		alusrcb		<= "00";
 		alusrca		<= '0';
 		regwrite		<=	'0';
-		regdst		<=	'0';	
+		regdst		<=	'0';
+		aluoutput_en<=	'0';
+		
 	when memaccess_LW =>
 		pcwritecond <= '0';	
 		lord			<=	'1';
@@ -301,10 +357,66 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'0';
 		regdst		<=	'0';	
+		aluoutput_en<=	'0';
+		
+	when memaccess_lw_buffer0 =>
+		pcwritecond <= '0';	
+		lord			<=	'1';
+		memread		<= '1';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';	
+		aluoutput_en<=	'0';
+		
+	when memaccess_lw_buffer1 =>
+		pcwritecond <= '0';	
+		lord			<=	'1';
+		memread		<= '1';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';	
+		aluoutput_en<=	'0';
+		
+	when storein_memorydataregister =>
+		pcwritecond <= '0';	
+		lord			<=	'1';
+		memread		<= '1';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';	
+		aluoutput_en<=	'0';
+		
 	when store_inregisterfile_lw =>
 		pcwritecond <= '0';	
 		lord			<=	'1';
-		memread		<= '0';	
+		memread		<= '1';	
 		memwrite 	<=	'1';
 		memtoreg		<=	'1';
 		irwrite		<=	'0';
@@ -317,6 +429,8 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'1';
 		regdst		<=	'0';
+		aluoutput_en<=	'0';
+		
 	when others=>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -333,6 +447,7 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'0';
 		regdst		<=	'0';	
+		aluoutput_en<=	'0';
 end case;
 
 end process;

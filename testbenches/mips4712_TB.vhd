@@ -27,7 +27,7 @@ architecture TB of mips4712_TB is
     signal input_sw		:  std_logic_vector(9 downto 0);
     signal outputs		:  std_logic_vector(31 downto 0);
     signal clk 		:  std_logic := '0';
-    signal reset		: std_logic := '0';
+    signal reset		: std_logic := '1';
 
 begin  -- TB
 
@@ -44,13 +44,15 @@ begin  -- TB
 clk <= not(clk) after 5 ns;
 process
 begin
---reset <= '1';
---wait for 50 ns;
---reset <= '0';
+inport_en <= '1';
+input_sw <= "1010101010";
+
+wait for 50 ns;
+reset <= '0';
 wait for 50 ns;
 wait until rising_edge(clk);
-
 report "simulation finished!";
+wait;
 end process;
 
 end TB;

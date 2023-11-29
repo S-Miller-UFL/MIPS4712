@@ -28,6 +28,7 @@ alusrca				: in std_logic;
 regwrite				: in std_logic;
 regdst				: in std_logic;
 lord					: in std_logic;
+aluoutput_en		: in std_logic;
 instructiontype	: out std_logic_vector(5 downto 0);
 --general use
 clk					: in std_logic;
@@ -231,7 +232,7 @@ signal alu_result										: std_logic_vector(31 downto 0);
 signal alu_resulthi									: std_logic_vector(31 downto 0);
 signal alu_branchtaken								: std_logic;
 signal alu_inputb_4x1mux_input_0					: std_logic_vector(31 downto 0);
-signal alu_inputb_4x1mux_input_1					: std_logic_vector(31 downto 0);
+constant alu_inputb_4x1mux_input_1				: std_logic_vector(31 downto 0):= x"00000004";
 signal alu_inputb_4x1mux_input_2					: std_logic_vector(31 downto 0);
 signal alu_inputb_4x1mux_input_3					: std_logic_vector(31 downto 0);
 signal alu_inputb_4x1mux_signextend_input		: std_logic_vector(31 downto 0);
@@ -415,6 +416,8 @@ aluresultregister: thirtytwobitregister port map(
 																	clk=>clk,
 																	
 																	reset=> reset,
+																	
+																	enable => aluoutput_en,
 																	
 																	output=>alu_result_mux_input_0
 																);

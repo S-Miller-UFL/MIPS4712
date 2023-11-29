@@ -1,0 +1,25 @@
+--steven miller
+--Section number: 11710
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity sramandio_outputlogic is
+
+port
+(
+
+inport0: in std_logic_vector(31 downto 0);
+inport1: in std_logic_vector(31 downto 0);
+ram	 : in std_logic_vector(31 downto 0);
+address: in std_logic_vector(31 downto 0);
+
+);
+
+end sramandio_outputlogic; 
+
+architecture arch of sramandio_outputlogic is
+
+
+begin
+end arch;

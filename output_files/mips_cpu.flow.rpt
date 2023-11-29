@@ -1,5 +1,5 @@
 Flow report for mips_cpu
-Mon Nov 27 14:14:06 2023
+Mon Nov 27 23:21:28 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,28 +38,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Flow Summary                                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Flow Status                        ; MIF/HEX Update Failed - Mon Nov 27 14:14:06 2023 ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition      ;
-; Revision Name                      ; mips_cpu                                         ;
-; Top-level Entity Name              ; MIPS4712                                         ;
-; Family                             ; MAX 10                                           ;
-; Device                             ; 10M50DAF484C6GES                                 ;
-; Timing Models                      ; Preliminary                                      ;
-; Total logic elements               ; 3,063 / 49,760 ( 6 % )                           ;
-;     Total combinational functions  ; 2,909 / 49,760 ( 6 % )                           ;
-;     Dedicated logic registers      ; 1,555 / 49,760 ( 3 % )                           ;
-; Total registers                    ; 1555                                             ;
-; Total pins                         ; 45 / 360 ( 13 % )                                ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 8,192 / 1,677,312 ( < 1 % )                      ;
-; Embedded Multiplier 9-bit elements ; 16 / 288 ( 6 % )                                 ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                                    ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                                    ;
-+------------------------------------+--------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon Nov 27 23:21:28 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; mips_cpu                                    ;
+; Top-level Entity Name              ; MIPS4712                                    ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 3,057 / 49,760 ( 6 % )                      ;
+;     Total combinational functions  ; 2,924 / 49,760 ( 6 % )                      ;
+;     Dedicated logic registers      ; 1,557 / 49,760 ( 3 % )                      ;
+; Total registers                    ; 1557                                        ;
+; Total pins                         ; 45 / 360 ( 13 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192 / 1,677,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 16 / 288 ( 6 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2023 13:47:23 ;
+; Start date & time ; 11/27/2023 23:20:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips_cpu            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 136672563756387.170111084310944        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 17613682322845.170114522643572         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -108,14 +108,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4882 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:19     ; 2.7                     ; 5979 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4705 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 2.7                     ; 4904 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
-; MIF/HEX Update       ; 00:00:00     ; 1.0                     ; 4740 MB             ; 00:00:00                           ;
-; MIF/HEX Update       ; 00:00:00     ; 1.0                     ; 4740 MB             ; 00:00:00                           ;
-; Total                ; 00:00:49     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 4834 MB             ; 00:00:53                           ;
+; Fitter               ; 00:00:16     ; 1.5                     ; 5693 MB             ; 00:00:28                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4701 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 2.2                     ; 4850 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4672 MB             ; 00:00:02                           ;
+; Total                ; 00:00:56     ; --                      ; --                  ; 00:01:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,13 +122,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; MIF/HEX Update       ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
-; MIF/HEX Update       ; Stevens_Victus   ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; VENOM-OMEN       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -142,8 +138,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off mips_cpu -c mip
 quartus_asm --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
 quartus_sta mips_cpu -c mips_cpu
 quartus_eda --read_settings_files=off --write_settings_files=off mips_cpu -c mips_cpu
-quartus_cdb mips_cpu -c mips_cpu --update_mif
-quartus_cdb mips_cpu -c mips_cpu --update_mif
 
 
 

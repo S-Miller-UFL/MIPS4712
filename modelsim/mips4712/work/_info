@@ -10,25 +10,25 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/20.1
 Ealu_controller
-Z0 w1700703389
+Z0 w1701145224
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 198
-Z4 dC:/Users/steve/git_repos/school/EEL4712/mini-project/modelsim/mips4712
-Z5 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd
-Z6 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd
+!i122 780
+Z4 dC:/Users/steve/source/eel4712/mini-project/modelsim/mips4712
+Z5 8C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd
+Z6 FC:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd
 l0
 L7 1
 VL@NUBbfnU47jJ7<lQlCGi3
 !s100 <M^d9ck_ZeZB2KCDnXE^C3
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1701116154
+Z8 !s110 1701148157
 !i10b 1
-Z9 !s108 1701116154.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd|
-Z11 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd|
+Z9 !s108 1701148157.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd|
+Z11 !s107 C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -37,11 +37,11 @@ R1
 R2
 R3
 DEx4 work 14 alu_controller 0 22 L@NUBbfnU47jJ7<lQlCGi3
-!i122 198
+!i122 780
 l21
 L19 218
-V2H=>eD4ZAWe@4?z@3D4TV2
-!s100 n@HlZ58_]IfmPg<@O_agB3
+V:Laznh:b^Q?=_RM6O:8b]0
+!s100 3`T17b=71U51;IIQA;Zl33
 R7
 32
 R8
@@ -53,25 +53,25 @@ R11
 R12
 R13
 Edatapath
-Z14 w1701106270
+Z14 w1701140855
 R1
 R2
 R3
-!i122 197
+!i122 781
 R4
-Z15 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
-Z16 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+Z15 8C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd
+Z16 FC:/Users/steve/source/eel4712/mini-project/components/datapath.vhd
 l0
 L7 1
-VK7f9WNZgOdIBbVVFCQT2=0
-!s100 Z17KOlzPW:W8:kg9h=eP^3
+VQQNQcRF?z2Uk>`hC<I0?33
+!s100 U3eR7mEF7iY]][4P;bkH`2
 R7
 32
 R8
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd|
-Z18 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd|
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd|
+Z18 !s107 C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd|
 !i113 1
 R12
 R13
@@ -79,12 +79,12 @@ Aarch
 R1
 R2
 R3
-DEx4 work 8 datapath 0 22 K7f9WNZgOdIBbVVFCQT2=0
-!i122 197
-l253
-L39 455
-V?[HJQN37YSzR8QKK]7`X^3
-!s100 [9<bFz@QBAXBkJbn7?dm00
+DEx4 work 8 datapath 0 22 QQNQcRF?z2Uk>`hC<I0?33
+!i122 781
+l254
+L40 457
+VB^[knoa4ik4IO5?JaCn<j1
+!s100 ]HzzW;OF4SJ8z?RlC7ZW50
 R7
 32
 R8
@@ -95,26 +95,26 @@ R18
 !i113 1
 R12
 R13
-Emips4712
-Z19 w1701110617
+Einstruction_register
+Z19 w1700504390
 R1
 R2
 R3
-!i122 195
+!i122 782
 R4
-Z20 8C:\Users\steve\git_repos\school\EEL4712\mini-project\components\MIPS4712.vhd
-Z21 FC:\Users\steve\git_repos\school\EEL4712\mini-project\components\MIPS4712.vhd
+Z20 8C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd
+Z21 FC:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd
 l0
 L7 1
-V?WACWGU6276dkn?=DYbef2
-!s100 i40H:;4=U0FeEGhU1DG_;3
+VK^zF2In^S<LKG3lZRhOS62
+!s100 IID<=ZQ41me0EFJ=N`z>V3
 R7
 32
 R8
 !i10b 1
 R9
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\steve\git_repos\school\EEL4712\mini-project\components\MIPS4712.vhd|
-Z23 !s107 C:\Users\steve\git_repos\school\EEL4712\mini-project\components\MIPS4712.vhd|
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd|
+Z23 !s107 C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd|
 !i113 1
 R12
 R13
@@ -122,12 +122,12 @@ Aarch
 R1
 R2
 R3
-Z24 DEx4 work 8 mips4712 0 22 ?WACWGU6276dkn?=DYbef2
-!i122 195
-l94
-L20 125
-VB=d15AScRh86=ENLo9J1<1
-!s100 DKLz>O0RPPSgVhU1QIiCO2
+DEx4 work 20 instruction_register 0 22 K^zF2In^S<LKG3lZRhOS62
+!i122 782
+l26
+L24 21
+VN:hQV0[8R1KHHjS:N;BOE1
+!s100 :ZWUFUjUzdC60D6E?:[AZ1
 R7
 32
 R8
@@ -138,74 +138,26 @@ R23
 !i113 1
 R12
 R13
-Emips4712_tb
-Z25 w1701116149
+Emips4712
+Z24 w1701141090
 R1
-Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
-!i122 199
+!i122 785
 R4
-Z28 8C:\Users\steve\git_repos\school\EEL4712\mini-project\testbenches\mips4712_TB.vhd
-Z29 FC:\Users\steve\git_repos\school\EEL4712\mini-project\testbenches\mips4712_TB.vhd
-l0
-L10 1
-VeznCBzQgd[G31Uz2NJ]bl1
-!s100 Oc]H:ZcoGecfBY7bEzehB0
-R7
-32
-R8
-!i10b 1
-R9
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\steve\git_repos\school\EEL4712\mini-project\testbenches\mips4712_TB.vhd|
-Z31 !s107 C:\Users\steve\git_repos\school\EEL4712\mini-project\testbenches\mips4712_TB.vhd|
-!i113 1
-R12
-R13
-Atb
-R24
-R1
-R26
-R27
-R2
-R3
-DEx4 work 11 mips4712_tb 0 22 eznCBzQgd[G31Uz2NJ]bl1
-!i122 199
-l32
-L13 44
-V0?0<aVhTLa0S_T10TU=Oz3
-!s100 fG@:J[`W[<@C?_mDKmiD`0
-R7
-32
-R8
-!i10b 1
-R9
-R30
-R31
-!i113 1
-R12
-R13
-Emips_controller
-Z32 w1701110841
-R1
-R2
-R3
-!i122 196
-R4
-Z33 8C:\Users\steve\git_repos\school\EEL4712\mini-project\components\mips_controller.vhd
-Z34 FC:\Users\steve\git_repos\school\EEL4712\mini-project\components\mips_controller.vhd
+Z25 8C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd
+Z26 FC:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd
 l0
 L7 1
-V=jNbBAb8JSFL4kfe;Ba?_3
-!s100 Y4l[RDk`hiIO1oBBVLHa82
+V?WACWGU6276dkn?=DYbef2
+!s100 i40H:;4=U0FeEGhU1DG_;3
 R7
 32
-R8
+Z27 !s110 1701148158
 !i10b 1
-R9
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\steve\git_repos\school\EEL4712\mini-project\components\mips_controller.vhd|
-Z36 !s107 C:\Users\steve\git_repos\school\EEL4712\mini-project\components\mips_controller.vhd|
+Z28 !s108 1701148158.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd|
+Z30 !s107 C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd|
 !i113 1
 R12
 R13
@@ -213,42 +165,262 @@ Aarch
 R1
 R2
 R3
-DEx4 work 15 mips_controller 0 22 =jNbBAb8JSFL4kfe;Ba?_3
-!i122 196
-l58
-L33 307
-VWHCiTkYN1QRGF9Af?aAB;2
-!s100 NWIbW:]Sfgogdl;AQeWKT3
+Z31 DEx4 work 8 mips4712 0 22 ?WACWGU6276dkn?=DYbef2
+!i122 785
+l97
+L20 130
+VMZRCFWc?XN64SU=U:E`3P1
+!s100 QXJeRaT5m8I31;4iKAo8N3
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Emips4712_tb
+Z32 w1701139612
+R1
+Z33 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z34 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 790
+R4
+Z35 8C:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd
+Z36 FC:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd
+l0
+L10 1
+VeznCBzQgd[G31Uz2NJ]bl1
+!s100 Oc]H:ZcoGecfBY7bEzehB0
+R7
+32
+Z37 !s110 1701148159
+!i10b 1
+Z38 !s108 1701148159.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd|
+Z40 !s107 C:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd|
+!i113 1
+R12
+R13
+Atb
+R31
+R1
+R33
+R34
+R2
+R3
+DEx4 work 11 mips4712_tb 0 22 eznCBzQgd[G31Uz2NJ]bl1
+!i122 790
+l32
+L13 46
+V_>n7`n=0?4QhMBNU3`ofI3
+!s100 hC5Ii`b12X@9PU]CBC<Ik1
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Emips_alu
+Z41 w1700498403
+R1
+R2
+R3
+!i122 783
+R4
+Z42 8C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd
+Z43 FC:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd
+l0
+L7 1
+VYk`hY9z1`TcSVX9F:JI]L3
+!s100 k08IKO3Mn;_[Z4k7CG[P01
 R7
 32
 R8
 !i10b 1
 R9
-R35
-R36
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd|
+Z45 !s107 C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 8 mips_alu 0 22 Yk`hY9z1`TcSVX9F:JI]L3
+!i122 783
+l24
+L19 152
+VnnlZG1`i=^4fn_DFC@8ZF2
+!s100 4?YGcnoX;i?Sm@WX5N5^g1
+R7
+32
+R8
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13
+Emips_controller
+Z46 w1701148153
+R1
+R2
+R3
+!i122 784
+R4
+Z47 8C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd
+Z48 FC:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd
+l0
+L7 1
+VX]iXDM97_KknZZUU=g4EN0
+!s100 X5O?UFO4aK4UMZcV3zKd_0
+R7
+32
+R27
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd|
+Z50 !s107 C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 15 mips_controller 0 22 X]iXDM97_KknZZUU=g4EN0
+!i122 784
+l67
+L34 421
+V5T3PEQ98Kgn;k1I<Z5`>O3
+!s100 ^SBz`cmO9dSMCz`_?AKK93
+R7
+32
+R27
+!i10b 1
+R9
+R49
+R50
+!i113 1
+R12
+R13
+Emux2to1
+Z51 w1700267610
+R1
+R2
+R3
+!i122 791
+R4
+Z52 8C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd
+Z53 FC:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd
+l0
+L7 1
+V^P[iAkenZI;aUQN=jmm>?0
+!s100 FXX8RRh7ja1e=dL:m8Ih53
+R7
+32
+R37
+!i10b 1
+R38
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd|
+Z55 !s107 C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 7 mux2to1 0 22 ^P[iAkenZI;aUQN=jmm>?0
+!i122 791
+l19
+L18 19
+VS2Hk^Tcb`[@BRD5SO6:W63
+!s100 PdhW0fo<1nZ6Lk8P92DF[1
+R7
+32
+R37
+!i10b 1
+R38
+R54
+R55
+!i113 1
+R12
+R13
+Emux4to1
+R51
+R1
+R2
+R3
+!i122 792
+R4
+Z56 8C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd
+Z57 FC:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd
+l0
+L7 1
+Vo0lk@INc^HNj5FYURkb350
+!s100 MAa:J:=XlF5AXlIUDN5]n0
+R7
+32
+R37
+!i10b 1
+R38
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd|
+Z59 !s107 C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 7 mux4to1 0 22 o0lk@INc^HNj5FYURkb350
+!i122 792
+l21
+L20 22
+V84PkN`DE?m9;<mZQ1P;e00
+!s100 mM_FSCk8_JZfOHCiU<X8b0
+R7
+32
+R37
+!i10b 1
+R38
+R58
+R59
 !i113 1
 R12
 R13
 Eregister_file
-Z37 w1700251001
+Z60 w1700247001
 R1
 R2
 R3
-!i122 202
+!i122 786
 R4
-Z38 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd
-Z39 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd
+Z61 8C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd
+Z62 FC:/Users/steve/source/eel4712/mini-project/components/register_file.vhd
 l0
 L5 1
 VD?jFVnD7`3Y?<jk?e0X8G1
 !s100 Shc1[8faNHRn42CM@A1H;1
 R7
 32
-R8
+R27
 !i10b 1
-R9
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd|
-Z41 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd|
+R28
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd|
+Z64 !s107 C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd|
 !i113 1
 R12
 R13
@@ -256,85 +428,171 @@ Async_read
 R1
 R2
 R3
-Z42 DEx4 work 13 register_file 0 22 D?jFVnD7`3Y?<jk?e0X8G1
-!i122 202
+DEx4 work 13 register_file 0 22 D?jFVnD7`3Y?<jk?e0X8G1
+!i122 786
 l29
-Z43 L25 25
-Z44 VlEGd0bma0N2@Ff=<EZRGk1
-Z45 !s100 `@4WN?eS184]Qf_cS6n_j2
+L25 25
+VlEGd0bma0N2@Ff=<EZRGk1
+!s100 `@4WN?eS184]Qf_cS6n_j2
 R7
 32
-R8
+R27
 !i10b 1
-R9
-R40
-R41
+R28
+R63
+R64
+!i113 1
+R12
+R13
+Eshiftleft2
+Z65 w1700501480
+R1
+R2
+R3
+!i122 793
+R4
+Z66 8C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd
+Z67 FC:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd
+l0
+L8 1
+VkA@OVhCWAecoBF<kT1Zl60
+!s100 f`haBYQ0H34DPc1KoJ4AE2
+R7
+32
+Z68 !s110 1701148160
+!i10b 1
+R38
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd|
+Z70 !s107 C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 10 shiftleft2 0 22 kA@OVhCWAecoBF<kT1Zl60
+!i122 793
+l19
+L17 8
+VBBX2f4QQNhmbM<f`=^1MT3
+!s100 Pa0520F6W56jGc0EJi92N3
+R7
+32
+R68
+!i10b 1
+R38
+R69
+R70
+!i113 1
+R12
+R13
+Esignextend
+Z71 w1700502469
+R1
+R2
+R3
+!i122 794
+R4
+Z72 8C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd
+Z73 FC:/Users/steve/source/eel4712/mini-project/components/signextend.vhd
+l0
+L7 1
+V;NLA87LGRZ;4LX7=4:O<d2
+!s100 3nE_ZkR5XOUK<2O3Q28J00
+R7
+32
+R68
+!i10b 1
+Z74 !s108 1701148160.000000
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd|
+Z76 !s107 C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 10 signextend 0 22 ;NLA87LGRZ;4LX7=4:O<d2
+!i122 794
+l18
+L16 12
+V39Jg<nezb^O2lJ@n7gd?60
+!s100 ZQlj:EeSiXVPeb8F4Yh263
+R7
+32
+R68
+!i10b 1
+R74
+R75
+R76
 !i113 1
 R12
 R13
 Esram
-Z46 w1701115082
-Z47 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Z77 w1701130108
+Z78 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
 R2
 R3
-!i122 201
+!i122 787
 R4
-Z48 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd
-Z49 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd
+Z79 8C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd
+Z80 FC:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd
 l0
 L43 1
 VEiZ3f_2I[_Ya6Ai07L6090
 !s100 J7jhZD<dDnea^zhnfBz?]1
 R7
 32
-R8
+R27
 !i10b 1
-R9
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd|
-Z51 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd|
+R28
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd|
+Z82 !s107 C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd|
 !i113 1
 R12
 R13
 Asyn
-R47
+R78
 R2
 R3
 DEx4 work 4 sram 0 22 EiZ3f_2I[_Ya6Ai07L6090
-!i122 201
+!i122 787
 l61
 L57 38
-VT_R7BDT5HhH23n9VGoNKR1
-!s100 0jD<bV_ZBSE<ziLS1CI2R1
+Vz34^NmGggc@:1k6Dm_6Y41
+!s100 Ha:3m`ObBM=I;_Sc1J5TE2
 R7
 32
-R8
+R27
 !i10b 1
-R9
-R50
-R51
+R28
+R81
+R82
 !i113 1
 R12
 R13
 Esramandio
-Z52 w1701105843
+Z83 w1701144620
 R1
 R2
 R3
-!i122 200
+!i122 788
 R4
-Z53 8C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
-Z54 FC:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+Z84 8C:\Users\steve\source\eel4712\mini-project\components\sramandio.vhd
+Z85 FC:\Users\steve\source\eel4712\mini-project\components\sramandio.vhd
 l0
 L7 1
 VhK;;]lI5;MgNCoVBjaUbC1
 !s100 eQ:JdV3SVKJ1HjIE5SlBN0
 R7
 32
-R8
+R27
 !i10b 1
-R9
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd|
-Z56 !s107 C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd|
+R28
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\steve\source\eel4712\mini-project\components\sramandio.vhd|
+Z87 !s107 C:\Users\steve\source\eel4712\mini-project\components\sramandio.vhd|
 !i113 1
 R12
 R13
@@ -343,18 +601,235 @@ R1
 R2
 R3
 DEx4 work 9 sramandio 0 22 hK;;]lI5;MgNCoVBjaUbC1
-!i122 200
-l85
-L26 117
-VP?2`;a?B8UDCfV5`_o3]<3
-!s100 S<6@T=Dc=l_<Amzb?1G;G3
+!i122 788
+l111
+L26 121
+VERm4bnG_Xf3]2^<8091IC1
+!s100 8;zUa^09lI>U=nzR`<PAV0
 R7
 32
-R8
+R27
 !i10b 1
-R9
-R55
-R56
+R28
+R86
+R87
+!i113 1
+R12
+R13
+Esramandio_outputlogic
+Z88 w1701143321
+R1
+R2
+R3
+!i122 796
+R4
+Z89 8C:\Users\steve\source\eel4712\mini-project\components\sramandio_outputlogic.vhd
+Z90 FC:\Users\steve\source\eel4712\mini-project\components\sramandio_outputlogic.vhd
+l0
+L7 1
+V:]e=^Ao7NI@62B8MPXKL<3
+!s100 lW=OO66:znmN?c3zi_A3h3
+R7
+32
+R68
+!i10b 1
+R74
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\steve\source\eel4712\mini-project\components\sramandio_outputlogic.vhd|
+Z92 !s107 C:\Users\steve\source\eel4712\mini-project\components\sramandio_outputlogic.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 21 sramandio_outputlogic 0 22 :]e=^Ao7NI@62B8MPXKL<3
+!i122 796
+l64
+L24 60
+VGgGc1ZT]Gj9hm_[A^NWea0
+!s100 4NMCM>Ejbj`4ajcj6_o?o0
+R7
+32
+R68
+!i10b 1
+R74
+R91
+R92
+!i113 1
+R12
+R13
+Esramandio_outputlogic_addressdecoder
+Z93 w1701143377
+R1
+R2
+R3
+!i122 797
+R4
+Z94 8C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd
+Z95 FC:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd
+l0
+L7 1
+V436:bf?JPESA86nP1aNB12
+!s100 U0?9W1g==AmOK8zb<F`[h0
+R7
+32
+R68
+!i10b 1
+R74
+Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd|
+Z97 !s107 C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 36 sramandio_outputlogic_addressdecoder 0 22 436:bf?JPESA86nP1aNB12
+!i122 797
+l20
+L18 32
+V9zhbAeYcoOf[?lV9EGYXm2
+!s100 K_c[G6Jz`JoCdg?fQ>NHk3
+R7
+32
+R68
+!i10b 1
+R74
+R96
+R97
+!i113 1
+R12
+R13
+Esramandio_sramenablelogic
+Z98 w1701143800
+R1
+R2
+R3
+!i122 798
+R4
+Z99 8C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd
+Z100 FC:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd
+l0
+L7 1
+V7Dg9MTOjcdc5=;OGzX5?_3
+!s100 IA6<J9CjRVS_YlYSC^L910
+R7
+32
+Z101 !s110 1701148161
+!i10b 1
+R74
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd|
+Z103 !s107 C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+Z104 DEx4 work 25 sramandio_sramenablelogic 0 22 7Dg9MTOjcdc5=;OGzX5?_3
+!i122 798
+l21
+Z105 L19 21
+Z106 Vd8OXej<m[71D5n83FR<gX2
+Z107 !s100 MkHDI;DzGFSa6od<ONHQQ3
+R7
+32
+R101
+!i10b 1
+R74
+R102
+R103
+!i113 1
+R12
+R13
+Etentothirtytwoextender
+Z108 w1700243155
+R1
+R2
+R3
+!i122 795
+R4
+Z109 8C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd
+Z110 FC:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd
+l0
+L7 1
+V[Y5aTlfVF@L5ZLL]5@E@J3
+!s100 DX]@RWbCROWo?@_4@XMN43
+R7
+32
+R68
+!i10b 1
+R74
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd|
+Z112 !s107 C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 22 tentothirtytwoextender 0 22 [Y5aTlfVF@L5ZLL]5@E@J3
+!i122 795
+l19
+L15 10
+V:]9;EW;b3DP46QFR7LWQ73
+!s100 ^:REeJ]NnC=1l0ddb`=f`0
+R7
+32
+R68
+!i10b 1
+R74
+R111
+R112
+!i113 1
+R12
+R13
+Ethirtytwobitregister
+Z113 w1699810314
+R34
+R33
+R2
+R3
+!i122 789
+R4
+Z114 8C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
+Z115 FC:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
+l0
+L7 1
+Va^Pga90>aW<<=ICgzdf<N0
+!s100 inW>J47zLAEPUOYFLX2cR1
+R7
+32
+R37
+!i10b 1
+R38
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
+Z117 !s107 C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd|
+!i113 1
+R12
+R13
+Aarch
+R34
+R33
+R2
+R3
+DEx4 work 20 thirtytwobitregister 0 22 a^Pga90>aW<<=ICgzdf<N0
+!i122 789
+l24
+L20 33
+V`6aocM^AEa3AKhgCMKeTJ1
+!s100 bo<c<J;7TWgCb29?EC1IN2
+R7
+32
+R37
+!i10b 1
+R38
+R116
+R117
 !i113 1
 R12
 R13
