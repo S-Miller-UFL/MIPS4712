@@ -30,6 +30,7 @@ regdst				: in std_logic;
 lord					: in std_logic;
 aluoutput_en		: in std_logic;
 instructiontype	: out std_logic_vector(5 downto 0);
+ir						: out std_logic_vector(5 downto 0);
 --general use
 clk					: in std_logic;
 reset					: in std_logic
@@ -252,6 +253,8 @@ signal shifted_left 					: std_logic_vector(31 downto 0);
 
 
 begin
+
+ir <= instructionregister_25to0(5 downto 0);
 
 pc_enable <= ((alu_branchtaken and pcwritecond) or (pcwrite));
 zeroextend: tentothirtytwoextender port map(

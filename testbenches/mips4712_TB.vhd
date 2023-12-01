@@ -45,7 +45,7 @@ clk <= not(clk) after 5 ns;
 process
 begin
 inport_en <= '1';
-input_sw <= "1010101010";
+input_sw <= "0111111111";
 
 wait for 50 ns;
 reset <= '0';

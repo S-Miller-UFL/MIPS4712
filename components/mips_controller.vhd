@@ -9,6 +9,7 @@ port
 (
 --controller signals
 instruction_type	: in std_logic_vector(5 downto 0);
+ir						: in std_logic_vector(5 downto 0);
 pcwritecond			: out std_logic;
 lord					: out std_logic;
 memread				: out std_logic;
@@ -40,6 +41,8 @@ type asmstatetype is (
 							fetch_buffer1,
 							
 							decode,
+							
+							load_aluinputregs,
 							
 							compute_R, 
 							
@@ -93,10 +96,10 @@ elsif (clk'event and clk = '1') then
 		
 			--if R type
 			if (instruction_type = "000000") then
-				state<=compute_R;
+				state<=load_aluinputregs;
 			--if immediate
 			elsif(instruction_type(5 downto 3) = "001") then
-				state<=compute_I;
+				state<=load_aluinputregs;
 			--if load word
 			elsif(instruction_type = "100011") then
 				state<=compute_address;
@@ -115,6 +118,16 @@ elsif (clk'event and clk = '1') then
 			--store word
 			else
 				state<= memaccess_SW;
+			end if;
+		
+		when load_aluinputregs=>
+			--if R type
+			if(instruction_type = "000000") then
+				state<=compute_R;
+			--if immediate
+			elsif(instruction_type(5 downto 3) = "001") then
+				state<=compute_I;
+				
 			end if;
 			
 		--alu op on R type
@@ -232,7 +245,23 @@ case state is
 		regwrite		<=	'0';
 		regdst		<=	'0';
 		aluoutput_en<=	'1';
-		
+	when load_aluinputregs=>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "11";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'1';
 	when compute_R=>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -262,7 +291,12 @@ case state is
 		jal			<=	'0';
 		issigned		<=	'0';
 		pcsource		<=	"00";
-		aluop			<=	default_op;
+		--if instruction is move from low or instruction is move from high
+		if(ir = "010010" or ir = "010000") then
+			aluop 	<= "000000";
+		else
+			aluop		<=	default_op;
+		end if;
 		alusrcb		<= "00";
 		alusrca		<= '0';
 		regwrite		<=	'1';
@@ -278,7 +312,7 @@ case state is
 		irwrite		<=	'0';
 		pcwrite		<=	'0';
 		jal			<=	'0';
-		issigned		<=	'1';
+		issigned		<=	'0';
 		pcsource		<=	"00";
 		aluop			<=	instruction_type;
 		alusrcb		<= "10";

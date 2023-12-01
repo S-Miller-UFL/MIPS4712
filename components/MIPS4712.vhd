@@ -24,6 +24,7 @@ port
 (
 	--controller signals
 	instruction_type	: in std_logic_vector(5 downto 0);
+	ir						: in std_logic_vector(5 downto 0);
 	pcwritecond			: out std_logic;
 	lord					: out std_logic;
 	memread				: out std_logic;
@@ -71,6 +72,7 @@ port
 	lord					: in std_logic;
 	aluoutput_en		: in std_logic;
 	instructiontype	: out std_logic_vector(5 downto 0);
+	ir						: out std_logic_vector(5 downto 0);
 	--general use
 	clk					: in std_logic;
 	reset					: in std_logic
@@ -94,6 +96,7 @@ end component;
 	signal controller_regwrite				: std_logic;
 	signal controller_regdst				: std_logic;
 	signal controller_aluoutput_en		: std_logic;
+	signal controller_ir						: std_logic_vector(5 downto 0);
 begin
 
 datapathcircuit : datapath port map
@@ -117,6 +120,7 @@ datapathcircuit : datapath port map
 	regdst				=>controller_regdst,
 	lord					=>controller_lord,
 	instructiontype	=>controller_instruction_type,
+	ir						=>controller_ir,
 	aluoutput_en 		=>controller_aluoutput_en,
 	clk					=>clk,
 	reset					=> reset
@@ -127,6 +131,7 @@ controllercircuit : MIPS_controller port map
 (
 
 	instruction_type	=>controller_instruction_type,
+	ir						=> controller_ir,
 	pcwritecond			=>controller_pcwritecond,
 	lord					=>controller_lord		,
 	memread				=>controller_memread	,

@@ -18,6 +18,7 @@ architecture TB of MIPS_controller_tb is
 		  (
 			--controller signals
 			instruction_type	: in std_logic_vector(5 downto 0);
+			ir						: in std_logic_vector(5 downto 0);
 			pcwritecond			: out std_logic;
 			lord					: out std_logic;
 			memread				: out std_logic;
@@ -57,6 +58,7 @@ architecture TB of MIPS_controller_tb is
 			signal regdst					: std_logic;
 			signal clk 						: std_logic:='0'; 
 			signal reset 					: std_logic;
+			signal ir						: std_logic_vector(5 downto 9);
 			
 begin
 
@@ -64,6 +66,7 @@ UUT : entity work.MIPS_controller
         port map 
 	(
            instruction_type	=> instruction_type,
+			  ir						=> ir,
 			  pcwritecond 			=>	pcwritecond,
 			  lord					=>	lord		,		
 			  memread				=>	memread	,	

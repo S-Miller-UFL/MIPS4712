@@ -1,0 +1,77 @@
+# Current time Fri Dec 01 17:32:41 2023
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0056e550. Traceback:
+# 0    0x0056e550: 'WinMain + 0x151c0'
+# 1    0x005163bf: 'EnumDispProc + 0x2083f'
+# 2    0x005176cf: 'EnumDispProc + 0x21b4f'
+# 3    0x00574c16: 'WinMain + 0x1b886'
+# 4    0x005b615d: 'WinMain + 0x5cdcd'
+# 5    0x0057a886: 'WinMain + 0x214f6'
+# 6    0x00575216: 'WinMain + 0x1be86'
+# 7    0x71df39f1: 'TclNREvalObjv + 0x3e1'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Fri Dec 01 17:32:41 2023
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0056d44c. Traceback:
+# 0    0x0056d44c: 'WinMain + 0x140bc'
+# 1    0x005813a5: 'WinMain + 0x28015'
+# 2    0x005ebf43: 'WinMain + 0x92bb3'
+# 3    0x005e88b0: 'WinMain + 0x8f520'
+# 4    0x005e8691: 'WinMain + 0x8f301'
+# 5    0x71eb653b: 'TclServiceIdle + 0x4b'
+# 6    0x71e4efbe: 'TclInThreadExit + 0xce'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Fri Dec 01 17:32:41 2023
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0056d44c. Traceback:
+# 0    0x0056d44c: 'WinMain + 0x140bc'
+# 1    0x005813a5: 'WinMain + 0x28015'
+# 2    0x005ebf43: 'WinMain + 0x92bb3'
+# 3    0x005e88b0: 'WinMain + 0x8f520'
+# 4    0x005e8691: 'WinMain + 0x8f301'
+# 5    0x71eb653b: 'TclServiceIdle + 0x4b'
+# 6    0x71e4efbe: 'TclInThreadExit + 0xce'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Fri Dec 01 17:32:41 2023
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 0056d44c. Traceback:
+# 0    0x0056d44c: 'WinMain + 0x140bc'
+# 1    0x005813a5: 'WinMain + 0x28015'
+# 2    0x005ebf43: 'WinMain + 0x92bb3'
+# 3    0x005e88b0: 'WinMain + 0x8f520'
+# 4    0x005e8691: 'WinMain + 0x8f301'
+# 5    0x71eb653b: 'TclServiceIdle + 0x4b'
+# 6    0x71e4efbe: 'TclInThreadExit + 0xce'
+StackWalk failed 299
+# End of Stack Trace
+

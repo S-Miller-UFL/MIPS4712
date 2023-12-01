@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips_cpu
-Mon Nov 27 23:20:57 2023
+Fri Dec 01 16:48:00 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -31,8 +31,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: datapath:datapathcircuit|mux4to1:aluresultmux
  24. Parameter Settings for User Entity Instance: datapath:datapathcircuit|mux4to1:pcsourcemux
  25. Parameter Settings for User Entity Instance: datapath:datapathcircuit|mux2to1:programcountermux
- 26. Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1
- 27. Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0
+ 26. Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0
+ 27. Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1
  28. altsyncram Parameter Settings by Entity Instance
  29. lpm_mult Parameter Settings by Entity Instance
  30. Port Connectivity Checks: "datapath:datapathcircuit|mux4to1:pcsourcemux"
@@ -77,15 +77,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 27 23:20:57 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 01 16:47:59 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; mips_cpu                                    ;
 ; Top-level Entity Name              ; MIPS4712                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4,162                                       ;
-;     Total combinational functions  ; 2,923                                       ;
-;     Dedicated logic registers      ; 1,557                                       ;
-; Total registers                    ; 1557                                        ;
+; Total logic elements               ; 4,146                                       ;
+;     Total combinational functions  ; 2,905                                       ;
+;     Dedicated logic registers      ; 1,560                                       ;
+; Total registers                    ; 1560                                        ;
 ; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
@@ -187,75 +187,79 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                  ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
-; components/sramandio_sramenablelogic.vhd                           ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd                           ;             ;
-; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd                                                ;             ;
-; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd                                             ;             ;
-; components/MIPS_ALU.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd                                            ;             ;
-; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
-; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd                                           ;             ;
-; components/mux4to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd                                             ;             ;
-; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd                                       ;             ;
-; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd                                            ;             ;
-; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
-; components/mips_controller.vhd                                     ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd                                     ;             ;
-; components/alu_controller.vhd                                      ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd                                      ;             ;
-; components/instruction_register.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd                                ;             ;
-; components/signextend.vhd                                          ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd                                          ;             ;
-; components/MIPS4712.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd                                            ;             ;
-; components/sramandio_outputlogic_addressdecoder.vhd                ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd                ;             ;
-; components/sramandio_outputlogic.vhd                               ; yes             ; User VHDL File                               ; C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd                               ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                            ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                         ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                         ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                          ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                             ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                             ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                           ;             ;
-; db/altsyncram_t0u3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf                                             ;             ;
-; db/altsyncram_8dr2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/altsyncram_8dr2.tdf                                             ;             ;
-; components/Deliverable4.mif                                        ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/source/eel4712/mini-project/components/Deliverable4.mif                                        ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                    ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                          ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                      ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                         ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                            ; altera_sld  ;
-; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
-; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                                           ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;             ;
-; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                                           ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                                           ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                                           ;             ;
-; db/mult_tns.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/mult_tns.tdf                                                    ;             ;
-; db/mult_qgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/source/eel4712/mini-project/db/mult_qgs.tdf                                                    ;             ;
-; sramandio_sramenablelogic.vhd                                      ; yes             ; User VHDL File                               ; sramandio_sramenablelogic.vhd                                                                                 ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                      ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                            ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
+; components/sramandio_sramenablelogic.vhd                           ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_sramenablelogic.vhd                           ;             ;
+; components/SRAM.vhd                                                ; yes             ; User Wizard-Generated File                   ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd                                                ;             ;
+; components/mux2to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd                                             ;             ;
+; components/MIPS_ALU.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd                                            ;             ;
+; components/thirtytwobitregister.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd                                ;             ;
+; components/sramandio.vhd                                           ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd                                           ;             ;
+; components/mux4to1.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd                                             ;             ;
+; components/register_file.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd                                       ;             ;
+; components/datapath.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd                                            ;             ;
+; components/tentothirtytwoextender.vhd                              ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd                              ;             ;
+; components/mips_controller.vhd                                     ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd                                     ;             ;
+; components/alu_controller.vhd                                      ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd                                      ;             ;
+; components/instruction_register.vhd                                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/instruction_register.vhd                                ;             ;
+; components/signextend.vhd                                          ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/signextend.vhd                                          ;             ;
+; components/MIPS4712.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd                                            ;             ;
+; components/sramandio_outputlogic_addressdecoder.vhd                ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd                ;             ;
+; components/sramandio_outputlogic.vhd                               ; yes             ; User VHDL File                               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd                               ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;             ;
+; db/altsyncram_t0u3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf                                             ;             ;
+; db/altsyncram_8dr2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_8dr2.tdf                                             ;             ;
+; components/Deliverable4.mif                                        ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/components/Deliverable4.mif                                        ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                              ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                   ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                      ; altera_sld  ;
+; db/ip/sld0b47db4c/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                 ;             ;
+; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                     ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                  ;             ;
+; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                                                     ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                                                     ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                                                     ;             ;
+; db/mult_qgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/mult_qgs.tdf                                                    ;             ;
+; db/mult_tns.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/steve/git_repos/school/EEL4712/mini-project/db/mult_tns.tdf                                                    ;             ;
+; sramandio_sramenablelogic.vhd                                      ; yes             ; User VHDL File                               ; sramandio_sramenablelogic.vhd                                                                                           ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +---------------------------------------------------------+
@@ -263,20 +267,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,162     ;
+; Estimated Total logic elements              ; 4,146     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2923      ;
+; Total combinational functions               ; 2905      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2146      ;
-;     -- 3 input functions                    ; 584       ;
-;     -- <=2 input functions                  ; 193       ;
+;     -- 4 input functions                    ; 2113      ;
+;     -- 3 input functions                    ; 628       ;
+;     -- <=2 input functions                  ; 164       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2638      ;
+;     -- normal mode                          ; 2620      ;
 ;     -- arithmetic mode                      ; 285       ;
 ;                                             ;           ;
-; Total registers                             ; 1557      ;
-;     -- Dedicated logic registers            ; 1557      ;
+; Total registers                             ; 1560      ;
+;     -- Dedicated logic registers            ; 1560      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 45        ;
@@ -285,8 +289,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 16        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1439      ;
-; Total fan-out                               ; 17622     ;
+; Maximum fan-out                             ; 1442      ;
+; Total fan-out                               ; 17573     ;
 ; Average fan-out                             ; 3.81      ;
 +---------------------------------------------+-----------+
 
@@ -296,40 +300,40 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                          ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+--------------+
-; |MIPS4712                                                                                                                               ; 2923 (1)            ; 1557 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |MIPS4712                                                                                                                                                                                                                                                                                                                                            ; MIPS4712                             ; work         ;
-;    |MIPS_controller:controllercircuit|                                                                                                  ; 19 (19)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|MIPS_controller:controllercircuit                                                                                                                                                                                                                                                                                                          ; MIPS_controller                      ; work         ;
-;    |datapath:datapathcircuit|                                                                                                           ; 2781 (0)            ; 1458 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit                                                                                                                                                                                                                                                                                                                   ; datapath                             ; work         ;
-;       |MIPS_ALU:alu|                                                                                                                    ; 965 (794)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu                                                                                                                                                                                                                                                                                                      ; MIPS_ALU                             ; work         ;
+; |MIPS4712                                                                                                                               ; 2905 (1)            ; 1560 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |MIPS4712                                                                                                                                                                                                                                                                                                                                            ; MIPS4712                             ; work         ;
+;    |MIPS_controller:controllercircuit|                                                                                                  ; 33 (33)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|MIPS_controller:controllercircuit                                                                                                                                                                                                                                                                                                          ; MIPS_controller                      ; work         ;
+;    |datapath:datapathcircuit|                                                                                                           ; 2749 (0)            ; 1458 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit                                                                                                                                                                                                                                                                                                                   ; datapath                             ; work         ;
+;       |MIPS_ALU:alu|                                                                                                                    ; 951 (780)           ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu                                                                                                                                                                                                                                                                                                      ; MIPS_ALU                             ; work         ;
 ;          |lpm_mult:Mult0|                                                                                                               ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0                                                                                                                                                                                                                                                                                       ; lpm_mult                             ; work         ;
 ;             |mult_qgs:auto_generated|                                                                                                   ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0|mult_qgs:auto_generated                                                                                                                                                                                                                                                               ; mult_qgs                             ; work         ;
 ;          |lpm_mult:Mult1|                                                                                                               ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1                                                                                                                                                                                                                                                                                       ; lpm_mult                             ; work         ;
 ;             |mult_tns:auto_generated|                                                                                                   ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1|mult_tns:auto_generated                                                                                                                                                                                                                                                               ; mult_tns                             ; work         ;
-;       |alu_controller:alucontroller|                                                                                                    ; 75 (75)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|alu_controller:alucontroller                                                                                                                                                                                                                                                                                      ; alu_controller                       ; work         ;
+;       |alu_controller:alucontroller|                                                                                                    ; 54 (54)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|alu_controller:alucontroller                                                                                                                                                                                                                                                                                      ; alu_controller                       ; work         ;
 ;       |instruction_register:instructionregister|                                                                                        ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|instruction_register:instructionregister                                                                                                                                                                                                                                                                          ; instruction_register                 ; work         ;
 ;       |mux2to1:instructionregistermux|                                                                                                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux2to1:instructionregistermux                                                                                                                                                                                                                                                                                    ; mux2to1                              ; work         ;
 ;       |mux2to1:memorydatamux|                                                                                                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux2to1:memorydatamux                                                                                                                                                                                                                                                                                             ; mux2to1                              ; work         ;
-;       |mux2to1:programcountermux|                                                                                                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux2to1:programcountermux                                                                                                                                                                                                                                                                                         ; mux2to1                              ; work         ;
+;       |mux2to1:programcountermux|                                                                                                       ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux2to1:programcountermux                                                                                                                                                                                                                                                                                         ; mux2to1                              ; work         ;
 ;       |mux2to1:registerfileoutputmux|                                                                                                   ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux2to1:registerfileoutputmux                                                                                                                                                                                                                                                                                     ; mux2to1                              ; work         ;
-;       |mux4to1:alu_inputb_4x1mux|                                                                                                       ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux                                                                                                                                                                                                                                                                                         ; mux4to1                              ; work         ;
+;       |mux4to1:alu_inputb_4x1mux|                                                                                                       ; 50 (50)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux                                                                                                                                                                                                                                                                                         ; mux4to1                              ; work         ;
 ;       |mux4to1:aluresultmux|                                                                                                            ; 64 (64)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|mux4to1:aluresultmux                                                                                                                                                                                                                                                                                              ; mux4to1                              ; work         ;
 ;       |register_file:registerfile|                                                                                                      ; 1394 (1394)         ; 1056 (1056)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|register_file:registerfile                                                                                                                                                                                                                                                                                        ; register_file                        ; work         ;
-;       |sramandio:memoryunit|                                                                                                            ; 156 (2)             ; 146 (0)                   ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit                                                                                                                                                                                                                                                                                              ; sramandio                            ; work         ;
-;          |SRAM:sram_mem|                                                                                                                ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem                                                                                                                                                                                                                                                                                ; SRAM                                 ; work         ;
-;             |altsyncram:altsyncram_component|                                                                                           ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                ; altsyncram                           ; work         ;
-;                |altsyncram_t0u3:auto_generated|                                                                                         ; 92 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated                                                                                                                                                                                                                 ; altsyncram_t0u3                      ; work         ;
+;       |sramandio:memoryunit|                                                                                                            ; 157 (2)             ; 146 (0)                   ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit                                                                                                                                                                                                                                                                                              ; sramandio                            ; work         ;
+;          |SRAM:sram_mem|                                                                                                                ; 91 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem                                                                                                                                                                                                                                                                                ; SRAM                                 ; work         ;
+;             |altsyncram:altsyncram_component|                                                                                           ; 91 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                ; altsyncram                           ; work         ;
+;                |altsyncram_t0u3:auto_generated|                                                                                         ; 91 (0)              ; 64 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated                                                                                                                                                                                                                 ; altsyncram_t0u3                      ; work         ;
 ;                   |altsyncram_8dr2:altsyncram1|                                                                                         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|altsyncram_8dr2:altsyncram1                                                                                                                                                                                     ; altsyncram_8dr2                      ; work         ;
-;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 92 (72)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                       ; sld_mod_ram_rom                      ; work         ;
+;                   |sld_mod_ram_rom:mgl_prim2|                                                                                           ; 91 (71)             ; 64 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                       ; sld_mod_ram_rom                      ; work         ;
 ;                      |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                               ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                    ; sld_rom_sr                           ; work         ;
-;          |sramandio_outputlogic:outputlogic|                                                                                            ; 60 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic                                                                                                                                                                                                                                                            ; sramandio_outputlogic                ; work         ;
+;          |sramandio_outputlogic:outputlogic|                                                                                            ; 61 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic                                                                                                                                                                                                                                                            ; sramandio_outputlogic                ; work         ;
 ;             |mux4to1:sramandio_outputlogic_mux|                                                                                         ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|mux4to1:sramandio_outputlogic_mux                                                                                                                                                                                                                          ; mux4to1                              ; work         ;
-;             |sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic|                                                   ; 27 (27)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic                                                                                                                                                                                    ; sramandio_outputlogic_addressdecoder ; work         ;
+;             |sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic|                                                   ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic                                                                                                                                                                                    ; sramandio_outputlogic_addressdecoder ; work         ;
 ;             |thirtytwobitregister:sramandio_outputlogic_dff|                                                                            ; 9 (9)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|thirtytwobitregister:sramandio_outputlogic_dff                                                                                                                                                                                                             ; thirtytwobitregister                 ; work         ;
-;          |sramandio_sramenablelogic:sram_enablelogic|                                                                                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_sramenablelogic:sram_enablelogic                                                                                                                                                                                                                                                   ; sramandio_sramenablelogic            ; work         ;
+;          |sramandio_sramenablelogic:sram_enablelogic|                                                                                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_sramenablelogic:sram_enablelogic                                                                                                                                                                                                                                                   ; sramandio_sramenablelogic            ; work         ;
 ;          |thirtytwobitregister:inport0|                                                                                                 ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|thirtytwobitregister:inport0                                                                                                                                                                                                                                                                 ; thirtytwobitregister                 ; work         ;
 ;          |thirtytwobitregister:inport1|                                                                                                 ; 0 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|thirtytwobitregister:inport1                                                                                                                                                                                                                                                                 ; thirtytwobitregister                 ; work         ;
 ;          |thirtytwobitregister:outport|                                                                                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|thirtytwobitregister:outport                                                                                                                                                                                                                                                                 ; thirtytwobitregister                 ; work         ;
 ;       |thirtytwobitregister:aluresultregister|                                                                                          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:aluresultregister                                                                                                                                                                                                                                                                            ; thirtytwobitregister                 ; work         ;
-;       |thirtytwobitregister:hiregister|                                                                                                 ; 2 (2)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:hiregister                                                                                                                                                                                                                                                                                   ; thirtytwobitregister                 ; work         ;
+;       |thirtytwobitregister:hiregister|                                                                                                 ; 1 (1)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:hiregister                                                                                                                                                                                                                                                                                   ; thirtytwobitregister                 ; work         ;
 ;       |thirtytwobitregister:loregister|                                                                                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:loregister                                                                                                                                                                                                                                                                                   ; thirtytwobitregister                 ; work         ;
 ;       |thirtytwobitregister:memorydataregister|                                                                                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:memorydataregister                                                                                                                                                                                                                                                                           ; thirtytwobitregister                 ; work         ;
 ;       |thirtytwobitregister:programcounter|                                                                                             ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:programcounter                                                                                                                                                                                                                                                                               ; thirtytwobitregister                 ; work         ;
@@ -388,25 +392,28 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |MIPS4712|MIPS_controller:controllercircuit|state                                                                                                                                                                                                                                                                                      ;
-+----------------------------------+-------------------------------+----------------------------------+---------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+--------------+---------------------+-------------+
-; Name                             ; state.store_inregisterfile_lw ; state.storein_memorydataregister ; state.memaccess_lw_buffer ; state.memaccess_lw ; state.memaccess_SW ; state.compute_address ; state.store_inregisterfile_I ; state.compute_I ; state.store_inregisterfile_R ; state.compute_R ; state.decode ; state.fetch_buffer0 ; state.fetch ;
-+----------------------------------+-------------------------------+----------------------------------+---------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+--------------+---------------------+-------------+
-; state.fetch                      ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 0           ;
-; state.fetch_buffer0              ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 1                   ; 1           ;
-; state.decode                     ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 1            ; 0                   ; 1           ;
-; state.compute_R                  ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 1               ; 0            ; 0                   ; 1           ;
-; state.store_inregisterfile_R     ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 1                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.compute_I                  ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 1               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.store_inregisterfile_I     ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 1                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.compute_address            ; 0                             ; 0                                ; 0                         ; 0                  ; 0                  ; 1                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.memaccess_SW               ; 0                             ; 0                                ; 0                         ; 0                  ; 1                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.memaccess_lw               ; 0                             ; 0                                ; 0                         ; 1                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.memaccess_lw_buffer        ; 0                             ; 0                                ; 1                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.storein_memorydataregister ; 0                             ; 1                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-; state.store_inregisterfile_lw    ; 1                             ; 0                                ; 0                         ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0            ; 0                   ; 1           ;
-+----------------------------------+-------------------------------+----------------------------------+---------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+--------------+---------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MIPS4712|MIPS_controller:controllercircuit|state                                                                                                                                                                                                                                                                                                                                                                    ;
++----------------------------------+-------------------------------+----------------------------------+----------------------------+----------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+-------------------------+--------------+---------------------+---------------------+-------------+
+; Name                             ; state.store_inregisterfile_lw ; state.storein_memorydataregister ; state.memaccess_lw_buffer1 ; state.memaccess_lw_buffer0 ; state.memaccess_lw ; state.memaccess_SW ; state.compute_address ; state.store_inregisterfile_I ; state.compute_I ; state.store_inregisterfile_R ; state.compute_R ; state.load_aluinputregs ; state.decode ; state.fetch_buffer1 ; state.fetch_buffer0 ; state.fetch ;
++----------------------------------+-------------------------------+----------------------------------+----------------------------+----------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+-------------------------+--------------+---------------------+---------------------+-------------+
+; state.fetch                      ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 0           ;
+; state.fetch_buffer0              ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 1                   ; 1           ;
+; state.fetch_buffer1              ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 1                   ; 0                   ; 1           ;
+; state.decode                     ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 1            ; 0                   ; 0                   ; 1           ;
+; state.load_aluinputregs          ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 1                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.compute_R                  ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 1               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.store_inregisterfile_R     ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 1                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.compute_I                  ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 1               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.store_inregisterfile_I     ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 1                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.compute_address            ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 1                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.memaccess_SW               ; 0                             ; 0                                ; 0                          ; 0                          ; 0                  ; 1                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.memaccess_lw               ; 0                             ; 0                                ; 0                          ; 0                          ; 1                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.memaccess_lw_buffer0       ; 0                             ; 0                                ; 0                          ; 1                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.memaccess_lw_buffer1       ; 0                             ; 0                                ; 1                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.storein_memorydataregister ; 0                             ; 1                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
+; state.store_inregisterfile_lw    ; 1                             ; 0                                ; 0                          ; 0                          ; 0                  ; 0                  ; 0                     ; 0                            ; 0               ; 0                            ; 0               ; 0                       ; 0            ; 0                   ; 0                   ; 1           ;
++----------------------------------+-------------------------------+----------------------------------+----------------------------+----------------------------+--------------------+--------------------+-----------------------+------------------------------+-----------------+------------------------------+-----------------+-------------------------+--------------+---------------------+---------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -476,10 +483,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1557  ;
+; Total registers                              ; 1560  ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 27    ;
-; Number of registers using Asynchronous Clear ; 1285  ;
+; Number of registers using Asynchronous Clear ; 1288  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1412  ;
 ; Number of registers using Preset             ; 0     ;
@@ -502,26 +509,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|thirtytwobitregister:sramandio_outputlogic_dff|sigout[4]                                                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:hiregister|sigout[31]                                                                                                                                                     ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|register_file:registerfile|rd_data1[7]                                                                                                                                                         ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|register_file:registerfile|rd_data0[14]                                                                                                                                                        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[25]                                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|thirtytwobitregister:sramandio_outputlogic_dff|sigout[7]                                                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 64 LEs               ; 608 LEs                ; Yes        ; |MIPS4712|datapath:datapathcircuit|thirtytwobitregister:hiregister|sigout[22]                                                                                                                                                     ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|register_file:registerfile|rd_data1[30]                                                                                                                                                        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |MIPS4712|datapath:datapathcircuit|register_file:registerfile|rd_data0[28]                                                                                                                                                        ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 44 LEs               ; 24 LEs                 ; Yes        ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|alu_controller:alucontroller|op_select[2]                                                                                                                                                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:aluresultmux|Mux29                                                                                                                                                                     ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |MIPS4712|MIPS_controller:controllercircuit|state                                                                                                                                                                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:aluresultmux|Mux31                                                                                                                                                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|sramandio:memoryunit|sramandio_sramenablelogic:sram_enablelogic|outport_en                                                                                                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux30                                                                                                                                                                ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux10                                                                                                                                                                ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux19                                                                                                                                                                ;
-; 24:1               ; 8 bits    ; 128 LEs       ; 72 LEs               ; 56 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux20                                                                                                                                                                             ;
-; 25:1               ; 7 bits    ; 112 LEs       ; 63 LEs               ; 49 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux10                                                                                                                                                                             ;
-; 25:1               ; 4 bits    ; 64 LEs        ; 40 LEs               ; 24 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux26                                                                                                                                                                             ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux5                                                                                                                                                                              ;
-; 26:1               ; 2 bits    ; 34 LEs        ; 20 LEs               ; 14 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux29                                                                                                                                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux15                                                                                                                                                                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux30                                                                                                                                                                ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|mux4to1:alu_inputb_4x1mux|Mux20                                                                                                                                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS4712|MIPS_controller:controllercircuit|Selector15                                                                                                                                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS4712|MIPS_controller:controllercircuit|state                                                                                                                                                                                 ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 72 LEs               ; 56 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux16                                                                                                                                                                             ;
+; 25:1               ; 7 bits    ; 112 LEs       ; 63 LEs               ; 49 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux13                                                                                                                                                                             ;
+; 25:1               ; 4 bits    ; 64 LEs        ; 40 LEs               ; 24 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux27                                                                                                                                                                             ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux6                                                                                                                                                                              ;
+; 26:1               ; 2 bits    ; 34 LEs        ; 20 LEs               ; 14 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux28                                                                                                                                                                             ;
 ; 27:1               ; 2 bits    ; 36 LEs        ; 22 LEs               ; 14 LEs                 ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Mux3                                                                                                                                                                              ;
 ; 1:1                ; 30 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MIPS4712|datapath:datapathcircuit|MIPS_ALU:alu|Add0                                                                                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -678,41 +687,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1 ;
-+------------------------------------------------+----------+-------------------------------------------+
-; Parameter Name                                 ; Value    ; Type                                      ;
-+------------------------------------------------+----------+-------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                              ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                              ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                            ;
-; LPM_WIDTHA                                     ; 32       ; Untyped                                   ;
-; LPM_WIDTHB                                     ; 32       ; Untyped                                   ;
-; LPM_WIDTHP                                     ; 64       ; Untyped                                   ;
-; LPM_WIDTHR                                     ; 64       ; Untyped                                   ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                                   ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                                   ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                                   ;
-; LATENCY                                        ; 0        ; Untyped                                   ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                   ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                   ;
-; USE_EAB                                        ; OFF      ; Untyped                                   ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                   ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                   ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                   ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                       ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                   ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                   ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                   ;
-; CBXI_PARAMETER                                 ; mult_tns ; Untyped                                   ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                   ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                   ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                   ;
-+------------------------------------------------+----------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0 ;
 +------------------------------------------------+----------+-------------------------------------------+
 ; Parameter Name                                 ; Value    ; Type                                      ;
@@ -747,6 +721,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1 ;
++------------------------------------------------+----------+-------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                      ;
++------------------------------------------------+----------+-------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                            ;
+; LPM_WIDTHA                                     ; 32       ; Untyped                                   ;
+; LPM_WIDTHB                                     ; 32       ; Untyped                                   ;
+; LPM_WIDTHP                                     ; 64       ; Untyped                                   ;
+; LPM_WIDTHR                                     ; 64       ; Untyped                                   ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                                   ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                   ;
+; LATENCY                                        ; 0        ; Untyped                                   ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                   ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                   ;
+; USE_EAB                                        ; OFF      ; Untyped                                   ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                   ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                   ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                   ;
+; CBXI_PARAMETER                                 ; mult_tns ; Untyped                                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                   ;
++------------------------------------------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                                        ;
 +-------------------------------------------+---------------------------------------------------------------------------------------------+
@@ -773,22 +782,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                                                ;
 +---------------------------------------+------------------------------------------------------+
 ; Number of entity instances            ; 2                                                    ;
-; Entity Instance                       ; datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1 ;
+; Entity Instance                       ; datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 32                                                   ;
 ;     -- LPM_WIDTHB                     ; 32                                                   ;
 ;     -- LPM_WIDTHP                     ; 64                                                   ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                             ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                               ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                   ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO                                                   ;
 ;     -- USE_EAB                        ; OFF                                                  ;
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                 ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                   ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                   ;
-; Entity Instance                       ; datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0 ;
+; Entity Instance                       ; datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 32                                                   ;
 ;     -- LPM_WIDTHB                     ; 32                                                   ;
 ;     -- LPM_WIDTHP                     ; 64                                                   ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                             ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                   ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO                                                   ;
 ;     -- USE_EAB                        ; OFF                                                  ;
@@ -926,29 +935,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 72                          ;
-; cycloneiii_ff         ; 1471                        ;
-;     CLR               ; 117                         ;
+; cycloneiii_ff         ; 1474                        ;
+;     CLR               ; 120                         ;
 ;     ENA               ; 205                         ;
 ;     ENA CLR           ; 1127                        ;
 ;     ENA CLR SLD       ; 8                           ;
 ;     ENA SCLR          ; 5                           ;
 ;     ENA SLD           ; 9                           ;
-; cycloneiii_lcell_comb ; 2801                        ;
+; cycloneiii_lcell_comb ; 2783                        ;
 ;     arith             ; 277                         ;
 ;         2 data inputs ; 54                          ;
 ;         3 data inputs ; 223                         ;
-;     normal            ; 2524                        ;
+;     normal            ; 2506                        ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 94                          ;
-;         3 data inputs ; 328                         ;
-;         4 data inputs ; 2094                        ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 372                         ;
+;         4 data inputs ; 2061                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 6.36                        ;
+; Max LUT depth         ; 15.40                       ;
+; Average LUT depth     ; 6.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -957,7 +966,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -967,87 +976,85 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 27 23:20:25 2023
+    Info: Processing started: Fri Dec 01 16:47:35 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips_cpu -c mips_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio_sramenablelogic.vhd
-    Info (12022): Found design unit 1: sramandio_sramenablelogic-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd Line: 19
-    Info (12023): Found entity 1: sramandio_sramenablelogic File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio_sramenablelogic-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_sramenablelogic.vhd Line: 19
+    Info (12023): Found entity 1: sramandio_sramenablelogic File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_sramenablelogic.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sram.vhd
-    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 57
-    Info (12023): Found entity 1: SRAM File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 43
+    Info (12022): Found design unit 1: sram-SYN File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 57
+    Info (12023): Found entity 1: SRAM File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux2to1.vhd
-    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 18
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux2to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 18
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips_alu.vhd
-    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 19
-    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS_ALU-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 19
+    Info (12023): Found entity 1: MIPS_ALU File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitregister.vhd
-    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 20
-    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file components/thirtytwobitlatch.vhd
-    Info (12022): Found design unit 1: thirtytwobitlatch-arch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 19
-    Info (12023): Found entity 1: thirtytwobitlatch File: C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitlatch.vhd Line: 7
+    Info (12022): Found design unit 1: thirtytwobitregister-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 20
+    Info (12023): Found entity 1: thirtytwobitregister File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd Line: 7
+Warning (12019): Can't analyze file -- file components/thirtytwobitlatch.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio.vhd
-    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 26
-    Info (12023): Found entity 1: sramandio File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 26
+    Info (12023): Found entity 1: sramandio File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux4to1.vhd
-    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 20
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd Line: 7
+    Info (12022): Found design unit 1: mux4to1-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 20
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd Line: 7
 Warning (12019): Can't analyze file -- file SRAM.vhd is missing
 Warning (12019): Can't analyze file -- file components/TB_sramandio.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/register_file.vhd
-    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 25
-    Info (12023): Found entity 1: register_file File: C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd Line: 5
+    Info (12022): Found design unit 1: register_file-sync_read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 25
+    Info (12023): Found entity 1: register_file File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file components/datapath.vhd
-    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 40
-    Info (12023): Found entity 1: datapath File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 41
+    Info (12023): Found entity 1: datapath File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/tentothirtytwoextender.vhd
-    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
-    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
+    Info (12022): Found design unit 1: tentothirtytwoextender-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 15
+    Info (12023): Found entity 1: tentothirtytwoextender File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips_controller.vhd
-    Info (12022): Found design unit 1: MIPS_controller-arch File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 34
-    Info (12023): Found entity 1: MIPS_controller File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS_controller-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 35
+    Info (12023): Found entity 1: MIPS_controller File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/alu_controller.vhd
-    Info (12022): Found design unit 1: alu_controller-arch File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 19
-    Info (12023): Found entity 1: alu_controller File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 7
+    Info (12022): Found design unit 1: alu_controller-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd Line: 19
+    Info (12023): Found entity 1: alu_controller File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/instruction_register.vhd
-    Info (12022): Found design unit 1: instruction_register-arch File: C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd Line: 24
-    Info (12023): Found entity 1: instruction_register File: C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd Line: 7
+    Info (12022): Found design unit 1: instruction_register-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/instruction_register.vhd Line: 24
+    Info (12023): Found entity 1: instruction_register File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/instruction_register.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/shiftleft2.vhd
-    Info (12022): Found design unit 1: shiftleft2-arch File: C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd Line: 17
-    Info (12023): Found entity 1: shiftleft2 File: C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd Line: 8
+    Info (12022): Found design unit 1: shiftleft2-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/shiftleft2.vhd Line: 17
+    Info (12023): Found entity 1: shiftleft2 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/shiftleft2.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file components/signextend.vhd
-    Info (12022): Found design unit 1: signextend-arch File: C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd Line: 16
-    Info (12023): Found entity 1: signextend File: C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd Line: 7
+    Info (12022): Found design unit 1: signextend-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/signextend.vhd Line: 16
+    Info (12023): Found entity 1: signextend File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/signextend.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/mips_controller_tb.vhd
-    Info (12022): Found design unit 1: MIPS_controller_tb-TB File: C:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd Line: 13
-    Info (12023): Found entity 1: MIPS_controller_tb File: C:/Users/steve/source/eel4712/mini-project/testbenches/mips_controller_tb.vhd Line: 10
+    Info (12022): Found design unit 1: MIPS_controller_tb-TB File: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd Line: 13
+    Info (12023): Found entity 1: MIPS_controller_tb File: C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips_controller_tb.vhd Line: 10
 Warning (12019): Can't analyze file -- file components/controllerandsram.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file components/mips4712.vhd
-    Info (12022): Found design unit 1: MIPS4712-arch File: C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd Line: 20
-    Info (12023): Found entity 1: MIPS4712 File: C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd Line: 7
+    Info (12022): Found design unit 1: MIPS4712-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd Line: 20
+    Info (12023): Found entity 1: MIPS4712 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio_outputlogic_addressdecoder.vhd
-    Info (12022): Found design unit 1: sramandio_outputlogic_addressdecoder-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd Line: 18
-    Info (12023): Found entity 1: sramandio_outputlogic_addressdecoder File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio_outputlogic_addressdecoder-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd Line: 18
+    Info (12023): Found entity 1: sramandio_outputlogic_addressdecoder File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file components/sramandio_outputlogic.vhd
-    Info (12022): Found design unit 1: sramandio_outputlogic-arch File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd Line: 24
-    Info (12023): Found entity 1: sramandio_outputlogic File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd Line: 7
+    Info (12022): Found design unit 1: sramandio_outputlogic-arch File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd Line: 24
+    Info (12023): Found entity 1: sramandio_outputlogic File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd Line: 7
 Info (12127): Elaborating entity "MIPS4712" for the top level hierarchy
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:datapathcircuit" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd Line: 99
-Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "datapath:datapathcircuit|tentothirtytwoextender:zeroextend" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 257
-Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
-Info (12128): Elaborating entity "sramandio" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 262
-Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 119
-Info (12128): Elaborating entity "sramandio_outputlogic" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 125
-Info (12128): Elaborating entity "sramandio_outputlogic_addressdecoder" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd Line: 67
-Info (12128): Elaborating entity "mux4to1" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|mux4to1:sramandio_outputlogic_mux" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd Line: 74
-Info (12128): Elaborating entity "sramandio_sramenablelogic" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_sramenablelogic:sram_enablelogic" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 134
-Info (12128): Elaborating entity "SRAM" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd Line: 141
-Info (12128): Elaborating entity "altsyncram" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
-Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd Line: 64
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:datapathcircuit" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd Line: 102
+Info (12128): Elaborating entity "tentothirtytwoextender" for hierarchy "datapath:datapathcircuit|tentothirtytwoextender:zeroextend" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 260
+Warning (10540): VHDL Signal Declaration warning at tentothirtytwoextender.vhd(17): used explicit default value for signal "twentytwozeroes" because signal was never assigned a value File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd Line: 17
+Info (12128): Elaborating entity "sramandio" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 265
+Info (12128): Elaborating entity "thirtytwobitregister" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|thirtytwobitregister:inport0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 119
+Info (12128): Elaborating entity "sramandio_outputlogic" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 125
+Info (12128): Elaborating entity "sramandio_outputlogic_addressdecoder" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|sramandio_outputlogic_addressdecoder:sramandio_outputlogic_decoderlogic" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd Line: 67
+Info (12128): Elaborating entity "mux4to1" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_outputlogic:outputlogic|mux4to1:sramandio_outputlogic_mux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd Line: 74
+Info (12128): Elaborating entity "sramandio_sramenablelogic" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|sramandio_sramenablelogic:sram_enablelogic" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 134
+Info (12128): Elaborating entity "SRAM" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd Line: 141
+Info (12128): Elaborating entity "altsyncram" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
+Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd Line: 64
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1099,18 +1106,18 @@ Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memo
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=SRAM"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_t0u3.tdf
-    Info (12023): Found entity 1: altsyncram_t0u3 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_t0u3 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_t0u3" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8dr2.tdf
-    Info (12023): Found entity 1: altsyncram_8dr2 File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_8dr2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_8dr2" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|altsyncram_8dr2:altsyncram1" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf Line: 39
-Warning (113028): 243 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/steve/source/eel4712/mini-project/components/Deliverable4.mif Line: 1
-    Warning (113027): Addresses ranging from 11 to 47 are not initialized File: C:/Users/steve/source/eel4712/mini-project/components/Deliverable4.mif Line: 1
-    Warning (113027): Addresses ranging from 49 to 59 are not initialized File: C:/Users/steve/source/eel4712/mini-project/components/Deliverable4.mif Line: 1
-    Warning (113027): Addresses ranging from 61 to 255 are not initialized File: C:/Users/steve/source/eel4712/mini-project/components/Deliverable4.mif Line: 1
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
-Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
-Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
+    Info (12023): Found entity 1: altsyncram_8dr2 File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_8dr2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_8dr2" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|altsyncram_8dr2:altsyncram1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf Line: 39
+Warning (113028): 243 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/Deliverable4.mif Line: 1
+    Warning (113027): Addresses ranging from 11 to 47 are not initialized File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/Deliverable4.mif Line: 1
+    Warning (113027): Addresses ranging from 49 to 59 are not initialized File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/Deliverable4.mif Line: 1
+    Warning (113027): Addresses ranging from 61 to 255 are not initialized File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/Deliverable4.mif Line: 1
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
+Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
+Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/altsyncram_t0u3.tdf Line: 40
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -1122,21 +1129,22 @@ Info (12133): Instantiated megafunction "datapath:datapathcircuit|sramandio:memo
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "datapath:datapathcircuit|sramandio:memoryunit|SRAM:sram_mem|altsyncram:altsyncram_component|altsyncram_t0u3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:datapathcircuit|mux2to1:instructionregistermux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 287
-Info (12128): Elaborating entity "register_file" for hierarchy "datapath:datapathcircuit|register_file:registerfile" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 308
-Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:datapathcircuit|mux2to1:registerfileoutputmux" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 353
-Info (12128): Elaborating entity "instruction_register" for hierarchy "datapath:datapathcircuit|instruction_register:instructionregister" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 364
-Info (12128): Elaborating entity "MIPS_ALU" for hierarchy "datapath:datapathcircuit|MIPS_ALU:alu" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 395
-Warning (10036): Verilog HDL or VHDL warning at MIPS_ALU.vhd(20): object "tempsum" assigned a value but never read File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 20
-Info (12128): Elaborating entity "alu_controller" for hierarchy "datapath:datapathcircuit|alu_controller:alucontroller" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 454
-Warning (10620): VHDL warning at alu_controller.vhd(209): comparison between unequal length operands always returns FALSE File: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd Line: 209
-Info (12128): Elaborating entity "signextend" for hierarchy "datapath:datapathcircuit|signextend:signextender" File: C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd Line: 471
-Info (12128): Elaborating entity "MIPS_controller" for hierarchy "MIPS_controller:controllercircuit" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd Line: 126
-Warning (10542): VHDL Variable Declaration warning at mips_controller.vhd(149): used initial value expression for variable "default_op" because variable was never assigned a value File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 149
-Warning (10492): VHDL Process Statement warning at mips_controller.vhd(218): signal "instruction_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 218
-Warning (10492): VHDL Process Statement warning at mips_controller.vhd(254): signal "instruction_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd Line: 254
+Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:datapathcircuit|mux2to1:instructionregistermux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 290
+Info (12128): Elaborating entity "register_file" for hierarchy "datapath:datapathcircuit|register_file:registerfile" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 311
+Info (12128): Elaborating entity "mux2to1" for hierarchy "datapath:datapathcircuit|mux2to1:registerfileoutputmux" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 356
+Info (12128): Elaborating entity "instruction_register" for hierarchy "datapath:datapathcircuit|instruction_register:instructionregister" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 367
+Info (12128): Elaborating entity "MIPS_ALU" for hierarchy "datapath:datapathcircuit|MIPS_ALU:alu" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 398
+Warning (10036): Verilog HDL or VHDL warning at MIPS_ALU.vhd(20): object "tempsum" assigned a value but never read File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 20
+Info (12128): Elaborating entity "alu_controller" for hierarchy "datapath:datapathcircuit|alu_controller:alucontroller" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 457
+Warning (10620): VHDL warning at alu_controller.vhd(212): comparison between unequal length operands always returns FALSE File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd Line: 212
+Info (12128): Elaborating entity "signextend" for hierarchy "datapath:datapathcircuit|signextend:signextender" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd Line: 474
+Info (12128): Elaborating entity "MIPS_controller" for hierarchy "MIPS_controller:controllercircuit" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd Line: 130
+Warning (10542): VHDL Variable Declaration warning at mips_controller.vhd(173): used initial value expression for variable "default_op" because variable was never assigned a value File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at mips_controller.vhd(276): signal "instruction_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 276
+Warning (10492): VHDL Process Statement warning at mips_controller.vhd(295): signal "ir" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 295
+Warning (10492): VHDL Process Statement warning at mips_controller.vhd(317): signal "instruction_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd Line: 317
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.27.23:20:40 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.12.01.16:47:45 Progress: Loading sld0b47db4c/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1147,36 +1155,23 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/source/eel4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/ip/sld0b47db4c/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:datapathcircuit|MIPS_ALU:alu|Mult1" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 53
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:datapathcircuit|MIPS_ALU:alu|Mult0" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 47
-Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 53
-Info (12133): Instantiated megafunction "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 53
-    Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "32"
-    Info (12134): Parameter "LPM_WIDTHP" = "64"
-    Info (12134): Parameter "LPM_WIDTHR" = "64"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tns.tdf
-    Info (12023): Found entity 1: mult_tns File: C:/Users/steve/source/eel4712/mini-project/db/mult_tns.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0" File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 47
-Info (12133): Instantiated megafunction "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0" with the following parameter: File: C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd Line: 47
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:datapathcircuit|MIPS_ALU:alu|Mult0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 47
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "datapath:datapathcircuit|MIPS_ALU:alu|Mult1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 53
+Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 47
+Info (12133): Instantiated megafunction "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult0" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 47
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -1187,23 +1182,36 @@ Info (12133): Instantiated megafunction "datapath:datapathcircuit|MIPS_ALU:alu|l
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qgs.tdf
-    Info (12023): Found entity 1: mult_qgs File: C:/Users/steve/source/eel4712/mini-project/db/mult_qgs.tdf Line: 31
+    Info (12023): Found entity 1: mult_qgs File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/mult_qgs.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1" File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 53
+Info (12133): Instantiated megafunction "datapath:datapathcircuit|MIPS_ALU:alu|lpm_mult:Mult1" with the following parameter: File: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd Line: 53
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tns.tdf
+    Info (12023): Found entity 1: mult_tns File: C:/Users/steve/git_repos/school/EEL4712/mini-project/db/mult_tns.tdf Line: 31
 Info (13014): Ignored 470 buffer(s)
     Info (13019): Ignored 470 SOFT buffer(s)
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 15 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4328 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 4230 logic cells
+    Info (21061): Implemented 4214 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Mon Nov 27 23:20:57 2023
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:54
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Fri Dec 01 16:48:00 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:09
 
 

@@ -1,4 +1,131 @@
-C:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/testbenches/mips4712_TB.vhd
+C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/SRAM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity SRAM
+-- Compiling architecture SYN of sram
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/shiftleft2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/shiftleft2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shiftleft2
+-- Compiling architecture arch of shiftleft2
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mips_controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MIPS_controller
+-- Compiling architecture arch of MIPS_controller
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sramandio_outputlogic
+-- Compiling architecture arch of sramandio_outputlogic
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_controller
+-- Compiling architecture arch of alu_controller
+** Warning: C:/Users/steve/git_repos/school/EEL4712/mini-project/components/alu_controller.vhd(212): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 0).
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_sramenablelogic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_sramenablelogic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sramandio_sramenablelogic
+-- Compiling architecture arch of sramandio_sramenablelogic
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sramandio
+-- Compiling architecture arch of sramandio
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS4712.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MIPS4712
+-- Compiling architecture arch of MIPS4712
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/datapath.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity datapath
+-- Compiling architecture arch of datapath
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sramandio_outputlogic_addressdecoder
+-- Compiling architecture arch of sramandio_outputlogic_addressdecoder
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux2to1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux2to1
+-- Compiling architecture arch of mux2to1
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/mux4to1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux4to1
+-- Compiling architecture arch of mux4to1
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/MIPS_ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MIPS_ALU
+-- Compiling architecture arch of MIPS_ALU
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/register_file.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity register_file
+-- Compiling architecture sync_read of register_file
+
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/testbenches/mips4712_TB.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\steve\git_repos\school\EEL4712\mini-project\testbenches\mips4712_TB.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -10,7 +137,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture TB of mips4712_TB
 -- Loading entity MIPS4712
 
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/instruction_register.vhd
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/instruction_register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/instruction_register.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -19,7 +146,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity instruction_register
 -- Compiling architecture arch of instruction_register
 
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/tentothirtytwoextender.vhd
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/tentothirtytwoextender.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -28,7 +155,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity tentothirtytwoextender
 -- Compiling architecture arch of tentothirtytwoextender
 
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/signextend.vhd
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/signextend.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/signextend.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -37,7 +164,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity signextend
 -- Compiling architecture arch of signextend
 
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/thirtytwobitregister.vhd
+} {} {}} C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/git_repos/school/EEL4712/mini-project/components/thirtytwobitregister.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -46,132 +173,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity thirtytwobitregister
 -- Compiling architecture arch of thirtytwobitregister
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/SRAM.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity SRAM
--- Compiling architecture SYN of sram
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/shiftleft2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity shiftleft2
--- Compiling architecture arch of shiftleft2
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/mips_controller.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MIPS_controller
--- Compiling architecture arch of MIPS_controller
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\steve\source\eel4712\mini-project\components\sramandio_outputlogic.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sramandio_outputlogic
--- Compiling architecture arch of sramandio_outputlogic
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity alu_controller
--- Compiling architecture arch of alu_controller
-** Warning: C:/Users/steve/source/eel4712/mini-project/components/alu_controller.vhd(209): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 0).
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/sramandio_sramenablelogic.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sramandio_sramenablelogic
--- Compiling architecture arch of sramandio_sramenablelogic
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/sramandio.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\steve\source\eel4712\mini-project\components\sramandio.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sramandio
--- Compiling architecture arch of sramandio
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/datapath.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity datapath
--- Compiling architecture arch of datapath
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/MIPS4712.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MIPS4712
--- Compiling architecture arch of MIPS4712
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/sramandio_outputlogic_addressdecoder.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sramandio_outputlogic_addressdecoder
--- Compiling architecture arch of sramandio_outputlogic_addressdecoder
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/mux2to1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mux2to1
--- Compiling architecture arch of mux2to1
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/mux4to1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mux4to1
--- Compiling architecture arch of mux4to1
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/MIPS_ALU.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MIPS_ALU
--- Compiling architecture arch of MIPS_ALU
-
-} {} {}} C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/steve/source/eel4712/mini-project/components/register_file.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity register_file
--- Compiling architecture sync_read of register_file
 
 } {} {}}

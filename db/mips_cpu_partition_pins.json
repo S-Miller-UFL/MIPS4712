@@ -140,7 +140,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_sw[0]",
+					"name" : "input_sw[5]",
 					"strict" : false
 				},
 				{
@@ -152,11 +152,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_sw[2]",
+					"name" : "input_sw[0]",
 					"strict" : false
 				},
 				{
-					"name" : "input_sw[5]",
+					"name" : "input_sw[2]",
 					"strict" : false
 				},
 				{
@@ -172,15 +172,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_sw[8]",
-					"strict" : false
-				},
-				{
 					"name" : "input_sw[7]",
 					"strict" : false
 				},
 				{
 					"name" : "input_sw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input_sw[8]",
 					"strict" : false
 				},
 				{
