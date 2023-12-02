@@ -73,9 +73,10 @@ type asmstatetype is (
 							compute_jal,
 							
 							store_jal,
-							------------------------
-							--add branch states here
-							------------------------
+							
+							compute_branch,
+							
+							determine_branch
 							
 							);
 signal state: asmstatetype := fetch;
@@ -118,23 +119,25 @@ elsif (clk'event and clk = '1') then
 				
 			--if load word
 			elsif(instruction_type = "100011") then
-			
-				state<=compute_address;
 				
+				state <= load_aluinputregs;
+			
 			--if store word
 			elsif(instruction_type = "101011") then
 			
 				state<=compute_address;
 				
-			--if instruction is jump type
+			--if instruction is jump type to address
 			elsif(instruction_type = "000010") then
 			
 				state<=jump_address;
+				
+			--if instruction is branch type
+			elsif(instruction_type(5 downto 2) = "0001" or instruction_type = "000001") then
 			
-			--------------------------------
-			--add branch instructions here
-			--------------------------------
-			
+				state<= compute_branch;
+				
+			--if instruction is jump and link
 			else
 			
 				state <= compute_jal;
@@ -145,6 +148,7 @@ elsif (clk'event and clk = '1') then
 		
 			--load word
 			if(instruction_type = "100011") then
+			
 				state <= memaccess_LW;
 			--store word
 			else
@@ -162,6 +166,11 @@ elsif (clk'event and clk = '1') then
 			elsif(instruction_type(5 downto 3) = "001" or instruction_type = "010000") then
 			
 				state<=compute_I;
+				
+			--if load word
+			elsif(instruction_type = "100011") then
+			
+				state<=compute_address;
 				
 			end if;
 			
@@ -220,6 +229,12 @@ elsif (clk'event and clk = '1') then
 			
 		when store_jal=>
 			state <= jump_address;
+			
+		when compute_branch=>
+			state<=determine_branch;
+		
+		when determine_branch=>
+			state <= fetch;
 	end case;
 	
 end if;
@@ -593,7 +608,42 @@ case state is
 		regwrite		<=	'1';
 		regdst		<=	'0';
 		aluoutput_en<=	'0';
-	
+		
+	when compute_branch =>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"00";
+		aluop			<=	default_op;
+		alusrcb		<= "11";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'1';
+		
+	when determine_branch =>
+		pcwritecond <= '1';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"01";
+		aluop			<=	instruction_type;
+		alusrcb		<= "00";
+		alusrca		<= '1';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'0';
 	
 	when others=>
 		pcwritecond <= '0';	

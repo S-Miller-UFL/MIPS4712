@@ -7,12 +7,13 @@ use ieee.numeric_std.all;
 entity alu_controller is
 port
 (
-	ir 			: in std_logic_vector(5 downto 0);
-	aluop 		: in std_logic_vector(5 downto 0);
-	hi_en 		: out std_logic;
-	lo_en 		: out std_logic;
-	alu_lo_hi 	: out std_logic_vector(1 downto 0);
-	op_select	: out std_logic_vector(4 downto 0)
+	ir 					 : in std_logic_vector(5 downto 0);
+	aluop 				 : in std_logic_vector(5 downto 0);
+	twentydowntosixteen: in std_logic_vector(4 downto 0);
+	hi_en 				 : out std_logic;
+	lo_en 				 : out std_logic;
+	alu_lo_hi 			 : out std_logic_vector(1 downto 0);
+	op_select			 : out std_logic_vector(4 downto 0)
 );
 end alu_controller;
 
@@ -202,12 +203,21 @@ elsif(aluop = "000111") then
 	lo_en 	<= '0';
 	alu_lo_hi<= "00";
 	op_select<=	"01111";
---branch on less than zero
+--branch on zero instructions
 elsif(aluop = "000001") then
+	--branch on greater than or equal to zero
+	if(twentydowntosixteen = "00001") then
+		hi_en 	<= '0';	
+		lo_en 	<= '0';
+		alu_lo_hi<= "00";
+		op_select<=	"10001";
+	--branch on less than zero	
+	else
 	hi_en 	<= '0';	
 	lo_en 	<= '0';
 	alu_lo_hi<= "00";
 	op_select<=	"10000";
+	end if;
 --branch on greater than or equal to zero
 elsif(aluop = "") then
 	hi_en 	<= '0';	

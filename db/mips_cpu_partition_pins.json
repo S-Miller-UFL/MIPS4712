@@ -156,15 +156,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_sw[5]",
-					"strict" : false
-				},
-				{
 					"name" : "input_sw[0]",
 					"strict" : false
 				},
 				{
 					"name" : "input_sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_sw[5]",
 					"strict" : false
 				},
 				{

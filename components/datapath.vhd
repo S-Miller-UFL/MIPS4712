@@ -153,12 +153,13 @@ end component;
 component alu_controller is
 port
 (
-	ir 			: in std_logic_vector(5 downto 0);
-	aluop 		: in std_logic_vector(5 downto 0);
-	hi_en 		: out std_logic;
-	lo_en 		: out std_logic;
-	alu_lo_hi 	: out std_logic_vector(1 downto 0);
-	op_select	: out std_logic_vector(4 downto 0)
+	ir 						: in std_logic_vector(5 downto 0);
+	aluop 					: in std_logic_vector(5 downto 0);
+	twentydowntosixteen	: in std_logic_vector(4 downto 0);
+	hi_en 					: out std_logic;
+	lo_en 					: out std_logic;
+	alu_lo_hi 				: out std_logic_vector(1 downto 0);
+	op_select				: out std_logic_vector(4 downto 0)
 );
 end component;
 
@@ -457,6 +458,7 @@ aluresultmux: mux4to1 generic map(width=>32) port map(
 alucontroller: alu_controller port map(
 													ir=>instructionregister_25to0(5 downto 0),
 													aluop=> aluop,
+													twentydowntosixteen => instructionregister_25to0(20 downto 16),
 													hi_en=>alucontroller_hien,
 													lo_en=>alucontroller_loen,
 													alu_lo_hi=>alucontroller_alulohi,
