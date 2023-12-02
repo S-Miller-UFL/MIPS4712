@@ -64,7 +64,19 @@ type asmstatetype is (
 							
 							storein_memorydataregister,
 							
-							store_inregisterfile_lw
+							store_inregisterfile_lw,
+							
+							jump_register,
+							
+							jump_address,
+							
+							compute_jal,
+							
+							store_jal,
+							------------------------
+							--add branch states here
+							------------------------
+							
 							);
 signal state: asmstatetype := fetch;
 begin
@@ -96,18 +108,37 @@ elsif (clk'event and clk = '1') then
 		
 			--if R type
 			if (instruction_type = "000000") then
+			
 				state<=load_aluinputregs;
+				
 			--if immediate
-			elsif(instruction_type(5 downto 3) = "001") then
+			elsif(instruction_type(5 downto 3) = "001" or instruction_type = "010000") then
+			
 				state<=load_aluinputregs;
+				
 			--if load word
 			elsif(instruction_type = "100011") then
+			
 				state<=compute_address;
+				
 			--if store word
 			elsif(instruction_type = "101011") then
+			
 				state<=compute_address;
+				
+			--if instruction is jump type
+			elsif(instruction_type = "000010") then
+			
+				state<=jump_address;
+			
+			--------------------------------
+			--add branch instructions here
+			--------------------------------
+			
 			else
-				state <= fetch;
+			
+				state <= compute_jal;
+				
 			end if;
 			
 		when compute_address=>
@@ -121,18 +152,32 @@ elsif (clk'event and clk = '1') then
 			end if;
 		
 		when load_aluinputregs=>
+		
 			--if R type
 			if(instruction_type = "000000") then
+			
 				state<=compute_R;
+				
 			--if immediate
-			elsif(instruction_type(5 downto 3) = "001") then
+			elsif(instruction_type(5 downto 3) = "001" or instruction_type = "010000") then
+			
 				state<=compute_I;
 				
 			end if;
 			
 		--alu op on R type
 		when compute_R =>
+		
+		--if instruction is jump to register
+		if(ir = "001000") then
+		
+			state<=jump_register;
+			
+		else
+		
 			state <= store_inregisterfile_R;
+			
+		end if;
 			
 		--alu op on I type
 		when compute_I =>
@@ -163,6 +208,18 @@ elsif (clk'event and clk = '1') then
 			
 		when store_inregisterfile_R=>
 			state <= fetch;
+		
+		when jump_register=>
+			state <= fetch;
+			
+		when jump_address =>
+			state<= fetch;
+			
+		when compute_jal =>
+			state <= store_jal;
+			
+		when store_jal=>
+			state <= jump_address;
 	end case;
 	
 end if;
@@ -465,6 +522,79 @@ case state is
 		regdst		<=	'0';
 		aluoutput_en<=	'0';
 		
+	when jump_register =>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'1';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"10";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'0';
+	
+	when jump_address =>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'1';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"10";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'0';
+		
+	when compute_jal =>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'0';
+		issigned		<=	'0';
+		pcsource		<=	"10";
+		aluop			<=	default_op;
+		alusrcb		<= "01";
+		alusrca		<= '0';
+		regwrite		<=	'0';
+		regdst		<=	'0';
+		aluoutput_en<=	'1';
+	
+	when store_jal=>
+		pcwritecond <= '0';	
+		lord			<=	'0';
+		memread		<= '0';	
+		memwrite 	<=	'0';
+		memtoreg		<=	'0';
+		irwrite		<=	'0';
+		pcwrite		<=	'0';
+		jal			<=	'1';
+		issigned		<=	'0';
+		pcsource		<=	"10";
+		aluop			<=	default_op;
+		alusrcb		<= "00";
+		alusrca		<= '0';
+		regwrite		<=	'1';
+		regdst		<=	'0';
+		aluoutput_en<=	'0';
+	
+	
 	when others=>
 		pcwritecond <= '0';	
 		lord			<=	'0';

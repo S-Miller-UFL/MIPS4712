@@ -48,7 +48,6 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_location_assignment PIN_N5 -to ADC_CLK_10
-set_location_assignment PIN_P11 -to MAX10_CLK1_50
 set_location_assignment PIN_N14 -to MAX10_CLK2_50
 set_location_assignment PIN_U17 -to DRAM_ADDR[0]
 set_location_assignment PIN_W19 -to DRAM_ADDR[1]
@@ -137,8 +136,6 @@ set_location_assignment PIN_M20 -to HEX5[4]
 set_location_assignment PIN_N19 -to HEX5[5]
 set_location_assignment PIN_N20 -to HEX5[6]
 set_location_assignment PIN_L19 -to HEX5[7]
-set_location_assignment PIN_B8 -to KEY[0]
-set_location_assignment PIN_A7 -to KEY[1]
 set_location_assignment PIN_A8 -to LEDR[0]
 set_location_assignment PIN_A9 -to LEDR[1]
 set_location_assignment PIN_A10 -to LEDR[2]
@@ -149,16 +146,6 @@ set_location_assignment PIN_E14 -to LEDR[6]
 set_location_assignment PIN_D14 -to LEDR[7]
 set_location_assignment PIN_A11 -to LEDR[8]
 set_location_assignment PIN_B11 -to LEDR[9]
-set_location_assignment PIN_C10 -to SW[0]
-set_location_assignment PIN_C11 -to SW[1]
-set_location_assignment PIN_D12 -to SW[2]
-set_location_assignment PIN_C12 -to SW[3]
-set_location_assignment PIN_A12 -to SW[4]
-set_location_assignment PIN_B12 -to SW[5]
-set_location_assignment PIN_A13 -to SW[6]
-set_location_assignment PIN_A14 -to SW[7]
-set_location_assignment PIN_B14 -to SW[8]
-set_location_assignment PIN_F15 -to SW[9]
 set_location_assignment PIN_P1 -to VGA_B[0]
 set_location_assignment PIN_T1 -to VGA_B[1]
 set_location_assignment PIN_P4 -to VGA_B[2]
@@ -463,4 +450,16 @@ set_global_assignment -name VHDL_FILE components/controllerandsram.vhd
 set_global_assignment -name VHDL_FILE components/MIPS4712.vhd
 set_global_assignment -name VHDL_FILE components/sramandio_outputlogic_addressdecoder.vhd
 set_global_assignment -name VHDL_FILE components/sramandio_outputlogic.vhd
+set_location_assignment PIN_F15 -to input_sw[9]
+set_location_assignment PIN_C10 -to input_sw[0]
+set_location_assignment PIN_C11 -to input_sw[1]
+set_location_assignment PIN_B14 -to input_sw[8]
+set_location_assignment PIN_A14 -to input_sw[7]
+set_location_assignment PIN_A13 -to input_sw[6]
+set_location_assignment PIN_B12 -to input_sw[5]
+set_location_assignment PIN_A12 -to input_sw[4]
+set_location_assignment PIN_C12 -to input_sw[3]
+set_location_assignment PIN_D12 -to input_sw[2]
+set_location_assignment PIN_B8 -to inport_en
+set_location_assignment PIN_P11 -to clk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

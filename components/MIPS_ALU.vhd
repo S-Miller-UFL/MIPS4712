@@ -66,17 +66,17 @@ result <= A or B;
 when "00110" =>
 result <= A xor B;
 
---SHIFT LOGICAL RIGHT A BY IR
+--SHIFT LOGICAL RIGHT B BY IR
 when "00111" =>
-result <= std_logic_vector(shift_right(unsigned(A),to_integer(unsigned(ir))));
+result <= std_logic_vector(shift_right(unsigned(B),to_integer(unsigned(ir))));
 
---SHIFT LOGICAL LEFT A BY IR
+--SHIFT LOGICAL LEFT B BY IR
 when "01000" =>
-result <= std_logic_vector(shift_left(unsigned(A),to_integer(unsigned(ir))));
+result <= std_logic_vector(shift_left(unsigned(B),to_integer(unsigned(ir))));
 
---SHIFT ARITHMETIC RIGHT A
+--SHIFT ARITHMETIC RIGHT B
 when "01001" =>
-result <= std_logic_vector(shift_right(signed(A),to_integer(unsigned(ir))));
+result <= std_logic_vector(shift_right(signed(B),to_integer(unsigned(ir))));
 
 --A < B? (SIGNED)
 when "01010" =>
