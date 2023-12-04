@@ -16,13 +16,36 @@
 # Compile of sramandio_sramenablelogic.vhd was successful.
 # Compile of tentothirtytwoextender.vhd was successful.
 # Compile of thirtytwobitregister.vhd was successful.
-# Compile of mips4712_TB.vhd was successful.
+# Compile of mips4712_TB.vhd failed with 3 errors.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
+# 21 compiles, 3 failed with 5 errors.
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd failed with 3 errors.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 4 failed with 6 errors.
 vsim -gui work.mips4712_tb
 # vsim -gui work.mips4712_tb 
-# Start time: 15:23:39 on Dec 02,2023
+# Start time: 20:28:27 on Dec 03,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -51,102 +74,29 @@ vsim -gui work.mips4712_tb
 # Loading work.alu_controller(arch)
 # Loading work.signextend(arch)
 # Loading work.mips_controller(arch)
+run
+# ** Note: simulation finished!
+#    Time: 155 ns  Iteration: 0  Instance: /mips4712_tb
+run
+run
+run
+run
+add wave -position end sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: steve  Hostname: VENOM-OMEN  ProcessID: 61864
-#           Attempting to use alternate WLF file "./wlft26eciq".
+#           Attempting to use alternate WLF file "./wlft04xf4h".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft26eciq
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
+#           Using alternate file: ./wlft04xf4h
+add wave -position 0  sim:/mips4712_tb/clk
+add wave -position 1  sim:/mips4712_tb/inport_en
+add wave -position 2  sim:/mips4712_tb/input_sw
+add wave -position 3  sim:/mips4712_tb/outputs
+add wave -position 4  sim:/mips4712_tb/reset
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
-run
 # ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart -f
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-add wave -position 8  sim:/mips4712_tb/UUT/datapathcircuit/alu/B
-add wave -position 9  sim:/mips4712_tb/UUT/datapathcircuit/alu/branch_taken
-restart -f
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-restart -f
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-restart -f
-run
-run
-run
-run
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+#    Time: 155 ns  Iteration: 0  Instance: /mips4712_tb
 run
 run
 run
@@ -168,10 +118,57 @@ run
 # Compile of sramandio_sramenablelogic.vhd was successful.
 # Compile of tentothirtytwoextender.vhd was successful.
 # Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd failed with 3 errors.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 4 failed with 6 errors.
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd failed with 2 errors.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 4 failed with 5 errors.
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.mips4712_tb(tb)
@@ -193,43 +190,47 @@ restart -f
 # Loading work.signextend(arch)
 # Loading work.mips_controller(arch)
 run
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/A
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/B
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/branch_taken
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/hi
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/ir
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/lo
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/opcode
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/result
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/alu/result_hi
+restart -f
+run
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/address
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/clk
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport0_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport0_out
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport1_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport1_out
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/inport_input
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/outport_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/outport_output
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/output
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/read_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/reset
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/sram_address_word
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/sram_data
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/sram_en
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/sram_out
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/switchten
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/write_en
 run
 run
 run
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+restart -f
 run
 run
 # Compile of alu_controller.vhd was successful with warnings.
 # Compile of datapath.vhd was successful.
 # Compile of instruction_register.vhd was successful.
 # Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
+# Compile of mips_controller.vhd failed with 2 errors.
 # Compile of MIPS4712.vhd was successful.
 # Compile of mux2to1.vhd was successful.
 # Compile of mux4to1.vhd was successful.
@@ -246,204 +247,8 @@ run
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-run
-run
-run
-run
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-restart -f
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-run
-run
-run
-run
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-# Compile of sramandio_sramenablelogic.vhd was successful.
-run
-run
-run
-run
-run
-run
-# Compile of tentothirtytwoextender.vhd was successful.
-run
-run
-# Compile of thirtytwobitregister.vhd was successful.
-run
-run
-# Compile of mips4712_TB.vhd was successful.
-run
-run
-run
-# Compile of TestCase2.mif failed with 1 errors.
-run
-run
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-# Compile of sramandio_sramenablelogic.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of tentothirtytwoextender.vhd was successful.
-# Compile of thirtytwobitregister.vhd was successful.
-run
-run
-# Compile of mips4712_TB.vhd was successful.
-run
-run
-# Compile of TestCase2.mif failed with 1 errors.
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 4 failed with 5 errors.
 # Compile of alu_controller.vhd was successful with warnings.
 # Compile of datapath.vhd was successful.
 # Compile of instruction_register.vhd was successful.
@@ -465,102 +270,8 @@ run
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 3 failed with 3 errors.
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-run
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-run
-run
-run
-# Compile of sramandio_sramenablelogic.vhd was successful.
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-# Compile of tentothirtytwoextender.vhd was successful.
-run
-# Compile of thirtytwobitregister.vhd was successful.
-run
-# Compile of mips4712_TB.vhd was successful.
-run
-# Compile of TestCase2.mif failed with 1 errors.
-run
-run
-run
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 4 failed with 4 errors.
 # Compile of alu_controller.vhd was successful with warnings.
 # Compile of datapath.vhd was successful.
 # Compile of instruction_register.vhd was successful.
@@ -582,325 +293,8 @@ run
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-run
-# Compile of sramandio_outputlogic.vhd was successful.
-run
-run
-run
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-# Compile of sramandio_sramenablelogic.vhd was successful.
-run
-run
-# Compile of tentothirtytwoextender.vhd was successful.
-run
-run
-# Compile of thirtytwobitregister.vhd was successful.
-run
-run
-run
-# Compile of mips4712_TB.vhd was successful.
-run
-run
-run
-# Compile of TestCase2.mif failed with 1 errors.
-run
-run
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-# Compile of sramandio_sramenablelogic.vhd was successful.
-# Compile of tentothirtytwoextender.vhd was successful.
-# Compile of thirtytwobitregister.vhd was successful.
-# Compile of mips4712_TB.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of TestCase2.mif failed with 1 errors.
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-run
-run
-run
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.sramandio(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of sramandio_outputlogic.vhd was successful.
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-# Compile of sramandio_sramenablelogic.vhd was successful.
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-# Compile of tentothirtytwoextender.vhd was successful.
-# Compile of thirtytwobitregister.vhd was successful.
-# Compile of mips4712_TB.vhd was successful.
-# Compile of TestCase2.mif failed with 1 errors.
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-run
-add wave -position 3  sim:/mips4712_tb/UUT/datapathcircuit/memoryunit/outport_output
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mips4712_tb(tb)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-# Compile of sramandio_sramenablelogic.vhd was successful.
-# Compile of tentothirtytwoextender.vhd was successful.
-# Compile of thirtytwobitregister.vhd was successful.
-# Compile of mips4712_TB.vhd was successful.
-restart -f
-# Loading work.mips4712_tb(tb)
-# Loading work.mips4712(arch)
-# Loading work.datapath(arch)
-# Loading work.tentothirtytwoextender(arch)
-# Loading work.sramandio(arch)
-# Loading work.thirtytwobitregister(arch)
-# Loading work.sramandio_outputlogic(arch)
-# Loading work.sramandio_outputlogic_addressdecoder(arch)
-# Loading work.mux4to1(arch)
-# Loading work.sramandio_sramenablelogic(arch)
-# Loading work.sram(syn)
-# Loading work.mux2to1(arch)
-# Loading work.register_file(sync_read)
-# Loading work.instruction_register(arch)
-# Loading work.mips_alu(arch)
-# Loading work.alu_controller(arch)
-# Loading work.signextend(arch)
-# Loading work.mips_controller(arch)
-# Compile of TestCase2.mif failed with 1 errors.
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
-run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
-run
-run
-# Compile of alu_controller.vhd was successful with warnings.
-# Compile of datapath.vhd was successful.
-# Compile of instruction_register.vhd was successful.
-# Compile of MIPS_ALU.vhd was successful.
-# Compile of mips_controller.vhd was successful.
-# Compile of MIPS4712.vhd was successful.
-# Compile of mux2to1.vhd was successful.
-# Compile of mux4to1.vhd was successful.
-# Compile of register_file.vhd was successful.
-# Compile of shiftleft2.vhd was successful.
-# Compile of signextend.vhd was successful.
-# Compile of SRAM.vhd was successful.
-# Compile of sramandio.vhd was successful.
-# Compile of sramandio_outputlogic.vhd was successful.
-# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
-# Compile of sramandio_sramenablelogic.vhd was successful.
-# Compile of tentothirtytwoextender.vhd was successful.
-# Compile of thirtytwobitregister.vhd was successful.
-# Compile of mips4712_TB.vhd was successful.
-# Compile of TestCase2.mif failed with 1 errors.
-# Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.mips4712_tb(tb)
@@ -922,8 +316,211 @@ restart -f
 # Loading work.signextend(arch)
 # Loading work.mips_controller(arch)
 run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/mips4712_tb/UUT/controllercircuit/state
+restart -f
+run
+run
+run
+restart -f
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd was successful.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
+run
+run
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd was successful.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mips4712_tb(tb)
+# Loading work.mips4712(arch)
+# Loading work.datapath(arch)
+# Loading work.tentothirtytwoextender(arch)
+# Loading work.sramandio(arch)
+# Loading work.thirtytwobitregister(arch)
+# Loading work.sramandio_outputlogic(arch)
+# Loading work.sramandio_outputlogic_addressdecoder(arch)
+# Loading work.mux4to1(arch)
+# Loading work.sramandio_sramenablelogic(arch)
+# Loading work.sram(syn)
+# Loading work.mux2to1(arch)
+# Loading work.register_file(sync_read)
+# Loading work.instruction_register(arch)
+# Loading work.mips_alu(arch)
+# Loading work.alu_controller(arch)
+# Loading work.signextend(arch)
+# Loading work.mips_controller(arch)
+restart -f
+run
+run
+run
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd was successful.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
+restart -f
+# error here!
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mips4712_tb(tb)
+# Loading work.mips4712(arch)
+# Loading work.datapath(arch)
+# Loading work.tentothirtytwoextender(arch)
+# Loading work.sramandio(arch)
+# Loading work.thirtytwobitregister(arch)
+# Loading work.sramandio_outputlogic(arch)
+# Loading work.sramandio_outputlogic_addressdecoder(arch)
+# Loading work.mux4to1(arch)
+# Loading work.sramandio_sramenablelogic(arch)
+# Loading work.sram(syn)
+# Loading work.mux2to1(arch)
+# Loading work.register_file(sync_read)
+# Loading work.instruction_register(arch)
+# Loading work.mips_alu(arch)
+# Loading work.alu_controller(arch)
+# Loading work.signextend(arch)
+# Loading work.mips_controller(arch)
+run
+run
+run
+run
+run
+run
+run
+# error here!
+# error here!
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/loregister/enable
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/loregister/input
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/loregister/output
+add wave -position end  sim:/mips4712_tb/UUT/datapathcircuit/loregister/reset
+restart -f
+# error here!
+run
+# error here!
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# error here!
+# error here!
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# error here!
+# error here!
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# error here!
+# error here!
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd was successful.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
+restart -f
+# error here!
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mips4712_tb(tb)
+# Loading work.mips4712(arch)
+# Loading work.datapath(arch)
+# Loading work.tentothirtytwoextender(arch)
+# Loading work.sramandio(arch)
+# Loading work.thirtytwobitregister(arch)
+# Loading work.sramandio_outputlogic(arch)
+# Loading work.sramandio_outputlogic_addressdecoder(arch)
+# Loading work.mux4to1(arch)
+# Loading work.sramandio_sramenablelogic(arch)
+# Loading work.sram(syn)
+# Loading work.mux2to1(arch)
+# Loading work.register_file(sync_read)
+# Loading work.instruction_register(arch)
+# Loading work.mips_alu(arch)
+# Loading work.alu_controller(arch)
+# Loading work.signextend(arch)
+# Loading work.mips_controller(arch)
+# error here!
 run
 run
 run
@@ -949,8 +546,10 @@ run
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
 restart -f
+# error here!
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.mips4712_tb(tb)
 # Loading work.mips4712(arch)
@@ -971,14 +570,41 @@ restart -f
 # Loading work.signextend(arch)
 # Loading work.mips_controller(arch)
 run
-# ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
 run
 run
+restart -f
+# error here!
+# Compile of alu_controller.vhd was successful with warnings.
+# Compile of datapath.vhd was successful.
+# error here!
+# Compile of instruction_register.vhd was successful.
+# Compile of MIPS_ALU.vhd was successful.
+# Compile of mips_controller.vhd was successful.
+# error here!
+# Compile of MIPS4712.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of shiftleft2.vhd was successful.
+# Compile of signextend.vhd was successful.
+# Compile of SRAM.vhd was successful.
+# Compile of sramandio.vhd was successful.
+# Compile of sramandio_outputlogic.vhd was successful.
+# Compile of sramandio_outputlogic_addressdecoder.vhd was successful.
+# Compile of sramandio_sramenablelogic.vhd was successful.
+# Compile of tentothirtytwoextender.vhd was successful.
+# Compile of thirtytwobitregister.vhd was successful.
+# Compile of mips4712_TB.vhd was successful.
+# Compile of TestCase2.mif failed with 1 errors.
+# Compile of TestCase7.mif failed with 1 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
 run
 run
-run
-run
+# error here!
+# error here!
+# error here!
+# error here!
 # Compile of alu_controller.vhd was successful with warnings.
 # Compile of datapath.vhd was successful.
 # Compile of instruction_register.vhd was successful.
@@ -1000,8 +626,10 @@ run
 # Compile of mips4712_TB.vhd was successful.
 # Compile of TestCase2.mif failed with 1 errors.
 # Compile of TestCase7.mif failed with 1 errors.
-# 21 compiles, 2 failed with 2 errors.
+# Compile of gcd.mif failed with 1 errors.
+# 22 compiles, 3 failed with 3 errors.
 restart -f
+# error here!
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.mips4712_tb(tb)
 # Loading work.mips4712(arch)
@@ -1021,9 +649,14 @@ restart -f
 # Loading work.alu_controller(arch)
 # Loading work.signextend(arch)
 # Loading work.mips_controller(arch)
+# error here!
+run
+run
+run
+run
 run
 # ** Note: simulation finished!
-#    Time: 105 ns  Iteration: 0  Instance: /mips4712_tb
+#    Time: 4075 ns  Iteration: 2  Instance: /mips4712_tb
 run
 run
 run
@@ -1032,13 +665,9 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 17:12:38 on Dec 02,2023, Elapsed time: 1:48:59
-# Errors: 0, Warnings: 2
+# End time: 12:59:28 on Dec 04,2023, Elapsed time: 16:31:01
+# Errors: 0, Warnings: 1
+# error here!
+# error here!
+# error here!
+# error here!

@@ -45,12 +45,16 @@ clk <= not(clk) after 5 ns;
 process
 begin
 inport_en <= '1';
-input_sw <= "0111111111";
 
+input_sw <= "0111111111";
 wait for 50 ns;
+
+--input_sw <= "1000000111";
+wait for 50 ns;
+
 reset <= '0';
 wait for 50 ns;
-wait until rising_edge(clk);
+wait until outputs = x"00000037";
 report "simulation finished!";
 wait;
 end process;
