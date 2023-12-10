@@ -19,7 +19,11 @@ begin
 process(input, enable)
 begin
 if(enable = '1') then
+	if(input(15) = '1') then
 	output <= "1111111111111111" & input;
+	else
+	output <= "0000000000000000" & input; 
+	end if;
 else
 	output <= "0000000000000000" & input;
 end if;

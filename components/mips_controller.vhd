@@ -329,7 +329,7 @@ case state is
 		alusrca		<= '0';
 		regwrite		<=	'0';
 		regdst		<=	'0';
-		aluoutput_en<=	'1';
+		aluoutput_en<=	'0';
 	when load_aluinputregs=>
 		pcwritecond <= '0';	
 		lord			<=	'0';
@@ -397,7 +397,7 @@ case state is
 		irwrite		<=	'0';
 		pcwrite		<=	'0';
 		jal			<=	'0';
-		issigned		<=	'0';
+		issigned		<=	'1';
 		pcsource		<=	"00";
 		aluop			<=	instruction_type;
 		alusrcb		<= "10";

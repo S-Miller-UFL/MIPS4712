@@ -49,7 +49,7 @@ inport_en <= '1';
 input_sw <= "0111111111";
 wait for 50 ns;
 
---input_sw <= "1000000111";
+input_sw <= "1000000111";
 wait for 50 ns;
 
 reset <= '0';
